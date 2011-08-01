@@ -1,5 +1,5 @@
 RSPreset {
-	<>params;
+	var <>params;
 
 	*new {|params|
 		super.newCopyArgs(params).init;
@@ -23,7 +23,7 @@ RSPreset {
 				this.attemptSetting(routingString, amp);
 			};
 		};
-	};
+	}
 
 	attemptConnection {|routingString, amp|
 		var connection = routingString.find("=>");
