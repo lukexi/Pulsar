@@ -18,7 +18,7 @@
 
 ~sawLFO.connectToControlOf(~saw, \freq);
 ~sawLFO.disconnectFromControlOf(~saw, \freq);
-~sawLFO.setCenterValueOfControl(\freq, 10.0);
+~sawLFO.setCenterValueOfControl(\freq, 1.0);
 ~sawLFO.node.set(\freq, 10)
 ~saw.setModDepthOfControl(\freq, 50)
 
@@ -39,7 +39,7 @@
 
 
 ~sineLFO.connectToControlOf(~sawLFO, \freq)
-~sineLFO.setAmpOfConnectionTo(~sawLFO, \freq, 1.0)
+~sineLFO.setAmpOfConnectionTo(~sawLFO, \freq, 5.0)
 ~sineLFO.setCenterValueOfControl(\freq, 1000);
 
 

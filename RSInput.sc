@@ -28,7 +28,7 @@ RSInput {
     var <rate;
     var <initialCenterValue;
     var <spec; // TODO not used yet
-    var <bus;
+    var <inputSummingBus;
     var <scalerNode;
     var <connectedNodes; // These are incoming connected nodes from other RoutableSynths
     var <connectedNodeAmps;
@@ -53,17 +53,17 @@ RSInput {
 
         switch (this.rate) 
             {\audio} {
-                bus = Bus.audio(Server.default, numChannels);
+                inputSummingBus = Bus.audio(Server.default, numChannels);
                 scalerNodeName = \RSAudioMulAdd;
             }
             {\control} {
-                bus = Bus.control(Server.default, numChannels);
+                inputSummingBus = Bus.control(Server.default, numChannels);
                 scalerNodeName = \RSControlMulAdd;
             };
         
         scalerNode = Synth.tail(
             owningSynth.inputConnectorGroup, scalerNodeName, 
-            [\bus, bus, 
+            [\inputSummingBus, inputSummingBus, 
             \centerValue, centerValue,
             \modDepth, modDepth]);
     }
@@ -87,18 +87,16 @@ RSInput {
 
     setUpMap {
         "Owning synth: % node: % control: % bus: %".format(
-            owningSynth.name, owningSynth.node, this.name, bus).postln;
-        owningSynth.node.map(this.name, bus);
+            owningSynth.name, owningSynth.synthNode, this.name, inputSummingBus).postln;
+        owningSynth.synthNode.map(this.name, inputSummingBus);
     }
 
     // Not currently using this
     removeMap {
-        owningSynth.node.map(this.name, -1);
+        owningSynth.synthNode.map(this.name, -1);
     }
     
     acceptConnectionFrom {|fromSynth, amp=1|
-        var control, controlBus, synth;
-        
         if (this.prHasConnectionFrom(fromSynth)) {
             this.setAmpOfConnectionFrom(fromSynth, amp);
             ^this;
@@ -123,7 +121,7 @@ RSInput {
             "%.% NO MORE CONNECTED NODES, REMOVING MAP".format(
                 owningSynth.name, this.name).postln;
             this.removeMap();
-            owningSynth.node.set(this.name, this.centerValue);
+            owningSynth.synthNode.set(this.name, this.centerValue);
         }
     }
     
@@ -156,8 +154,8 @@ RSInput {
             {\audio} {connectorName = \RSAudioConnector}
             {\control} {connectorName = \RSControlConnector};
         ^Synth.head(owningSynth.inputConnectorGroup, connectorName,
-                [\fromBus, fromSynth.outBus,
-                \toBus, bus],
+                [\fromBus, fromSynth.outputBus,
+                \toBus, inputSummingBus],
                 \amp, amp);
     }
 
@@ -174,16 +172,16 @@ RSInput {
                 Out.ar(toBus, In.ar(fromBus) * amp);
             }).add;
 
-            SynthDef(\RSControlMulAdd, {|bus, centerValue, modDepth|
-                var mod = In.kr(bus);
+            SynthDef(\RSControlMulAdd, {|inputSummingBus, centerValue, modDepth|
+                var mod = In.kr(inputSummingBus);
                 var scaledMod = mod * modDepth;
-                ReplaceOut.kr(bus, scaledMod + centerValue);
+                ReplaceOut.kr(inputSummingBus, scaledMod + centerValue);
             }).add;
 
-            SynthDef(\RSAudioMulAdd, {|bus, centerValue, modDepth|
-                var mod = In.ar(bus);
+            SynthDef(\RSAudioMulAdd, {|inputSummingBus, centerValue, modDepth|
+                var mod = In.ar(inputSummingBus);
                 var scaledMod = mod * modDepth;
-                ReplaceOut.ar(bus, scaledMod + centerValue);
+                ReplaceOut.ar(inputSummingBus, scaledMod + centerValue);
             }).add;
         };
     }

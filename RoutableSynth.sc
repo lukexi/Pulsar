@@ -1,8 +1,8 @@
 RoutableSynth {
-    classvar allSynths, <allSynthsByName, <out;
+    classvar allSynths, <allSynthsByName;
     var <name, <ugenGraphFunc, <superGroup, <controlSpecs, <transient;
-    var <synthDef, <group, <inputConnectorGroup, <node;
-    var <outBus;
+    var <synthDef, <containerGroup, <inputConnectorGroup, <synthNode;
+    var <outputBus;
     // Each control has a controlBus that other routable synths can feed into,
     // and at the end of each controlBus is a controlScaler that multiplies the
     // summed controlBus signal by a modDepth and then adds it to a centerValue
@@ -92,9 +92,9 @@ RoutableSynth {
     }
     
     add { |args|
-        node = Synth.tail(this.group, this.name, 
-            [\outBus, this.outBus] ++ args);
-        "Spawned % node! %".format(this.name, this.node).postln;
+        synthNode = Synth.tail(this.containerGroup, this.name, 
+            [\outputBus, this.outputBus] ++ args);
+        "Spawned % node! %".format(this.name, this.synthNode).postln;
     }
     
     disconnect { |toSynth|
@@ -154,7 +154,7 @@ RoutableSynth {
     
     prAddSynthDef {
         
-        synthDef = SynthDef(this.name, {|outBus|
+        synthDef = SynthDef(this.name, {|outputBus|
             
             var result = SynthDef.wrap(ugenGraphFunc);
             
@@ -165,7 +165,7 @@ RoutableSynth {
                 result = Out.replaceZeroesWithSilence(result.asArray);
             };
             
-            Out.multiNewList([outputRate, outBus] ++ result);
+            Out.multiNewList([outputRate, outputBus] ++ result);
         }).add;
     }
     
@@ -173,18 +173,18 @@ RoutableSynth {
         // TODO reuse buses if they're already assigned, or free them before reassigning
         switch (outputRate) 
             {\audio} {
-                outBus = Bus.audio(Server.default, this.numChannels);
+                outputBus = Bus.audio(Server.default, this.numChannels);
             }
             {\control} {
-                outBus = Bus.control(Server.default, this.numChannels);
+                outputBus = Bus.control(Server.default, this.numChannels);
             };
         
-        group = Group.tail(this.superGroup);
-        inputConnectorGroup = Group.head(this.group);
+        containerGroup = Group.tail(this.superGroup);
+        inputConnectorGroup = Group.head(this.containerGroup);
         if (this.transient.not, {this.add});
 
         "routableSynth % created its group % in supergroup %".format(
-            this.name, this.group, this.superGroup).postln;
+            this.name, this.containerGroup, this.superGroup).postln;
     }
     
     prSetUpControls {
@@ -204,7 +204,7 @@ RoutableSynth {
         if (needsToBeMoved) {
             index = allSynths.indexOf(toSynth);
             allSynths.insert(index, allSynths.remove(this));
-            this.group.moveBefore(toSynth.group);
+            this.containerGroup.moveBefore(toSynth.containerGroup);
         };
         
         if (needsToBeMoved) {
@@ -220,7 +220,7 @@ RoutableSynth {
 RoutableSynthOut : RoutableSynth {
     classvar outInstance;
     var outConnector;
-
+    
     *new {
         if (outInstance.isNil) {
             outInstance = super.new(\Out, {|a_in|
@@ -237,7 +237,7 @@ RoutableSynthOut : RoutableSynth {
             Server.default.sync;
             outConnector = Synth.tail(
                 this.group,  \RSAudioConnector,
-                [\fromBus, this.outBus, 
+                [\fromBus, this.outputBus, 
                 \toBus, 0,
                 \amp, 1]);
         };
