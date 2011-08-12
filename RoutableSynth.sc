@@ -24,7 +24,7 @@ _RoutableSynthGraph_
 */
 
 RoutableSynth {
-    var <name, <ugenGraphFuncOrName, <controlSpecs, <transient, <parentGraph;
+    var <name, <ugenGraphFuncOrName, <controlSpecs, <transient, <parentGraph, initialSynthArgs;
     var <synthDefName;
     var <containerGroup, <inputConnectorGroup, <synthNode;
     var <outputBus;
@@ -35,8 +35,8 @@ RoutableSynth {
     var <numChannels;    
     var <outputRate;
     
-    *new {|name, ugenGraphFuncOrName, controlSpecs, transient=false, parentGraph=nil|
-        ^super.newCopyArgs(name, ugenGraphFuncOrName, controlSpecs, transient, parentGraph).init;
+    *new {|name, ugenGraphFuncOrName, controlSpecs, transient=false, parentGraph=nil, initialSynthArgs=nil|
+        ^super.newCopyArgs(name, ugenGraphFuncOrName, controlSpecs, transient, parentGraph, initialSynthArgs).init;
     }
     
     init {
@@ -64,7 +64,7 @@ RoutableSynth {
         synthDesc.controls.do { |control|
             var controlName = control.name.asSymbol;
             var controlRate = (control.rate == "?".asSymbol).if {\audio} {control.rate}; // Workaround a seeming bug in SynthDescLib(?) wherein a_ prefixed input names are given a rate of "?"
-            if (controlName != \i_out) {
+            if (controlName.asString.beginsWith("i_").not) {
                 "% creating control % rate %".format(this.name, control, controlRate).postln;
                 controls[controlName] = RoutableSynthInput(
                     owningSynth:this, 
@@ -85,16 +85,30 @@ RoutableSynth {
             synthNode = Synth.tail(this.containerGroup, this.synthDefName, 
             [\i_out, this.outputBus] ++ args);
             Server.default.sync;
-            "Spawned % node! %".format(this.name, this.synthNode).postln;
+            "Spawned % node! % with args: %".format(
+                this.name, this.synthNode, [\i_out, this.outputBus] ++ args).postln;
         };
     }
     
-    disconnect { |toSynth|
+    disconnectFrom { |toSynth|
         this.disconnectFromControlOf(toSynth, \a_in);
     }
     
-    =< { |toSynth|
-        this.disconnect(toSynth);
+    =< { |toObject|
+        
+        if (toObject.isKindOf(Symbol) and: {toObject == \Out}) {
+            this.disconnectFrom(this.parentGraph.out);
+        };
+        
+        if (toObject.isKindOf(RoutableSynth)) {
+            this.disconnectFrom(toObject);
+            ^toObject;
+        };
+        
+        if (toObject.isKindOf(RoutableSynthInput)) {
+            toObject.removeConnectionFrom(this);
+            ^this;
+        };
     }
     
     => { |toObject|
@@ -192,7 +206,7 @@ RoutableSynth {
             inputConnectorGroup = Group.head(this.containerGroup);
             Server.default.sync;
         };
-        if (this.transient.not, {this.spawn});
+        if (this.transient.not, {this.spawn(initialSynthArgs)});
         
         "routableSynth % created its group % in graph %".format(
             this.name, this.containerGroup, this.parentGraph).postln;

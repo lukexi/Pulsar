@@ -1,0 +1,6 @@
+Dictionary[ ('synths' -> List[ [ 'Sin1', 'RSSinOsc' ], [ 'Saw1', 'RSSawOsc' ], [ 'MoogFF1', 'RSMoogFF' ], [ 'TanH1', 'RSTanH' ], [ 'Saw2', 'RSSawOsc' ], [ 'SinLFO1', 'RSSinLFO' ] ]), ('params' -> Dictionary[ ("Out.a_in.modDepth" -> 1), ("TanH1.preamp.centerValue" -> 10), ("TanH1=>Out.a_in" -> 1), ("Sin1.freq.modDepth" -> 1), ("TanH1.a_in.modDepth" -> 1), 
+  ("MoogFF1=>TanH1.a_in" -> 1), ("SinLFO1=>Saw2.freq" -> 1), ("MoogFF1.freq.modDepth" -> 1500), ("Saw1.freq.centerValue" -> 440.0), ("Saw1=>MoogFF1.a_in" -> 1), 
+  ("SinLFO1.freq.centerValue" -> 2), ("TanH1.a_in.centerValue" -> 0.0), ("SinLFO1=>Saw1.freq" -> 1), ("MoogFF1.gain.modDepth" -> 1), ("MoogFF1.a_in.modDepth" -> 1), 
+  ("MoogFF1.freq.centerValue" -> 2000), ("Saw1.freq.modDepth" -> -200), ("Saw2=>MoogFF1.a_in" -> 1), ("TanH1.preamp.modDepth" -> 1), ("Out.a_in.centerValue" -> 0.0), 
+  ("Saw2.freq.modDepth" -> -300), ("MoogFF1.a_in.centerValue" -> 0.0), ("MoogFF1.gain.centerValue" -> 1), ("Saw2.freq.centerValue" -> 440.0), ("SinLFO1.freq.modDepth" -> 1), 
+  ("SinLFO1=>MoogFF1.freq" -> 1), ("Sin1.freq.centerValue" -> 440.0) ]) ]

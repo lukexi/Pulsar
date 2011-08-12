@@ -3,6 +3,7 @@ RoutableSynthGraph {
     var <graphGroup;
     var <synthsByName;
     var <out;
+    var <>lagTime; // Controls lags of the entire graph(!)
     
     classvar defaultGraph;
     
@@ -46,8 +47,8 @@ RoutableSynthGraph {
         API(this.name).mountOSC;
     }
     
-    addSynth {|synthName, defName|
-        RoutableSynth(synthName, defName, parentGraph:this);
+    addSynth {|synthName, defName, initialSynthArgs=nil|
+        RoutableSynth(synthName, defName, parentGraph:this, initialSynthArgs:initialSynthArgs);
     }
     
     removeSynth {|synthName|
@@ -61,6 +62,14 @@ RoutableSynthGraph {
         
         synthToRemove.containerGroup.free;
         synthsByName.removeAt(synthName);
+    }
+    
+    @ { |synthName|
+        ^this.at(synthName);
+    }
+    
+    at { |synthName|
+        ^this.synthsByName[synthName];
     }
     
     // Called by RoutableSynth
