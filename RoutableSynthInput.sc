@@ -95,7 +95,7 @@ RoutableSynthInput {
         centerValue = aCenterValue;
         Server.default.schedSync {
             this.scalerNode.set(
-                \centerValue, centerValue, 
+                \centerValue, aCenterValue, 
                 \t_lagTime, this.lagTime
             );
         };
@@ -109,7 +109,7 @@ RoutableSynthInput {
         modDepth = aModDepth;
         Server.default.schedSync {
             this.scalerNode.set(
-                \modDepth, modDepth, 
+                \modDepth, aModDepth, 
                 \t_lagTime, this.lagTime
             );
         };

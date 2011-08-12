@@ -30,7 +30,7 @@
 )
 
 (
-~durations = [1, 1, 1, 1, 1, 1, 1, 1];
+~durations = [1, 1, 1, 1, 1, 1, 1];
 ~pitchBuffer = Buffer.loadCollection(s, [440, 880, 220, 1000, 550, 770, 100, 660]);
 ~durationBuffer = Buffer.loadCollection(s, ~durations);
 ~envDuration = ~durations.sum;
@@ -43,18 +43,17 @@
 ~graph.addSynth(\LFO1, \RSSinLFO);
 ~graph.addSynth(\PitchEnvGen, \RSDemandEnvGen, [\i_pitchBufferNumber, ~pitchBuffer.bufnum,\i_durationBufferNumber,  ~durationBuffer.bufnum]);
 )
+(
 ~graph@\OutEnvelope => \Out;
 ~graph@\Saw1 => (~graph@\OutEnvelope);
 ~graph@\Sin1 => (~graph@\OutEnvelope);
-
-// Vibrato
-(~graph@\Saw1@\freq) <= (~graph@\LFO1 * 10);
-
-
-
 ~graph@\PitchEnvGen => (~graph@\Saw1@\freq);
 ~graph@\PitchEnvGen => (~graph@\Sin1@\freq);
-
+// Vibrato ÑÊwe scale the LFO rather than adjust the Saw1's modDepth so the PitchEnvGen will scale correctly
+(~graph@\LFO1@\freq) <= 10;
+(~graph@\Saw1@\freq) <= (~graph@\LFO1 * 10);
+(~graph@\Sin1@\freq) <= (~graph@\LFO1 * 50);
+)
 (
 ~graph@\PitchEnvGen@\gate <= 1;
 ~graph@\OutEnvelope@\gate <= 1;
@@ -62,7 +61,9 @@
 
 (
 ~graph@\PitchEnvGen@\reset <= 0;
+~graph@\OutEnvelope@\gate <= 0;
+)
+(
 ~graph@\PitchEnvGen@\reset <= 1;
-~graph@\OutEnvelope@\gate <= -1;
 ~graph@\OutEnvelope@\gate <= 1;
 )
