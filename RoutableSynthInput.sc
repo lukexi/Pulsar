@@ -1,28 +1,12 @@
 /* 
 
-_Notes on implementing feedback_
-*Each time a source is connected to a destination, step forwards through the outgoing tree of the  destination and see if any of the paths lead back to the source.
 
-(*or, step backwards through the incoming tree of the source and see if any paths lead back to the destination)
 
-*If so, use an "InFeedback" connector and don't reorder the allSynths array.
 
-_Notes on unifying connections_
-
-*Separate out the amp-setting call so we can use operators (e.g. => to connect, =>* to change amp) for everything?
-
-_Notes on RoutableSynthDef_
-*Fold the SynthDef creation part of RoutableSynth into RoutableSynthDef and use that to store off named synths for RoutableSynths — then only use RoutableSynth's ugenGraphFunc if it's passed in, otherwise looking up the synthdef.
-
-*Replace all "waitForBoot" and Server.default.syncs with a condition that signals when it's ready for connections to occur
-
-*modDepth should be the MIN(abs(centerValue-spec.max), abs(centerValue-spec.min)) so it can never exceed the bounds — or, automatically shift the centerValue towards the center ((spec.max-spec.min)/2 + spec.min) so modulation can still occur? final option: clip final mod value in the scaler. double-final: don't do any of this and see if it creates nice glitches, leaving it to the user.
-
-*K2A and A2K can give us RSAudio2ControlConnector and RSControl2AudioConnectors
 
 */
 
-RSInput {
+RoutableSynthInput {
     var owningSynth;
     var <name;
     var <rate;
@@ -45,12 +29,12 @@ RSInput {
         connectedNodeAmps = IdentityDictionary();
     }
     
-    setUpServerObjects {
+    setupServerObjects {
         var numChannels = 1;
         var scalerNodeName;
         modDepth = 1; // TODO get this from the spec
         centerValue = this.initialCenterValue;
-
+        
         switch (this.rate) 
             {\audio} {
                 inputSummingBus = Bus.audio(Server.default, numChannels);
@@ -61,39 +45,72 @@ RSInput {
                 scalerNodeName = \RSControlMulAdd;
             };
         
-        scalerNode = Synth.tail(
-            owningSynth.inputConnectorGroup, scalerNodeName, 
-            [\inputSummingBus, inputSummingBus, 
-            \centerValue, centerValue,
-            \modDepth, modDepth]);
+        Server.default.schedSync {
+            scalerNode = Synth.tail(
+                owningSynth.inputConnectorGroup, scalerNodeName, 
+                [\inputSummingBus, inputSummingBus, 
+                \centerValue, centerValue,
+                \modDepth, modDepth]);
+            Server.default.sync;
+        };
+    }
+    
+    <= { |anObject|
+        var synth, amp;
+        if (anObject.isKindOf(RoutableSynth)) {
+            this.acceptConnectionFrom(anObject);
+            ^this;
+        };
+        
+        if (anObject.isKindOf(Array)) {
+            synth = anObject[0];
+            amp = anObject[1];
+            ^this.acceptConnectionFrom(synth, amp);
+        };
+        
+        this.centerValue = anObject;        
     }
     
     centerValue_ { |aCenterValue|
         centerValue = aCenterValue;
-        this.scalerNode.set(\centerValue, centerValue);
-
+        Server.default.schedSync {
+            this.scalerNode.set(\centerValue, centerValue);
+        };
         this.prSetCenterDirectlyIfNoConnectedNodes();
+    }
+    
+    +- { |aModDepth|
+        this.modDepth = aModDepth;
     }
     
     modDepth_ { |aModDepth|
         modDepth = aModDepth;
-        this.scalerNode.set(\modDepth, modDepth);
+        Server.default.schedSync {
+            this.scalerNode.set(\modDepth, modDepth);
+        };
     }
     
     setAmpOfConnectionFrom {|fromSynth, amp|
         this.connectedNodeAmps[fromSynth] = amp;
-        this.connectedNodes[fromSynth].set(\amp, amp);
+        Server.default.schedSync {
+            this.connectedNodes[fromSynth].set(\amp, amp);
+        };
     }
-
-    setUpMap {
-        "Owning synth: % node: % control: % bus: %".format(
-            owningSynth.name, owningSynth.synthNode, this.name, inputSummingBus).postln;
-        owningSynth.synthNode.map(this.name, inputSummingBus);
+    
+    setupMap {
+        Server.default.schedSync {
+            owningSynth.synthNode.map(this.name, inputSummingBus);
+            Server.default.sync;
+            "Owning synth % mapped input of node: % control: % bus: %".format(
+                owningSynth.name, owningSynth.synthNode, this.name, inputSummingBus).postln;
+        }
     }
-
-    // Not currently using this
+    
     removeMap {
-        owningSynth.synthNode.map(this.name, -1);
+        Server.default.schedSync {
+            owningSynth.synthNode.map(this.name, -1);
+            Server.default.sync;
+        };
     }
     
     acceptConnectionFrom {|fromSynth, amp=1|
@@ -101,7 +118,7 @@ RSInput {
             this.setAmpOfConnectionFrom(fromSynth, amp);
             ^this;
         };
-
+        
         this.prAcceptConnectionFrom(fromSynth, amp);
     }
     
@@ -109,10 +126,14 @@ RSInput {
         if (this.prHasConnectionFrom(fromSynth).not) {
             ^this;
         };
-        this.connectedNodes[fromSynth].free;
+        
+        Server.default.schedSync {
+            this.connectedNodes[fromSynth].free;
+        };
+        
         this.connectedNodeAmps.removeAt(fromSynth);
         this.connectedNodes.removeAt(fromSynth);
-
+        
         this.prSetCenterDirectlyIfNoConnectedNodes();
     }
     
@@ -121,7 +142,10 @@ RSInput {
             "%.% NO MORE CONNECTED NODES, REMOVING MAP".format(
                 owningSynth.name, this.name).postln;
             this.removeMap();
-            owningSynth.synthNode.set(this.name, this.centerValue);
+            
+            Server.default.schedSync {
+                owningSynth.synthNode.set(this.name, this.centerValue);
+            }
         }
     }
     
@@ -131,20 +155,19 @@ RSInput {
     
     prAcceptConnectionFrom {|fromSynth, amp=1|
         // Skips check for existing connection. Useful for restoring connections.
-        var connectionNode;
-        Server.default.waitForBoot {
-            Server.default.sync;
-            
-            this.setUpMap();
+        Server.default.schedSync {
+            var connectionNode;
+            this.setupMap();
             "%.% accepting connection from %".format(
                 owningSynth.name, this.name, fromSynth.name).postln;
             
             connectionNode = this.prConnectorFromSynthAtAmp(fromSynth, amp);
+            Server.default.sync;
             
             this.connectedNodeAmps[fromSynth] = amp;
             this.connectedNodes[fromSynth] = connectionNode;
             
-            fromSynth.prOrderBefore(owningSynth);
+            fromSynth.prOrderBefore(owningSynth, originatingSynth:owningSynth);
         };
     }
     
@@ -158,31 +181,62 @@ RSInput {
                 \toBus, inputSummingBus],
                 \amp, amp);
     }
-
+    
     // RSInput Class Methods
     *initClass {
+        
+        {
+            this.addSynthDefs;
+        }.defer(1);
+        
+        /*
         Server.default.waitForBoot {
             "Initializing RoutableSynth Architecture 2".postln;
-
+            //synthDefs.do(_.writeDefFile);
+            //synthDefs.do(_.add);
+        };
+        */
+    }
+    
+    *addSynthDefs {
+        var synthDefs = [
             SynthDef(\RSControlConnector, { |fromBus, toBus, amp=1|
                 Out.kr(toBus, In.kr(fromBus) * amp);
-            }).add;
-
+            }),
+            
             SynthDef(\RSAudioConnector, { |fromBus, toBus, amp=1|
                 Out.ar(toBus, In.ar(fromBus) * amp);
-            }).add;
-
-            SynthDef(\RSControlMulAdd, {|inputSummingBus, centerValue, modDepth|
+            }),
+            
+            SynthDef(\RSControlDC, { |toBus|
+                Out.kr(toBus, DC.kr(0.0));
+            }),
+            
+            SynthDef(\RSAudioDC, { |toBus|
+                Out.ar(toBus, DC.ar(0.0));
+            }),
+            
+            SynthDef(\RSControlMulAdd, {|inputSummingBus, centerValue, modDepth, t_lagTime|
+                var lagModDepth = Ramp.kr(modDepth, t_lagTime);
+                var lagCenterValue = Ramp.kr(centerValue, t_lagTime);
                 var mod = In.kr(inputSummingBus);
                 var scaledMod = mod * modDepth;
                 ReplaceOut.kr(inputSummingBus, scaledMod + centerValue);
-            }).add;
-
-            SynthDef(\RSAudioMulAdd, {|inputSummingBus, centerValue, modDepth|
+            }),
+            
+            SynthDef(\RSAudioMulAdd, {|inputSummingBus, centerValue, modDepth, t_lagTime|
+                var lagModDepth = Ramp.ar(modDepth, t_lagTime);
+                var lagCenterValue = Ramp.ar(centerValue, t_lagTime); 
                 var mod = In.ar(inputSummingBus);
                 var scaledMod = mod * modDepth;
                 ReplaceOut.ar(inputSummingBus, scaledMod + centerValue);
-            }).add;
-        };
+            })
+        ];
+        
+        synthDefs.do(_.writeDefFile);
+        Server.default.schedSync {
+            synthDefs.do(_.add);
+            Server.default.sync;
+        }
     }
 }

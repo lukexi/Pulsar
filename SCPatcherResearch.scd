@@ -12,7 +12,7 @@
 	list;
 };
 
-~subclassesOf.(UGen).do({|aClass|aClass.class.dumpInterface})
+~subclassesOf.(UGen).do({|aClass|aClass.name.postln;aClass.class.dumpInterface})
 ~subclassesOf.(UGen).do({|aClass|
 	var arMethod = aClass.class.findRespondingMethodFor('ar');
 	var krMethod = aClass.class.findRespondingMethodFor('kr');
