@@ -36,7 +36,7 @@
 ~envDuration = ~durations.sum;
 )
 (
-~graph = RoutableSynthGraph(\pitchTestGraph);
+~graph = RSGraph(\pitchTestGraph);
 ~graph.addSynth(\OutEnvelope, \RSFadeEnvelope, [\i_duration, ~envDuration, \i_fadeTime, 0.3]);
 ~graph.addSynth(\Sin1, \RSSinOsc);
 ~graph.addSynth(\Saw1, \RSSawOsc);

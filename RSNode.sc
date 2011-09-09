@@ -8,8 +8,8 @@ _Notes on unifying connections_
 
 *Separate out the amp-setting call so we can use operators (e.g. => to connect, =>* to change amp) for everything?
 
-_Notes on RoutableSynthDef_
-*Fold the SynthDef creation part of RoutableSynth into RoutableSynthDef and use that to store off named synths for RoutableSynths ÑÊthen only use RoutableSynth's ugenGraphFunc if it's passed in, otherwise looking up the synthdef.
+_Notes on RSNodeDef_
+*Fold the SynthDef creation part of RSNode into RSNodeDef and use that to store off named synths for RSNodes ÑÊthen only use RSNode's ugenGraphFunc if it's passed in, otherwise looking up the synthdef.
 
 *Replace all "waitForBoot" and Server.default.syncs with a condition that signals when it's ready for connections to occur
 
@@ -17,67 +17,62 @@ _Notes on RoutableSynthDef_
 
 *K2A and A2K can give us RSAudio2ControlConnector and RSControl2AudioConnectors
 
-_RoutableSynthGraph_
+_RSGraph_
 
-*synthsByName isn't great because it uses the same name as the synthDef name, which means we can't use multiple instances of the same synth. Fix this so names are unique or auto-append a number like LFO1, LFO2 etc., or figure out a different scheme. Do this when we deal with the RoutableSynthDef thing above.
+*synthsByName isn't great because it uses the same name as the synthDef name, which means we can't use multiple instances of the same synth. Fix this so names are unique or auto-append a number like LFO1, LFO2 etc., or figure out a different scheme. Do this when we deal with the RSNodeDef thing above.
 
 */
 
-RoutableSynth {
+RSNode {
     var <name, <ugenGraphFuncOrName, <controlSpecs, <transient, <parentGraph, initialSynthArgs;
-    var <synthDefName;
+    var <synthDef;
     var <containerGroup, <inputConnectorGroup, <synthNode;
     var <outputBus;
     // Each control has a controlBus that other routable synths can feed into,
     // and at the end of each controlBus is a controlScaler that multiplies the
     // summed controlBus signal by a modDepth and then adds it to a centerValue
     var <controls;
-    var <numChannels;    
-    var <outputRate;
+    var <numChannels;
     
-    *new {|name, ugenGraphFuncOrName, controlSpecs, transient=false, parentGraph=nil, initialSynthArgs=nil|
-        ^super.newCopyArgs(name, ugenGraphFuncOrName, controlSpecs, transient, parentGraph, initialSynthArgs).init;
+    *new {|name, ugenGraphFuncOrName, synthDef, controlSpecs, transient=false, parentGraph=nil, initialSynthArgs=nil|
+        ^super.newCopyArgs(name, ugenGraphFuncOrName, synthDef, controlSpecs, transient, parentGraph, initialSynthArgs).init;
     }
     
     init {
-        var synthDesc;
+        
         controls = Dictionary();
         numChannels = 1;
         
-        parentGraph = parentGraph ?? {RoutableSynthGraph.defaultGraph};
+        parentGraph = parentGraph ?? {RSGraph.defaultGraph};
         
         if (ugenGraphFuncOrName.isKindOf(Symbol) or: {ugenGraphFuncOrName.isKindOf(String)}) {
-            synthDefName = ugenGraphFuncOrName.asSymbol;
-            synthDesc = SynthDescLib.global[synthDefName];
-            if (synthDesc.isNil) {
-                "Couldn't find SynthDesc named %".format(synthDefName).warn;
+            synthDef = RSLibrary.sharedLibrary[name];
+            if (synthDef.isNil) {
+                "Couldn't find SynthDesc named %".format(name).warn;
                 ^nil;
             }
         } {
-            synthDefName = ("RS"++this.name).asSymbol;
-            ugenGraphFuncOrName.asSynthDef(name:this.synthDefName).add.writeDefFile;
-            synthDesc = SynthDescLib.global[this.synthDefName];
+            synthDef = RSLibrary.sharedLibrary.addSynthDef(this.name, ugenGraphFuncOrName);
         };
         
-        outputRate = synthDesc.outputs[0].rate;
-        
-        synthDesc.controls.do { |control|
+        synthDef.controls.do { |control|
             var controlName = control.name.asSymbol;
-            var controlRate = (control.rate == "?".asSymbol).if {\audio} {control.rate}; // Workaround a seeming bug in SynthDescLib(?) wherein a_ prefixed input names are given a rate of "?"
+            
+            // we ignore 'initial rate' (i_-prefixed) controls as they can't be modulated
             if (controlName.asString.beginsWith("i_").not) {
-                "% creating control % rate %".format(this.name, control, controlRate).postln;
-                controls[controlName] = RoutableSynthInput(
+                "% creating control % rate %".format(this.name, control, control.rate).postln;
+                controls[controlName] = RSInput(
                     owningSynth:this, 
                     name:controlName, 
-                    rate:controlRate,
-                    initialCenterValue:control.defaultValue
+                    rate:control.rate,
+                    initialCenterValue:control.default
                 );
             };
         };
         
         this.prSetupServerObjects;
         
-        this.parentGraph.prAdd(this.name, this);
+        this.parentGraph.prAddSynth(this);
     }
     
     spawn { |args|
@@ -100,12 +95,12 @@ RoutableSynth {
             this.disconnectFrom(this.parentGraph.out);
         };
         
-        if (toObject.isKindOf(RoutableSynth)) {
+        if (toObject.isKindOf(RSNode)) {
             this.disconnectFrom(toObject);
             ^toObject;
         };
         
-        if (toObject.isKindOf(RoutableSynthInput)) {
+        if (toObject.isKindOf(RSInput)) {
             toObject.removeConnectionFrom(this);
             ^this;
         };
@@ -117,12 +112,12 @@ RoutableSynth {
             this.connectTo(this.parentGraph.out);
         };
         
-        if (toObject.isKindOf(RoutableSynth)) {
+        if (toObject.isKindOf(RSNode)) {
             this.connectTo(toObject);
             ^toObject;
         };
         
-        if (toObject.isKindOf(RoutableSynthInput)) {
+        if (toObject.isKindOf(RSInput)) {
             toObject.acceptConnectionFrom(this, amp:1);
             ^this;
         };
@@ -175,14 +170,14 @@ RoutableSynth {
         controls[controlName].centerValue = centerValue;
     }
     
-    description {
-        ^ (
-            'name':this.name,
-            'controlNames':controls.keys.asArray,
-            'controlDefaults':controls.values.collect(_.initialCenterValue),
-            'outputRate':this.outputRate
-        );
+    outputRate {
+        ^this.synthDef.outputRate;
     }
+    
+    synthDefName {
+        ^this.synthDef.name;
+    }
+    
     
     // private
     
@@ -193,7 +188,7 @@ RoutableSynth {
     
     prSetupSynths {
         // TODO reuse buses if they're already assigned, or free them before reassigning
-        switch (outputRate) 
+        switch (this.outputRate) 
             {\audio} {
                 outputBus = Bus.audio(Server.default, this.numChannels);
             }
@@ -208,7 +203,7 @@ RoutableSynth {
         };
         if (this.transient.not, {this.spawn(initialSynthArgs)});
         
-        "routableSynth % created its group % in graph %".format(
+        "RSNode % created its group % in graph %".format(
             this.name, this.containerGroup, this.parentGraph).postln;
     }
     
@@ -239,7 +234,7 @@ RoutableSynth {
     }
 }
 
-RoutableSynthOut : RoutableSynth {
+RSNodeOut : RSNode {
     var <outConnector;
     
     *new { |parentGraph|

@@ -4,6 +4,7 @@
 // figure out how to cancel a lag ÑÊseems to not be possible with this setup
 // but haven't looked if it's the Trig or the Ramp's fault
 
+// DOUBLE UPDATE: looks like this is a known bug in Ramp, and I should use Lag or LPF instead.
 ~synth = {|freq=440, lagTime=1, t_env=0|
 	var lagTrig = Trig.kr(t_env * lagTime, dur:lagTime);
 	var lagFreq = Ramp.kr(freq, lagTrig);

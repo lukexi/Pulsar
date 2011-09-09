@@ -1,4 +1,4 @@
-RoutableSynthGraph {
+RSGraph {
     var <name;
     var <graphGroup;
     var <synthsByName;
@@ -9,7 +9,7 @@ RoutableSynthGraph {
     
     *defaultGraph {
         if (defaultGraph.isNil) {
-            defaultGraph = RoutableSynthGraph("Default");
+            defaultGraph = RSGraph("Default");
         }
         ^defaultGraph;
     }
@@ -22,13 +22,12 @@ RoutableSynthGraph {
         
         synthsByName = Dictionary();
         
-        
         Server.default.schedSync {
             graphGroup = Group();
             Server.default.sync;
         };
         
-        out = RoutableSynthOut(this);
+        out = RSNodeOut(this);
         /*
         CmdPeriod.add({
             {
@@ -48,7 +47,7 @@ RoutableSynthGraph {
     }
     
     addSynth {|synthName, defName, initialSynthArgs=nil|
-        RoutableSynth(synthName, defName, parentGraph:this, initialSynthArgs:initialSynthArgs);
+        RSNode(synthName, defName, parentGraph:this, initialSynthArgs:initialSynthArgs);
     }
     
     removeSynth {|synthName|
@@ -72,13 +71,9 @@ RoutableSynthGraph {
         ^this.synthsByName[synthName];
     }
     
-    // Called by RoutableSynth
-    prAdd {|synthName, synth|
-        synthsByName[synthName] = synth;
-    }
-    
-    synthDescriptionsAsJSON {
-        ^synthsByName.values.collect(_.description).asJSONString;
+    // Called by RSNode
+    prAddSynth {|synth|
+        synthsByName[synth.name] = synth;
     }
     
     restoreNodeTree {

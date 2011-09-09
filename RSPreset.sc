@@ -46,7 +46,7 @@ RSPreset {
         };
     }
     
-    apply {
+    apply { |initialSynthArgsByName|
         var synths, params;
         synths = snapshot[\synths];
         params = snapshot[\params];
@@ -54,7 +54,7 @@ RSPreset {
         synths.do {|synthNameAndDefName|
             var synthName, defName;
             #synthName, defName = synthNameAndDefName;
-            RoutableSynth(synthName, defName, parentGraph:this.parentGraph);
+            RoutableSynth(synthName, defName, parentGraph:this.parentGraph, initialSynthArgs:initialSynthArgsByName[synthName]);
         };
         
         params.keysValuesDo {|routingString, amp|

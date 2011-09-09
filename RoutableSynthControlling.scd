@@ -1,29 +1,29 @@
 // TODO use .exprange in the RSControlMulAdd (or make a specialized) 
 // synthDef when appropriate to scale modulation to an exponential range
 (
-~sinLFO = RoutableSynth(\LFSin, {|in, freq=0.5| 
+~sinLFO = RSNode(\LFSin, {|in, freq=0.5| 
 	SinOsc.kr(freq);
 });
 
-~sawLFO = RoutableSynth(\LFSaw, {|in, freq=3| 
+~sawLFO = RSNode(\LFSaw, {|in, freq=3| 
 	LFSaw.kr(freq);
 });
 
-~squareLFO = RoutableSynth(\LFPulse, {|in, freq=7| 
+~squareLFO = RSNode(\LFPulse, {|in, freq=7| 
 	LFPulse.kr(freq);
 });
 
-~saw = RoutableSynth(\Saw, {|in, freq=440, cutoff=1000| 
+~saw = RSNode(\Saw, {|in, freq=440, cutoff=1000| 
 	var sig = Saw.ar(freq);
 	MoogFF.ar(sig, freq:cutoff, gain:3);
 });
 
-~noise = RoutableSynth(\Noise, {|in, cutoff=1000|
+~noise = RSNode(\Noise, {|in, cutoff=1000|
 	var sig = WhiteNoise.ar();
 	MoogFF.ar(sig, freq:cutoff, gain:3);
 });
 
-~reverb = RoutableSynth(\Reverb, {|in, room=0.7|
+~reverb = RSNode(\Reverb, {|in, room=0.7|
 	"In is:".post; in.postln;
 	FreeVerb.ar(in, mix:0.7, room:room);
 });

@@ -1,13 +1,13 @@
-~osc = RoutableSynth(\osc, {|freq=440|SinOsc.ar(freq)});
+~osc = RSNode(\osc, {|freq=440|SinOsc.ar(freq)});
 ~osc => \Out;
 
-~lfo = RoutableSynth(\lfo, {|freq=4|SinOsc.kr(freq)});
+~lfo = RSNode(\lfo, {|freq=4|SinOsc.kr(freq)});
 ~osc@\freq <= ~lfo;
 ~osc@\freq +- 200;
 
-~dist = RoutableSynth(\dist, );
+~dist = RSNode(\dist, );
 
-RoutableSynthGraph.defaultGraph.snapshot.asCompileString;
+RSGraph.defaultGraph.snapshot.asCompileString;
 
 (
 (
@@ -19,7 +19,7 @@ RoutableSynthGraph.defaultGraph.snapshot.asCompileString;
 ).keysValuesDo{|name, graphFunc|graphFunc.asSynthDef(name:name).add.writeDefFile}
 )
 
-~graph = RoutableSynthGraph(\testGraph);
+~graph = RSGraph(\testGraph);
 ~graph.addSynth(\Sin1, \RSSinOsc);
 ~graph.addSynth(\Saw1, \RSSawOsc);
 ~graph.addSynth(\Saw2, \RSSawOsc);
@@ -75,4 +75,4 @@ RoutableSynthGraph.defaultGraph.snapshot.asCompileString;
 
 ~george.parentGraph.snapshot
 
-RoutableSynthGraph.defaultGraph.graphGroup.free
+RSGraph.defaultGraph.graphGroup.free

@@ -1,12 +1,4 @@
-/* 
-
-
-
-
-
-*/
-
-RoutableSynthInput {
+RSInput {
     var owningSynth;
     var <name;
     var <rate;
@@ -19,6 +11,7 @@ RoutableSynthInput {
     var <connectedNodeAmps;
     var <centerValue;
     var <modDepth;
+    var <rsSynthDefControl;
     
     *new {|owningSynth, name, rate, initialCenterValue=0|
         ^super.newCopyArgs(owningSynth, name, rate, initialCenterValue).init;
@@ -77,7 +70,7 @@ RoutableSynthInput {
     
     <= { |anObject|
         var synth, amp;
-        if (anObject.isKindOf(RoutableSynth)) {
+        if (anObject.isKindOf(RSNode)) {
             this.acceptConnectionFrom(anObject);
             ^this;
         };
@@ -225,6 +218,7 @@ RoutableSynthInput {
             }),
             
             // Haven't gotten centerValue and modDepth lag working for this yet (getting distortion...)
+            // UPDATE use LPF.ar and 1/t_lagTime (with a min t_lagTime of 1/20000)
             SynthDef(\RSAudioMulAdd, {|inputSummingBus, centerValue, modDepth, t_lagTime|
                 var lagModDepth = Ramp.ar(modDepth, t_lagTime);
                 var lagCenterValue = Lag.ar(centerValue, t_lagTime);
