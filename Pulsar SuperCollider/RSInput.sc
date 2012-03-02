@@ -201,6 +201,11 @@ RSInput {
                 Out.ar(toBus, In.ar(fromBus) * lagAmp);
             }),
             
+            SynthDef(\RSAudioConnectorMonoToStereo, { |fromBus, toBus, amp=1, t_lagTime|
+                var lagAmp = Ramp.ar(K2A.ar(amp));
+                Out.ar(toBus, In.ar(fromBus) * lagAmp ! 2);
+            }),
+            
             SynthDef(\RSControlDC, { |inputSummingBus|
                 Out.kr(inputSummingBus, DC.kr(0.0));
             }),

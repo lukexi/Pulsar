@@ -1,0 +1,3 @@
+[submodule "ThirdParty/SuperCollider"]
+	path = ThirdParty/SuperCollider
+	url = git@github.com:mrotondo/SuperCollider.git

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="RSGraph" representedClassName="RSGraph" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="completionNode" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSNode" inverseName="graphAsCompletion" inverseEntity="RSNode" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RSNode" inverseName="graph" inverseEntity="RSNode" indexed="YES" syncable="YES"/>
+        <relationship name="outNode" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="RSOutNode" inverseName="graphAsOut" inverseEntity="RSOutNode" indexed="YES" syncable="YES"/>
+        <userInfo>
+            <entry key="uniqueIDPropertyName" value="name"/>
+        </userInfo>
+    </entity>
+    <entity name="RSInput" representedClassName="RSInput" syncable="YES">
+        <attribute name="centerValue" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="modDepth" optional="YES" attributeType="Float" defaultValueString="1" syncable="YES"/>
+        <relationship name="node" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSNode" inverseName="inputs" inverseEntity="RSNode" indexed="YES" syncable="YES"/>
+        <relationship name="synthDefControl" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSSynthDefControl" inverseName="nodeInputs" inverseEntity="RSSynthDefControl" indexed="YES" syncable="YES"/>
+        <relationship name="wires" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RSWire" inverseName="destinationInput" inverseEntity="RSWire" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RSNode" representedClassName="RSNode" syncable="YES">
+        <attribute name="nodeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="graph" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSGraph" inverseName="nodes" inverseEntity="RSGraph" indexed="YES" syncable="YES"/>
+        <relationship name="graphAsCompletion" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSGraph" inverseName="completionNode" inverseEntity="RSGraph" syncable="YES"/>
+        <relationship name="inputs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RSInput" inverseName="node" inverseEntity="RSInput" indexed="YES" syncable="YES"/>
+        <relationship name="outWires" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RSWire" inverseName="sourceNode" inverseEntity="RSWire" indexed="YES" syncable="YES"/>
+        <relationship name="synthDef" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSSynthDef" inverseName="nodes" inverseEntity="RSSynthDef" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RSOutNode" representedClassName="RSOutNode" parentEntity="RSNode" syncable="YES">
+        <relationship name="graphAsOut" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSGraph" inverseName="outNode" inverseEntity="RSGraph" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RSSynthDef" representedClassName="RSSynthDef" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="outputRateInteger" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="controls" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RSSynthDefControl" inverseName="synthDef" inverseEntity="RSSynthDefControl" indexed="YES" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RSNode" inverseName="synthDef" inverseEntity="RSNode" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RSSynthDefControl" representedClassName="RSSynthDefControl" syncable="YES">
+        <attribute name="defaultValue" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rangeHigh" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="rangeLow" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="rateInteger" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="units" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="warpSpecifier" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="nodeInputs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RSInput" inverseName="synthDefControl" inverseEntity="RSInput" indexed="YES" syncable="YES"/>
+        <relationship name="synthDef" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSSynthDef" inverseName="controls" inverseEntity="RSSynthDef" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="RSWire" representedClassName="RSWire" syncable="YES">
+        <attribute name="amp" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="destinationInput" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSInput" inverseName="wires" inverseEntity="RSInput" indexed="YES" syncable="YES"/>
+        <relationship name="sourceNode" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="RSNode" inverseName="outWires" inverseEntity="RSNode" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RSGraph" positionX="106" positionY="414" width="128" height="120"/>
+        <element name="RSInput" positionX="513" positionY="315" width="128" height="120"/>
+        <element name="RSNode" positionX="306" positionY="369" width="128" height="165"/>
+        <element name="RSOutNode" positionX="306" positionY="549" width="128" height="60"/>
+        <element name="RSSynthDef" positionX="531" positionY="639" width="128" height="105"/>
+        <element name="RSSynthDefControl" positionX="745" positionY="564" width="128" height="180"/>
+        <element name="RSWire" positionX="520" positionY="486" width="128" height="90"/>
+    </elements>
+</model>

@@ -55,19 +55,16 @@ RSNode {
             synthDef = RSLibrary.sharedLibrary.addSynthDef(this.name, ugenGraphFuncOrName);
         };
         
-        synthDef.controls.do { |control|
+        synthDef.modulatableControls.do { |control|
             var controlName = control.name.asSymbol;
             
-            // we ignore 'initial rate' (i_-prefixed) controls as they can't be modulated
-            if (controlName.asString.beginsWith("i_").not) {
-                "% creating control % rate %".format(this.name, control, control.rate).postln;
-                controls[controlName] = RSInput(
-                    owningSynth:this, 
-                    name:controlName, 
-                    rate:control.rate,
-                    initialCenterValue:control.default
-                );
-            };
+            controls[controlName] = RSInput(
+                owningSynth:this, 
+                name:controlName, 
+                rate:control.rate,
+                initialCenterValue:control.default
+            );
+            "% creating control % rate %".format(this.name, control, control.rate).postln;
         };
         
         this.prSetupServerObjects;
