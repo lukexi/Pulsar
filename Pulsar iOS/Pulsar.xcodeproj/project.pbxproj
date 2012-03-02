@@ -374,8 +374,8 @@
 		C24EE6FC148C3ED600E72DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C24EE6FF148C3ED600E72DAF /* RoutableSynth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoutableSynth.xcdatamodel; sourceTree = "<group>"; };
 		C24EE70D148C3ED700E72DAF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTestSketches.h; path = ../RoutableSynthTests/RSTestSketches.h; sourceTree = "<group>"; };
-		C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTestSketches.m; path = ../RoutableSynthTests/RSTestSketches.m; sourceTree = "<group>"; };
+		C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTestSketches.h; sourceTree = "<group>"; };
+		C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTestSketches.m; sourceTree = "<group>"; };
 		C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKWireEditorViewController.xib; sourceTree = "<group>"; };
 		C2A9F1A415007909000ECC90 /* NKNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKNodeView.xib; sourceTree = "<group>"; };
 		C2A9F1A515007909000ECC90 /* NKOutNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKOutNodeView.xib; sourceTree = "<group>"; };
@@ -469,9 +469,9 @@
 		C2D62E9F1498631E000F534B /* RoutableSynthMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RoutableSynthMetadata.json; path = RoutableSynth/RoutableSynthMetadata.json; sourceTree = "<group>"; };
 		C2D62EBD14989D4C000F534B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C2D62EC31498A849000F534B /* libPulsarKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPulsarKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2D62EC71498A84A000F534B /* PulsarKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PulsarKit-Prefix.pch"; sourceTree = "<group>"; };
-		C2D62EC81498A84A000F534B /* Pulsar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pulsar.h; sourceTree = "<group>"; };
-		C2D62EC91498A84A000F534B /* Pulsar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pulsar.m; sourceTree = "<group>"; };
+		C2D62EC71498A84A000F534B /* PulsarKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PulsarKit-Prefix.pch"; path = "../RoutableSynth/PulsarKit-Prefix.pch"; sourceTree = "<group>"; };
+		C2D62EC81498A84A000F534B /* Pulsar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Pulsar.h; path = ../RoutableSynth/Pulsar.h; sourceTree = "<group>"; };
+		C2D62EC91498A84A000F534B /* Pulsar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Pulsar.m; path = ../RoutableSynth/Pulsar.m; sourceTree = "<group>"; };
 		C2D62ED01498A84A000F534B /* PulsarKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsarKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D62ED91498A84B000F534B /* PulsarKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PulsarKitTests-Info.plist"; sourceTree = "<group>"; };
 		C2D62EDB1498A84B000F534B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
