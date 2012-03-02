@@ -1,3 +1,6 @@
 [submodule "ThirdParty/SuperCollider"]
 	path = ThirdParty/SuperCollider
 	url = git@github.com:mrotondo/SuperCollider.git
+[submodule "ThirdParty/NodeCanvasKit"]
+	path = ThirdParty/NodeCanvasKit
+	url = git@github.com:lukexi/NodeCanvasKit.git
