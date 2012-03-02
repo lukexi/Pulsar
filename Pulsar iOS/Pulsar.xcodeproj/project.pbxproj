@@ -51,6 +51,11 @@
 		C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F18F15007893000ECC90 /* libNodeCanvasKit.a */; };
 		C2A9F1A1150078D6000ECC90 /* libscsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth.a */; };
+		C2A9F1A615007909000ECC90 /* NKWireEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */; };
+		C2A9F1A815007909000ECC90 /* NKNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A415007909000ECC90 /* NKNodeView.xib */; };
+		C2A9F1AA15007909000ECC90 /* NKOutNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A515007909000ECC90 /* NKOutNodeView.xib */; };
+		C2A9F1B0150079E6000ECC90 /* libscsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth.a */; };
+		C2A9F1B1150079EF000ECC90 /* libNodeCanvasKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F18F15007893000ECC90 /* libNodeCanvasKit.a */; };
 		C2B3ACB11498D32A00ED3B2B /* SCRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B3ACAF1498D32A00ED3B2B /* SCRenderer.h */; };
 		C2B3ACB21498D32A00ED3B2B /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
 		C2B3ACB41498D32A00ED3B2B /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
@@ -162,12 +167,6 @@
 		C2D62FB91498C79F000F534B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6EA148C3ED600E72DAF /* CoreData.framework */; };
 		C2D62FBA1498C7A9000F534B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACDFA14983F7C003EE04B /* AudioToolbox.framework */; };
 		C2D62FBB1498C7B6000F534B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EBD14989D4C000F534B /* QuartzCore.framework */; };
-		C2D62FD11498C93C000F534B /* NKWireEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D62FCE1498C93C000F534B /* NKWireEditorViewController.xib */; };
-		C2D62FD31498C93C000F534B /* NKWireEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D62FCE1498C93C000F534B /* NKWireEditorViewController.xib */; };
-		C2D62FD41498C93C000F534B /* NKNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D62FCF1498C93C000F534B /* NKNodeView.xib */; };
-		C2D62FD61498C93C000F534B /* NKNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D62FCF1498C93C000F534B /* NKNodeView.xib */; };
-		C2D62FD71498C93C000F534B /* NKOutNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D62FD01498C93C000F534B /* NKOutNodeView.xib */; };
-		C2D62FD91498C93C000F534B /* NKOutNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D62FD01498C93C000F534B /* NKOutNodeView.xib */; };
 		C2D630131498CCF6000F534B /* SCBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E5F1498623F000F534B /* SCBuffer.m */; };
 		C2D630141498CCF6000F534B /* SCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E611498623F000F534B /* SCBundle.m */; };
 		C2D630151498CCF6000F534B /* SCBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E631498623F000F534B /* SCBus.m */; };
@@ -287,6 +286,20 @@
 			remoteGlobalIDString = C2FFA915140372D800DCBDD4;
 			remoteInfo = NodeCanvasKit;
 		};
+		C2A9F1AC150079DC000ECC90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 77AA93910EB3685300DC0BCB;
+			remoteInfo = libscsynth;
+		};
+		C2A9F1AE150079DF000ECC90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F9C1498C751000F534B /* NodeCanvasKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C2FFA915140372D800DCBDD4;
+			remoteInfo = NodeCanvasKit;
+		};
 		C2D62ED41498A84A000F534B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C24EE6D7148C3ED600E72DAF /* Project object */;
@@ -363,6 +376,9 @@
 		C24EE70D148C3ED700E72DAF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSTestSketches.h; path = ../RoutableSynthTests/RSTestSketches.h; sourceTree = "<group>"; };
 		C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSTestSketches.m; path = ../RoutableSynthTests/RSTestSketches.m; sourceTree = "<group>"; };
+		C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKWireEditorViewController.xib; sourceTree = "<group>"; };
+		C2A9F1A415007909000ECC90 /* NKNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKNodeView.xib; sourceTree = "<group>"; };
+		C2A9F1A515007909000ECC90 /* NKOutNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKOutNodeView.xib; sourceTree = "<group>"; };
 		C2B3ACAF1498D32A00ED3B2B /* SCRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRenderer.h; sourceTree = "<group>"; };
 		C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRenderer.m; sourceTree = "<group>"; };
 		C2C513E214AA550700F089C2 /* NSDictionary+OSCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+OSCAdditions.h"; sourceTree = "<group>"; };
@@ -464,9 +480,6 @@
 		C2D62F2E1498BA4E000F534B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iPhone_Synth.xcodeproj; path = ../ThirdParty/SuperCollider/platform/iphone/iPhone_Synth.xcodeproj; sourceTree = "<group>"; };
 		C2D62F9C1498C751000F534B /* NodeCanvasKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NodeCanvasKit.xcodeproj; path = ../ThirdParty/NodeCanvasKit/NodeCanvasKit.xcodeproj; sourceTree = "<group>"; };
-		C2D62FCE1498C93C000F534B /* NKWireEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKWireEditorViewController.xib; sourceTree = "<group>"; };
-		C2D62FCF1498C93C000F534B /* NKNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKNodeView.xib; sourceTree = "<group>"; };
-		C2D62FD01498C93C000F534B /* NKOutNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKOutNodeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +487,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A9F1B1150079EF000ECC90 /* libNodeCanvasKit.a in Frameworks */,
+				C2A9F1B0150079E6000ECC90 /* libscsynth.a in Frameworks */,
 				C2339B0F14C3EEE2002E4251 /* AVFoundation.framework in Frameworks */,
 				C24EE6E5148C3ED600E72DAF /* UIKit.framework in Frameworks */,
 				C24EE6E7148C3ED600E72DAF /* Foundation.framework in Frameworks */,
@@ -674,6 +689,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C2A9F1A215007909000ECC90 /* NodeCanvasKit Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */,
+				C2A9F1A415007909000ECC90 /* NKNodeView.xib */,
+				C2A9F1A515007909000ECC90 /* NKOutNodeView.xib */,
+			);
+			name = "NodeCanvasKit Bundle";
+			path = ../ThirdParty/NodeCanvasKit;
+			sourceTree = "<group>";
+		};
 		C2CAFD9914FE04E700D1DF3B /* PulsarEditorApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -856,8 +882,8 @@
 		C2D62EFA1498B8EE000F534B /* Pulsar Bundle */ = {
 			isa = PBXGroup;
 			children = (
+				C2A9F1A215007909000ECC90 /* NodeCanvasKit Bundle */,
 				C24EE6FE148C3ED600E72DAF /* RoutableSynth.xcdatamodeld */,
-				C2D62FCD1498C93C000F534B /* NodeCanvasKit Bundle */,
 				C2D62E9C149862E5000F534B /* synthdefs */,
 				C2D62E9F1498631E000F534B /* RoutableSynthMetadata.json */,
 				C2D62E2C1498611B000F534B /* RSGraphEditorViewController.xib */,
@@ -867,17 +893,6 @@
 				C2D62E3A1498611B000F534B /* RSUGenListViewController.xib */,
 			);
 			name = "Pulsar Bundle";
-			sourceTree = "<group>";
-		};
-		C2D62FCD1498C93C000F534B /* NodeCanvasKit Bundle */ = {
-			isa = PBXGroup;
-			children = (
-				C2D62FCE1498C93C000F534B /* NKWireEditorViewController.xib */,
-				C2D62FCF1498C93C000F534B /* NKNodeView.xib */,
-				C2D62FD01498C93C000F534B /* NKOutNodeView.xib */,
-			);
-			name = "NodeCanvasKit Bundle";
-			path = ../NodeCanvasKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -908,6 +923,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				C2A9F1AF150079DF000ECC90 /* PBXTargetDependency */,
+				C2A9F1AD150079DC000ECC90 /* PBXTargetDependency */,
 			);
 			name = PulsarEditorApp;
 			productName = RoutableSynth;
@@ -1037,9 +1054,9 @@
 				C2D62E9D149862E5000F534B /* synthdefs in Resources */,
 				C2D62EA01498631E000F534B /* RoutableSynthMetadata.json in Resources */,
 				C2D62F2F1498BA4F000F534B /* README.txt in Resources */,
-				C2D62FD11498C93C000F534B /* NKWireEditorViewController.xib in Resources */,
-				C2D62FD41498C93C000F534B /* NKNodeView.xib in Resources */,
-				C2D62FD71498C93C000F534B /* NKOutNodeView.xib in Resources */,
+				C2A9F1A615007909000ECC90 /* NKWireEditorViewController.xib in Resources */,
+				C2A9F1A815007909000ECC90 /* NKNodeView.xib in Resources */,
+				C2A9F1AA15007909000ECC90 /* NKOutNodeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1049,9 +1066,6 @@
 			files = (
 				C2D62EDC1498A84B000F534B /* InfoPlist.strings in Resources */,
 				C2D62F311498BA4F000F534B /* README.txt in Resources */,
-				C2D62FD31498C93C000F534B /* NKWireEditorViewController.xib in Resources */,
-				C2D62FD61498C93C000F534B /* NKNodeView.xib in Resources */,
-				C2D62FD91498C93C000F534B /* NKOutNodeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1298,6 +1312,16 @@
 			name = NodeCanvasKit;
 			targetProxy = C2A9F19E150078C5000ECC90 /* PBXContainerItemProxy */;
 		};
+		C2A9F1AD150079DC000ECC90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libscsynth;
+			targetProxy = C2A9F1AC150079DC000ECC90 /* PBXContainerItemProxy */;
+		};
+		C2A9F1AF150079DF000ECC90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NodeCanvasKit;
+			targetProxy = C2A9F1AE150079DF000ECC90 /* PBXContainerItemProxy */;
+		};
 		C2D62ED51498A84A000F534B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C2D62EC21498A849000F534B /* Pulsar */;
@@ -1364,11 +1388,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../SuperCollider/include/common,
-					"../NodeCanvasKit/**",
-					../SuperCollider/include/plugin_interface,
-					../SuperCollider/include/server,
-					../SuperCollider/external_libraries/libsndfile,
+					../ThirdParty/SuperCollider/include/common,
+					"../ThirdParty/NodeCanvasKit/**",
+					../ThirdParty/SuperCollider/include/plugin_interface,
+					../ThirdParty/SuperCollider/include/server,
+					../ThirdParty/SuperCollider/external_libraries/libsndfile,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
@@ -1396,11 +1420,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					../SuperCollider/include/common,
-					"../NodeCanvasKit/**",
-					../SuperCollider/include/plugin_interface,
-					../SuperCollider/include/server,
-					../SuperCollider/external_libraries/libsndfile,
+					../ThirdParty/SuperCollider/include/common,
+					"../ThirdParty/NodeCanvasKit/**",
+					../ThirdParty/SuperCollider/include/plugin_interface,
+					../ThirdParty/SuperCollider/include/server,
+					../ThirdParty/SuperCollider/external_libraries/libsndfile,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
