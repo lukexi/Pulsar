@@ -253,7 +253,7 @@ int vpost(const char *fmt, va_list ap)
         
         options = kDefaultWorldOptions;
         options.mBufLength = 256;
-        // It's critical to increase these for RoutableSynth's operation, since it uses many audio & control buses for interconnection
+        // It's critical to increase these for Pulsar's operation, since it uses many audio & control buses for interconnection
         options.mNumAudioBusChannels = 4096;
         options.mNumControlBusChannels = 4096;
         options.mMaxNodes = 16384;

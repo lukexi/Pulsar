@@ -1,5 +1,5 @@
 //
-//  SCRoutableSynthEditorViewController.m
+//  SCPulsarEditorViewController.m
 //  Artikulator
 //
 //  Created by Luke Iannini on 8/30/11.
@@ -55,7 +55,7 @@
     [currentGraph free];
 }
 
-+ (id)routableSynthEditorViewControllerWithDelegate:(id <RSGraphEditorViewControllerDelegate>)delegate
++ (id)PulsarEditorViewControllerWithDelegate:(id <RSGraphEditorViewControllerDelegate>)delegate
 {
     RSGraphEditorViewController *editor = [[self alloc] initWithNibName:nil bundle:nil];
     editor.delegate = delegate;
@@ -221,7 +221,7 @@
 - (IBAction)doneAction:(id)sender 
 {
     [self save];
-    [self.delegate routableSynthEditorDidFinish:self];
+    [self.delegate PulsarEditorDidFinish:self];
 }
 
 - (void)save
@@ -272,7 +272,7 @@ connectedOutletNamed:(NSString *)outletName
       toInletNamed:(NSString *)inletName 
       ofNodeWithID:(NSString *)inletParentNodeID
 {
-    // RoutableSynth doesn't support multiple outlets yet, so we don't use the "outletName" param yet
+    // Pulsar doesn't support multiple outlets yet, so we don't use the "outletName" param yet
     RSNode *sourceSynth = [self.currentGraph nodeWithID:outletParentNodeID];
     RSNode *destinationSynth = [self.currentGraph nodeWithID:inletParentNodeID];
     RSInput *input = [destinationSynth controlNamed:inletName];

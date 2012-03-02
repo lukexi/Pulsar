@@ -1,6 +1,6 @@
 //
-//  RoutableSynthKit.m
-//  RoutableSynthKit
+//  Pulsar.m
+//  Pulsar
 //
 //  Created by Luke Iannini on 12/14/11.
 //  Copyright (c) 2011 Eeoo. All rights reserved.
@@ -26,12 +26,12 @@
 
 + (Pulsar *)sharedPulsar
 {
-    static Pulsar *sharedRoutableSynthKit;
-    if (!sharedRoutableSynthKit) 
+    static Pulsar *sharedPulsar;
+    if (!sharedPulsar) 
     {
-        sharedRoutableSynthKit = [[self alloc] init];
+        sharedPulsar = [[self alloc] init];
     }
-    return sharedRoutableSynthKit;
+    return sharedPulsar;
 }
 
 - (RSGraph *)graph
@@ -49,7 +49,7 @@
     NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
     if (!results) 
     {
-        NSLog(@"Error fetching graph %@ in RoutableSynthKit: %@", name, error);
+        NSLog(@"Error fetching graph %@ in Pulsar: %@", name, error);
     }
     RSGraph *graph = [results count] ? [results objectAtIndex:0] : nil;
     if (!graph) 
@@ -110,7 +110,7 @@
     {
         return managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"RoutableSynth" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Pulsar" withExtension:@"momd"];
     managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return managedObjectModel;
 }
@@ -126,7 +126,7 @@
         return persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"RoutableSynth.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Pulsar.sqlite"];
     
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, 
@@ -149,7 +149,7 @@
                                                             options:options 
                                                               error:&error])
         {
-            NSLog(@"Unresolved error setting up RoutableSynthKit PersistentStoreCoordinator %@, %@", 
+            NSLog(@"Unresolved error setting up Pulsar PersistentStoreCoordinator %@, %@", 
                   error, [error userInfo]);
             abort();
         }

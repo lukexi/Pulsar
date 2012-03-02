@@ -44,7 +44,7 @@
 		C24EE6F7148C3ED600E72DAF /* RSAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C24EE6F6148C3ED600E72DAF /* RSAppDelegate.mm */; };
 		C24EE6FA148C3ED600E72DAF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24EE6F8148C3ED600E72DAF /* MainStoryboard_iPhone.storyboard */; };
 		C24EE6FD148C3ED600E72DAF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24EE6FB148C3ED600E72DAF /* MainStoryboard_iPad.storyboard */; };
-		C24EE700148C3ED600E72DAF /* RoutableSynth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C24EE6FE148C3ED600E72DAF /* RoutableSynth.xcdatamodeld */; };
+		C24EE700148C3ED600E72DAF /* Pulsar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C24EE6FE148C3ED600E72DAF /* Pulsar.xcdatamodeld */; };
 		C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */ = {isa = PBXBuildFile; fileRef = C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */; };
 		C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
@@ -107,7 +107,7 @@
 		C2D62E981498623F000F534B /* SCSoundFileLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E771498623F000F534B /* SCSoundFileLibrary.m */; };
 		C2D62E9A1498623F000F534B /* SCSynth.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E791498623F000F534B /* SCSynth.m */; };
 		C2D62E9D149862E5000F534B /* synthdefs in Resources */ = {isa = PBXBuildFile; fileRef = C2D62E9C149862E5000F534B /* synthdefs */; };
-		C2D62EA01498631E000F534B /* RoutableSynthMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = C2D62E9F1498631E000F534B /* RoutableSynthMetadata.json */; };
+		C2D62EA01498631E000F534B /* PulsarMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = C2D62E9F1498631E000F534B /* PulsarMetadata.json */; };
 		C2D62EBE14989D4C000F534B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EBD14989D4C000F534B /* QuartzCore.framework */; };
 		C2D62EC41498A84A000F534B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
 		C2D62ECA1498A84A000F534B /* Pulsar.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62EC91498A84A000F534B /* Pulsar.m */; };
@@ -305,7 +305,7 @@
 			containerPortal = C24EE6D7148C3ED600E72DAF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C2D62EC21498A849000F534B;
-			remoteInfo = RoutableSynthKit;
+			remoteInfo = Pulsar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -372,7 +372,7 @@
 		C24EE6F6148C3ED600E72DAF /* RSAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RSAppDelegate.mm; sourceTree = "<group>"; };
 		C24EE6F9148C3ED600E72DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C24EE6FC148C3ED600E72DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		C24EE6FF148C3ED600E72DAF /* RoutableSynth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RoutableSynth.xcdatamodel; sourceTree = "<group>"; };
+		C24EE6FF148C3ED600E72DAF /* Pulsar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pulsar.xcdatamodel; sourceTree = "<group>"; };
 		C24EE70D148C3ED700E72DAF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTestSketches.h; sourceTree = "<group>"; };
 		C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTestSketches.m; sourceTree = "<group>"; };
@@ -415,20 +415,20 @@
 		C2D62E08149860FC000F534B /* RSWire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWire.m; sourceTree = "<group>"; };
 		C2D62E2A1498611B000F534B /* RSGraphEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphEditorViewController.h; sourceTree = "<group>"; };
 		C2D62E2B1498611B000F534B /* RSGraphEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraphEditorViewController.m; sourceTree = "<group>"; };
-		C2D62E2C1498611B000F534B /* RSGraphEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSGraphEditorViewController.xib; path = RoutableSynth/UI/RSGraphEditorViewController.xib; sourceTree = "<group>"; };
+		C2D62E2C1498611B000F534B /* RSGraphEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSGraphEditorViewController.xib; path = Pulsar/UI/RSGraphEditorViewController.xib; sourceTree = "<group>"; };
 		C2D62E2D1498611B000F534B /* RSGraphListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphListViewController.h; sourceTree = "<group>"; };
 		C2D62E2E1498611B000F534B /* RSGraphListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraphListViewController.m; sourceTree = "<group>"; };
-		C2D62E2F1498611B000F534B /* RSGraphListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSGraphListViewController.xib; path = RoutableSynth/UI/RSGraphListViewController.xib; sourceTree = "<group>"; };
+		C2D62E2F1498611B000F534B /* RSGraphListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSGraphListViewController.xib; path = Pulsar/UI/RSGraphListViewController.xib; sourceTree = "<group>"; };
 		C2D62E301498611B000F534B /* RSGraphNoteEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGraphNoteEditorViewController.h; sourceTree = "<group>"; };
 		C2D62E311498611B000F534B /* RSGraphNoteEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGraphNoteEditorViewController.m; sourceTree = "<group>"; };
-		C2D62E321498611B000F534B /* RSGraphNoteEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSGraphNoteEditorViewController.xib; path = RoutableSynth/UI/RSGraphNoteEditorViewController.xib; sourceTree = "<group>"; };
+		C2D62E321498611B000F534B /* RSGraphNoteEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSGraphNoteEditorViewController.xib; path = Pulsar/UI/RSGraphNoteEditorViewController.xib; sourceTree = "<group>"; };
 		C2D62E351498611B000F534B /* RSNodeControlInlet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNodeControlInlet.h; sourceTree = "<group>"; };
 		C2D62E361498611B000F534B /* RSNodeControlInlet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNodeControlInlet.m; sourceTree = "<group>"; };
-		C2D62E371498611B000F534B /* RSNodeControlInlet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSNodeControlInlet.xib; path = RoutableSynth/UI/RSNodeControlInlet.xib; sourceTree = "<group>"; };
+		C2D62E371498611B000F534B /* RSNodeControlInlet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSNodeControlInlet.xib; path = Pulsar/UI/RSNodeControlInlet.xib; sourceTree = "<group>"; };
 		C2D62E381498611B000F534B /* RSUGenListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUGenListViewController.h; sourceTree = "<group>"; };
 		C2D62E391498611B000F534B /* RSUGenListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUGenListViewController.m; sourceTree = "<group>"; };
-		C2D62E3A1498611B000F534B /* RSUGenListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSUGenListViewController.xib; path = RoutableSynth/UI/RSUGenListViewController.xib; sourceTree = "<group>"; };
-		C2D62E5314986129000F534B /* RSServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSServerObject.h; path = RoutableSynth/RSServerObject.h; sourceTree = SOURCE_ROOT; };
+		C2D62E3A1498611B000F534B /* RSUGenListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RSUGenListViewController.xib; path = Pulsar/UI/RSUGenListViewController.xib; sourceTree = "<group>"; };
+		C2D62E5314986129000F534B /* RSServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSServerObject.h; path = Pulsar/RSServerObject.h; sourceTree = SOURCE_ROOT; };
 		C2D62E551498623F000F534B /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		C2D62E561498623F000F534B /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		C2D62E571498623F000F534B /* NSArray+SCSynthAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SCSynthAdditions.h"; sourceTree = "<group>"; };
@@ -458,20 +458,20 @@
 		C2D62E701498623F000F534B /* SCOSCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCOSCManager.m; sourceTree = "<group>"; };
 		C2D62E711498623F000F534B /* SCOSCOutPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOSCOutPort.h; sourceTree = "<group>"; };
 		C2D62E721498623F000F534B /* SCOSCOutPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCOSCOutPort.m; sourceTree = "<group>"; };
-		C2D62E731498623F000F534B /* SCRoutableSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRoutableSynth.h; sourceTree = "<group>"; };
+		C2D62E731498623F000F534B /* SCPulsar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPulsar.h; sourceTree = "<group>"; };
 		C2D62E741498623F000F534B /* SCServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCServer.h; sourceTree = "<group>"; };
 		C2D62E751498623F000F534B /* SCServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SCServer.mm; sourceTree = "<group>"; };
 		C2D62E761498623F000F534B /* SCSoundFileLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSoundFileLibrary.h; sourceTree = "<group>"; };
 		C2D62E771498623F000F534B /* SCSoundFileLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSoundFileLibrary.m; sourceTree = "<group>"; };
 		C2D62E781498623F000F534B /* SCSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSynth.h; sourceTree = "<group>"; };
 		C2D62E791498623F000F534B /* SCSynth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSynth.m; sourceTree = "<group>"; };
-		C2D62E9C149862E5000F534B /* synthdefs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = synthdefs; path = RoutableSynth/synthdefs; sourceTree = "<group>"; };
-		C2D62E9F1498631E000F534B /* RoutableSynthMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RoutableSynthMetadata.json; path = RoutableSynth/RoutableSynthMetadata.json; sourceTree = "<group>"; };
+		C2D62E9C149862E5000F534B /* synthdefs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = synthdefs; path = Pulsar/synthdefs; sourceTree = "<group>"; };
+		C2D62E9F1498631E000F534B /* PulsarMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PulsarMetadata.json; path = Pulsar/PulsarMetadata.json; sourceTree = "<group>"; };
 		C2D62EBD14989D4C000F534B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C2D62EC31498A849000F534B /* libPulsarKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPulsarKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2D62EC71498A84A000F534B /* PulsarKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PulsarKit-Prefix.pch"; path = "../RoutableSynth/PulsarKit-Prefix.pch"; sourceTree = "<group>"; };
-		C2D62EC81498A84A000F534B /* Pulsar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Pulsar.h; path = ../RoutableSynth/Pulsar.h; sourceTree = "<group>"; };
-		C2D62EC91498A84A000F534B /* Pulsar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Pulsar.m; path = ../RoutableSynth/Pulsar.m; sourceTree = "<group>"; };
+		C2D62EC71498A84A000F534B /* PulsarKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PulsarKit-Prefix.pch"; path = "../Pulsar/PulsarKit-Prefix.pch"; sourceTree = "<group>"; };
+		C2D62EC81498A84A000F534B /* Pulsar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Pulsar.h; path = ../Pulsar/Pulsar.h; sourceTree = "<group>"; };
+		C2D62EC91498A84A000F534B /* Pulsar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Pulsar.m; path = ../Pulsar/Pulsar.m; sourceTree = "<group>"; };
 		C2D62ED01498A84A000F534B /* PulsarKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsarKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D62ED91498A84B000F534B /* PulsarKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PulsarKitTests-Info.plist"; sourceTree = "<group>"; };
 		C2D62EDB1498A84B000F534B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -657,7 +657,7 @@
 				C2D62DF8149860FC000F534B /* Model */,
 			);
 			name = Classes;
-			path = RoutableSynth;
+			path = Pulsar;
 			sourceTree = "<group>";
 		};
 		C24EE6ED148C3ED600E72DAF /* Supporting Files */ = {
@@ -710,7 +710,7 @@
 				C24EE6ED148C3ED600E72DAF /* Supporting Files */,
 			);
 			name = PulsarEditorApp;
-			path = RoutableSynth;
+			path = Pulsar;
 			sourceTree = "<group>";
 		};
 		C2D62DE9149860FC000F534B /* Generated */ = {
@@ -822,7 +822,7 @@
 				C2D62E701498623F000F534B /* SCOSCManager.m */,
 				C2D62E711498623F000F534B /* SCOSCOutPort.h */,
 				C2D62E721498623F000F534B /* SCOSCOutPort.m */,
-				C2D62E731498623F000F534B /* SCRoutableSynth.h */,
+				C2D62E731498623F000F534B /* SCPulsar.h */,
 				C2B3ACAF1498D32A00ED3B2B /* SCRenderer.h */,
 				C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */,
 				C2D62E741498623F000F534B /* SCServer.h */,
@@ -835,7 +835,7 @@
 				C2339B0414C3EDE7002E4251 /* SCWaveformView.m */,
 			);
 			name = SCKit;
-			path = RoutableSynth/SCKit;
+			path = Pulsar/SCKit;
 			sourceTree = "<group>";
 		};
 		C2D62EC51498A84A000F534B /* Pulsar */ = {
@@ -845,8 +845,7 @@
 				C2D62EC91498A84A000F534B /* Pulsar.m */,
 				C2D62EC61498A84A000F534B /* Supporting Files */,
 			);
-			name = Pulsar;
-			path = RoutableSynthKit;
+			path = Pulsar;
 			sourceTree = "<group>";
 		};
 		C2D62EC61498A84A000F534B /* Supporting Files */ = {
@@ -866,8 +865,7 @@
 				C2D62EDE1498A84B000F534B /* PulsarTests.m */,
 				C2D62ED81498A84B000F534B /* Supporting Files */,
 			);
-			name = PulsarTests;
-			path = RoutableSynthKitTests;
+			path = PulsarTests;
 			sourceTree = "<group>";
 		};
 		C2D62ED81498A84B000F534B /* Supporting Files */ = {
@@ -883,9 +881,9 @@
 			isa = PBXGroup;
 			children = (
 				C2A9F1A215007909000ECC90 /* NodeCanvasKit Bundle */,
-				C24EE6FE148C3ED600E72DAF /* RoutableSynth.xcdatamodeld */,
+				C24EE6FE148C3ED600E72DAF /* Pulsar.xcdatamodeld */,
 				C2D62E9C149862E5000F534B /* synthdefs */,
-				C2D62E9F1498631E000F534B /* RoutableSynthMetadata.json */,
+				C2D62E9F1498631E000F534B /* PulsarMetadata.json */,
 				C2D62E2C1498611B000F534B /* RSGraphEditorViewController.xib */,
 				C2D62E2F1498611B000F534B /* RSGraphListViewController.xib */,
 				C2D62E321498611B000F534B /* RSGraphNoteEditorViewController.xib */,
@@ -927,7 +925,7 @@
 				C2A9F1AD150079DC000ECC90 /* PBXTargetDependency */,
 			);
 			name = PulsarEditorApp;
-			productName = RoutableSynth;
+			productName = Pulsar;
 			productReference = C24EE6E0148C3ED600E72DAF /* Pulsar.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -946,7 +944,7 @@
 				C2A9F19D150078C2000ECC90 /* PBXTargetDependency */,
 			);
 			name = Pulsar;
-			productName = RoutableSynthKit;
+			productName = Pulsar;
 			productReference = C2D62EC31498A849000F534B /* libPulsarKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -965,7 +963,7 @@
 				C2D62ED51498A84A000F534B /* PBXTargetDependency */,
 			);
 			name = PulsarKitTests;
-			productName = RoutableSynthKitTests;
+			productName = PulsarTests;
 			productReference = C2D62ED01498A84A000F534B /* PulsarKitTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -1052,7 +1050,7 @@
 				C2D62E4D1498611B000F534B /* RSNodeControlInlet.xib in Resources */,
 				C2D62E511498611B000F534B /* RSUGenListViewController.xib in Resources */,
 				C2D62E9D149862E5000F534B /* synthdefs in Resources */,
-				C2D62EA01498631E000F534B /* RoutableSynthMetadata.json in Resources */,
+				C2D62EA01498631E000F534B /* PulsarMetadata.json in Resources */,
 				C2D62F2F1498BA4F000F534B /* README.txt in Resources */,
 				C2A9F1A615007909000ECC90 /* NKWireEditorViewController.xib in Resources */,
 				C2A9F1A815007909000ECC90 /* NKNodeView.xib in Resources */,
@@ -1094,7 +1092,7 @@
 			files = (
 				C24EE6F3148C3ED600E72DAF /* main.m in Sources */,
 				C24EE6F7148C3ED600E72DAF /* RSAppDelegate.mm in Sources */,
-				C24EE700148C3ED600E72DAF /* RoutableSynth.xcdatamodeld in Sources */,
+				C24EE700148C3ED600E72DAF /* Pulsar.xcdatamodeld in Sources */,
 				C22ACDA214983B8F003EE04B /* MutLockArray.m in Sources */,
 				C22ACDA414983B8F003EE04B /* MutLockDict.m in Sources */,
 				C22ACDA614983B8F003EE04B /* MutNRLockArray.m in Sources */,
@@ -1439,8 +1437,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RoutableSynth/Pulsar-Prefix.pch";
-				INFOPLIST_FILE = "RoutableSynth/Pulsar-Info.plist";
+				GCC_PREFIX_HEADER = "Pulsar/Pulsar-Prefix.pch";
+				INFOPLIST_FILE = "Pulsar/Pulsar-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ThirdParty/NodeCanvasKit/build/Release-iphoneos\"",
@@ -1454,8 +1452,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RoutableSynth/Pulsar-Prefix.pch";
-				INFOPLIST_FILE = "RoutableSynth/Pulsar-Info.plist";
+				GCC_PREFIX_HEADER = "Pulsar/Pulsar-Prefix.pch";
+				INFOPLIST_FILE = "Pulsar/Pulsar-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../ThirdParty/NodeCanvasKit/build/Release-iphoneos\"",
@@ -1468,9 +1466,9 @@
 		C2D62EE11498A84B000F534B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/RoutableSynthKit.dst;
+				DSTROOT = /tmp/Pulsar.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RoutableSynthKit/PulsarKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Pulsar/PulsarKit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1484,9 +1482,9 @@
 		C2D62EE21498A84B000F534B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/RoutableSynthKit.dst;
+				DSTROOT = /tmp/Pulsar.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RoutableSynthKit/PulsarKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Pulsar/PulsarKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = PulsarKit;
 				SKIP_INSTALL = YES;
@@ -1501,12 +1499,12 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RoutableSynthKit/RoutableSynthKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Pulsar/Pulsar-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "RoutableSynthKitTests/PulsarKitTests-Info.plist";
+				INFOPLIST_FILE = "PulsarTests/PulsarKitTests-Info.plist";
 				PRODUCT_NAME = PulsarKitTests;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1520,8 +1518,8 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RoutableSynthKit/RoutableSynthKit-Prefix.pch";
-				INFOPLIST_FILE = "RoutableSynthKitTests/PulsarKitTests-Info.plist";
+				GCC_PREFIX_HEADER = "Pulsar/Pulsar-Prefix.pch";
+				INFOPLIST_FILE = "PulsarTests/PulsarKitTests-Info.plist";
 				PRODUCT_NAME = PulsarKitTests;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1569,14 +1567,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C24EE6FE148C3ED600E72DAF /* RoutableSynth.xcdatamodeld */ = {
+		C24EE6FE148C3ED600E72DAF /* Pulsar.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C24EE6FF148C3ED600E72DAF /* RoutableSynth.xcdatamodel */,
+				C24EE6FF148C3ED600E72DAF /* Pulsar.xcdatamodel */,
 			);
-			currentVersion = C24EE6FF148C3ED600E72DAF /* RoutableSynth.xcdatamodel */;
-			name = RoutableSynth.xcdatamodeld;
-			path = RoutableSynth/RoutableSynth.xcdatamodeld;
+			currentVersion = C24EE6FF148C3ED600E72DAF /* Pulsar.xcdatamodel */;
+			name = Pulsar.xcdatamodeld;
+			path = Pulsar/Pulsar.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

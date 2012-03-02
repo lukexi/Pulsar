@@ -1,6 +1,6 @@
 //
-//  RoutableSynthKitTests.m
-//  RoutableSynthKitTests
+//  PulsarTests.m
+//  PulsarTests
 //
 //  Created by Luke Iannini on 12/14/11.
 //  Copyright (c) 2011 Eeoo. All rights reserved.
@@ -38,7 +38,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in RoutableSynthKitTests");
+    STFail(@"Unit tests are not implemented yet in PulsarTests");
 }
 
 @end

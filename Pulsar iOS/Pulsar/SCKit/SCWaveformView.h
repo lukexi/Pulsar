@@ -1,6 +1,6 @@
 //
 //  SCWaveformView.h
-//  RoutableSynth
+//  Pulsar
 //
 //  Created by Luke Iannini on 1/15/12.
 //  Copyright (c) 2012 Eeoo. All rights reserved.

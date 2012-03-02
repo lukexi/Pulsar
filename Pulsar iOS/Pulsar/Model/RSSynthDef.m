@@ -42,13 +42,13 @@
 
 + (void)updateDefsInContext:(NSManagedObjectContext *)context
 {
-    NSURL *path = [[NSBundle mainBundle] URLForResource:@"RoutableSynthMetadata" withExtension:@"json"];
+    NSURL *path = [[NSBundle mainBundle] URLForResource:@"PulsarMetadata" withExtension:@"json"];
     NSData *data = [NSData dataWithContentsOfURL:path];
     NSError *error;
     NSArray *metadata = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     if (!metadata)
     {
-        NSLog(@"Error loading RoutableSynthMetadata.json! %@", error);
+        NSLog(@"Error loading PulsarMetadata.json! %@", error);
         return;
     }
     

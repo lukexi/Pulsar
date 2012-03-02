@@ -1,5 +1,5 @@
 //
-//  SCRoutableSynthUGenListViewController.h
+//  SCPulsarUGenListViewController.h
 //  Artikulator
 //
 //  Created by Luke Iannini on 8/31/11.

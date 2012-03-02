@@ -1,6 +1,6 @@
 //
 //  TestSketches.m
-//  RoutableSynth
+//  Pulsar
 //
 //  Created by Luke Iannini on 1/4/12.
 //  Copyright (c) 2012 Eeoo. All rights reserved.
@@ -28,7 +28,7 @@
      }];
      
      [SCBundle bundleMessages:^{
-     RSGraph *graph = [SCRoutableSynthGraph graphWithName:nil];
+     RSGraph *graph = [SCPulsarGraph graphWithName:nil];
      [graph applyTestSnapshot];
      }];
      */

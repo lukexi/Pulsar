@@ -1,5 +1,5 @@
 //
-//  SCRoutableSynthEditorViewController.h
+//  SCPulsarEditorViewController.h
 //  Artikulator
 //
 //  Created by Luke Iannini on 8/30/11.
@@ -11,13 +11,13 @@
 @class RSGraphEditorViewController, RSGraph, NKNodeCanvasView;
 @protocol RSGraphEditorViewControllerDelegate <NSObject>
 
-- (void)routableSynthEditorDidFinish:(RSGraphEditorViewController *)aRoutableSynthEditor;
+- (void)PulsarEditorDidFinish:(RSGraphEditorViewController *)aPulsarEditor;
 
 @end
 
 @interface RSGraphEditorViewController : UIViewController <RSGraphListViewControllerDelegate>
 
-+ (id)routableSynthEditorViewControllerWithDelegate:(id <RSGraphEditorViewControllerDelegate>)delegate;
++ (id)PulsarEditorViewControllerWithDelegate:(id <RSGraphEditorViewControllerDelegate>)delegate;
 
 @property (nonatomic, weak) id <RSGraphEditorViewControllerDelegate> delegate;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;

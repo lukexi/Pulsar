@@ -1,5 +1,5 @@
 //
-//  SCRoutableSynthPresetParser.m
+//  SCPulsarPresetParser.m
 //  Artikulator
 //
 //  Created by Luke Iannini on 8/22/11.
@@ -12,20 +12,20 @@
 
 + (BOOL)handleConnectionKey:(NSString *)routingKey 
                       atAmp:(NSNumber *)amp 
-                  withBlock:(SCRoutableSynthPresetParserConnectedSynthBlock)connectionBlock;
+                  withBlock:(SCPulsarPresetParserConnectedSynthBlock)connectionBlock;
 
 + (void)handleSettingKey:(NSString *)routingKey 
                    atAmp:(NSNumber *)amp 
-               withBlock:(SCRoutableSynthPresetParserSetSynthControlBlock)setSynthControlBlock;
+               withBlock:(SCPulsarPresetParserSetSynthControlBlock)setSynthControlBlock;
 
 @end
 
 @implementation RSPresetParser
 
 + (void)parsePreset:(NSDictionary *)snapshot
-       createdSynth:(SCRoutableSynthPresetParserCreatedSynthBlock)creationBlock
-     connectedSynth:(SCRoutableSynthPresetParserConnectedSynthBlock)connectionBlock
-    setSynthControl:(SCRoutableSynthPresetParserSetSynthControlBlock)setSynthControlBlock
+       createdSynth:(SCPulsarPresetParserCreatedSynthBlock)creationBlock
+     connectedSynth:(SCPulsarPresetParserConnectedSynthBlock)connectionBlock
+    setSynthControl:(SCPulsarPresetParserSetSynthControlBlock)setSynthControlBlock
 {
     NSArray *synths = [snapshot objectForKey:@"synths"];
     NSDictionary *params = [snapshot objectForKey:@"params"];
@@ -62,7 +62,7 @@
 // Has form "FromSynthName=>ToSynthName" or "FromSynthName=>ToSynthName.controlName"
 + (BOOL)handleConnectionKey:(NSString *)routingKey 
                       atAmp:(NSNumber *)amp 
-                  withBlock:(SCRoutableSynthPresetParserConnectedSynthBlock)connectionBlock
+                  withBlock:(SCPulsarPresetParserConnectedSynthBlock)connectionBlock
 {
     NSArray *connectionItems = [routingKey componentsSeparatedByString:@"=>"];
     BOOL isConnection = [connectionItems count] == 2;
@@ -98,7 +98,7 @@
 // Has form "SynthName.controlName" or "SynthName.controlName.property"
 + (void)handleSettingKey:(NSString *)routingKey 
                    atAmp:(NSNumber *)amp 
-               withBlock:(SCRoutableSynthPresetParserSetSynthControlBlock)setSynthControlBlock
+               withBlock:(SCPulsarPresetParserSetSynthControlBlock)setSynthControlBlock
 {
     NSArray *components = [routingKey componentsSeparatedByString:@"."];
     if ([components count] <= 1) 

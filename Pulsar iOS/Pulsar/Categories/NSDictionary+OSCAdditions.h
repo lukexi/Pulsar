@@ -1,6 +1,6 @@
 //
 //  NSDictionary+OSCAdditions.h
-//  RoutableSynth
+//  Pulsar
 //
 //  Created by Luke Iannini on 12/27/11.
 //  Copyright (c) 2011 Eeoo. All rights reserved.
