@@ -72,6 +72,11 @@
                            inContext:context];
 }
 
+- (RSGraph *)graphCopy
+{
+    return [RSGraph graphFromGraph:self inContext:self.managedObjectContext];
+}
+
 - (void)awakeFromInsert
 {
     [super awakeFromInsert];

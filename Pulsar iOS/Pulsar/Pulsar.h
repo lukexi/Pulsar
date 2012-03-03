@@ -23,12 +23,14 @@
 #import "RSSynthDefControl.h"
 #import "RSWire.h"
 
+typedef void(^RSGraphCreationBlock)(RSGraph *emptyGraph);
+
 @interface Pulsar : NSObject
 
 + (Pulsar *)sharedPulsar;
 
 - (RSGraph *)graph;
-- (RSGraph *)graphNamed:(NSString *)name; // Returns a pre-existing graph with this name if one exists
+- (RSGraph *)graphNamed:(NSString *)name creation:(RSGraphCreationBlock)creationBlock; // Returns a pre-existing graph with this name if one exists
 - (RSSynthDef *)synthDefNamed:(NSString *)name;
 
 @end

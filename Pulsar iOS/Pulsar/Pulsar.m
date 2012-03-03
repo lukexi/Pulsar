@@ -41,7 +41,7 @@
                                          inManagedObjectContext:self.managedObjectContext];
 }
 
-- (RSGraph *)graphNamed:(NSString *)name
+- (RSGraph *)graphNamed:(NSString *)name creation:(RSGraphCreationBlock)creationBlock
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RSGraph"];
     [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", name]];
@@ -58,6 +58,7 @@
         graph = [NSEntityDescription insertNewObjectForEntityForName:@"RSGraph" 
                                               inManagedObjectContext:self.managedObjectContext];
         graph.name = name;
+        creationBlock(graph);
     }
     return graph;
 }

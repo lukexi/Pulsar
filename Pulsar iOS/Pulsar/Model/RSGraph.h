@@ -20,6 +20,8 @@
                 inContext:(NSManagedObjectContext *)context;
 + (id)graphFromGraph:(RSGraph *)graphToCopy
            inContext:(NSManagedObjectContext *)context;
+// For polyphony
+- (RSGraph *)graphCopy;
 
 // Querying
 - (NSString *)nodeIDForNewNodeWithSynthDef:(RSSynthDef *)synthDef;
