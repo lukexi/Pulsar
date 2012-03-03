@@ -3,7 +3,7 @@
 
 @interface RSSynthDef ()
 
-
++ (NSMutableDictionary *)synthDefCacheForContext:(NSManagedObjectContext *)context;
 
 @end
 
@@ -11,6 +11,12 @@
 
 + (RSSynthDef *)synthDefNamed:(NSString *)name inContext:(NSManagedObjectContext *)context
 {
+    RSSynthDef *cachedSynthDef = [[self synthDefCacheForContext:context] objectForKey:name];
+    if (cachedSynthDef) 
+    {
+        return cachedSynthDef;
+    }
+    
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     request.entity = [RSSynthDef entityInManagedObjectContext:context];
     request.predicate = [NSPredicate predicateWithFormat:@"name == %@", name];
@@ -21,12 +27,26 @@
         NSLog(@"Error fetching synthdef '%@' (synthdefs found: %i): %@", name, [defs count], error);
         return nil;
     }
-    return [defs objectAtIndex:0];
+    RSSynthDef *synthDef = [defs objectAtIndex:0];
+    [[self synthDefCacheForContext:context] setObject:synthDef forKey:name];
+    return synthDef;
 }
 
 - (SCSynthRate)outputRate
 {
     return self.outputRateIntegerValue;
+}
+
+static NSString *RSSynthDefCacheKey = @"RSSynthDefCacheKey";
++ (NSMutableDictionary *)synthDefCacheForContext:(NSManagedObjectContext *)context
+{
+    NSMutableDictionary *synthDefCache = [[context userInfo] objectForKey:RSSynthDefCacheKey];
+    if (!synthDefCache) 
+    {
+        synthDefCache = [NSMutableDictionary dictionary];
+        [[context userInfo] setObject:synthDefCache forKey:RSSynthDefCacheKey];
+    }
+    return synthDefCache;
 }
 
 @end
@@ -74,6 +94,8 @@
         synthDef.outputRateIntegerValue = [[metadatum objectForKey:@"outputRate"] isEqual:@"control"] ? SCSynthControlRate : SCSynthAudioRate;
         
         [synthDef updateControlsFromMetadatum:metadatum];
+        
+        [[self synthDefCacheForContext:context] setObject:synthDef forKey:defName];
     }
     
     for (RSSynthDef *notFoundSynthDef in remainingSynthDefs) 
@@ -88,6 +110,8 @@
         NSLog(@"Error saving synthDef update: %@", error);
     }
 }
+
+
 
 - (NSDictionary *)controlsByName
 {
