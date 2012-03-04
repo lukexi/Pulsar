@@ -28,7 +28,8 @@
 - (RSNode *)nodeWithID:(NSString *)nodeID;
 
 // Manipulation
-- (RSNode *)addNodeFromSynthDef:(RSSynthDef *)synthDef;
+- (RSNode *)addNodeWithID:(NSString *)nodeID fromSynthDefNamed:(NSString *)synthDefName;
+- (RSNode *)addNodeFromSynthDef:(RSSynthDef *)synthDef; // Automatic node ID (synth def name + number of nodes in the graph using that synthdef — e.g. "SinOsc-KR0")
 - (void)addNode:(RSNode *)synth;
 - (void)deleteNode:(RSNode *)node;
 

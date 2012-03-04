@@ -97,6 +97,14 @@
     self.spawnedOrderedNodes = [NSMutableArray array];
 }
 
+- (RSNode *)addNodeWithID:(NSString *)nodeID fromSynthDefNamed:(NSString *)synthDefName
+{
+    RSSynthDef *synthDef = [RSSynthDef synthDefNamed:synthDefName inContext:self.managedObjectContext];
+    RSNode *node = [RSNode nodeFromSynthDef:synthDef withID:nodeID];
+    [self addNode:node];
+    return node;
+}
+
 - (RSNode *)addNodeFromSynthDef:(RSSynthDef *)synthDef
 {
     NSString *nodeID = [self nodeIDForNewNodeWithSynthDef:synthDef];
