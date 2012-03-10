@@ -42,6 +42,7 @@
 - (void)nodeDidSpawn:(RSNode *)aNode;
 
 // Utility
+// Finds and deletes any nodes whose output wires all have an amplitude of 0
 - (void)trimInactiveNodesAndWires;
 
 @property (nonatomic, strong, readonly) NSDictionary *dictionaryRepresentation;
@@ -49,8 +50,10 @@
 // It's sometimes useful to use a graph with slightly different synthdefs
 // e.g. replacing a pitch-generating ugen that's usually a buffer with a constant-value generator
 // while editing the graph, and then putting it back when done
-- (NSDictionary *)dictionaryRepresentationWithSynthDefReplacements:(NSDictionary *)replacementSynthDefNamesByNodeID;
 - (void)replaceSynthDefsOfNodesByID:(NSDictionary *)replacementSynthDefNamesByNodeID;
+
+- (NSDictionary *)dictionaryRepresentationWithSynthDefReplacements:(NSDictionary *)replacementSynthDefNamesByNodeID;
+
 
 
 
