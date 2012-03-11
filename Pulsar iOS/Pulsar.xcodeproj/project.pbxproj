@@ -318,6 +318,13 @@
 			remoteGlobalIDString = C2D62EC21498A849000F534B;
 			remoteInfo = Pulsar;
 		};
+		D5FCEDF6150D10E400957ED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C260A2DF150CB84400B802A7;
+			remoteInfo = "libscsynth OS X";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1056,6 +1063,13 @@
 			fileType = archive.ar;
 			path = "libscsynth iOS.a";
 			remoteRef = C2A9F19A150078A1000ECC90 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5FCEDF7150D10E400957ED2 /* libscsynth OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libscsynth OS X.a";
+			remoteRef = D5FCEDF6150D10E400957ED2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
