@@ -50,11 +50,11 @@
 		C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F18F15007893000ECC90 /* libNodeCanvasKit.a */; };
-		C2A9F1A1150078D6000ECC90 /* libscsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth.a */; };
+		C2A9F1A1150078D6000ECC90 /* libscsynth iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */; };
 		C2A9F1A615007909000ECC90 /* NKWireEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */; };
 		C2A9F1A815007909000ECC90 /* NKNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A415007909000ECC90 /* NKNodeView.xib */; };
 		C2A9F1AA15007909000ECC90 /* NKOutNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A515007909000ECC90 /* NKOutNodeView.xib */; };
-		C2A9F1B0150079E6000ECC90 /* libscsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth.a */; };
+		C2A9F1B0150079E6000ECC90 /* libscsynth iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */; };
 		C2A9F1B1150079EF000ECC90 /* libNodeCanvasKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F18F15007893000ECC90 /* libNodeCanvasKit.a */; };
 		C2B3ACB11498D32A00ED3B2B /* SCRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B3ACAF1498D32A00ED3B2B /* SCRenderer.h */; };
 		C2B3ACB21498D32A00ED3B2B /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
@@ -307,6 +307,13 @@
 			remoteGlobalIDString = C2D62EC21498A849000F534B;
 			remoteInfo = Pulsar;
 		};
+		D5FCEDF6150D10E400957ED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C260A2DF150CB84400B802A7;
+			remoteInfo = "libscsynth OS X";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -488,7 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A9F1B1150079EF000ECC90 /* libNodeCanvasKit.a in Frameworks */,
-				C2A9F1B0150079E6000ECC90 /* libscsynth.a in Frameworks */,
+				C2A9F1B0150079E6000ECC90 /* libscsynth iOS.a in Frameworks */,
 				C2339B0F14C3EEE2002E4251 /* AVFoundation.framework in Frameworks */,
 				C24EE6E5148C3ED600E72DAF /* UIKit.framework in Frameworks */,
 				C24EE6E7148C3ED600E72DAF /* Foundation.framework in Frameworks */,
@@ -504,7 +511,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2A9F1A1150078D6000ECC90 /* libscsynth.a in Frameworks */,
+				C2A9F1A1150078D6000ECC90 /* libscsynth iOS.a in Frameworks */,
 				C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */,
 				C2339B0E14C3EED6002E4251 /* AVFoundation.framework in Frameworks */,
 				C2D62EC41498A84A000F534B /* Foundation.framework in Frameworks */,
@@ -684,7 +691,8 @@
 			isa = PBXGroup;
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
-				C2A9F19B150078A1000ECC90 /* libscsynth.a */,
+				C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */,
+				D5FCEDF7150D10E400957ED2 /* libscsynth OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1027,11 +1035,18 @@
 			remoteRef = C2A9F198150078A1000ECC90 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C2A9F19B150078A1000ECC90 /* libscsynth.a */ = {
+		C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libscsynth.a;
+			path = "libscsynth iOS.a";
 			remoteRef = C2A9F19A150078A1000ECC90 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5FCEDF7150D10E400957ED2 /* libscsynth OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libscsynth OS X.a";
+			remoteRef = D5FCEDF6150D10E400957ED2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
