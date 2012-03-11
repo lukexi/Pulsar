@@ -54,7 +54,7 @@
     RSGraph *graph = [results count] ? [results objectAtIndex:0] : nil;
     if (!graph) 
     {
-        NSLog(@"Creating graph: %@", name);
+        //NSLog(@"Creating graph: %@", name);
         graph = [NSEntityDescription insertNewObjectForEntityForName:@"RSGraph" 
                                               inManagedObjectContext:self.managedObjectContext];
         graph.name = name;

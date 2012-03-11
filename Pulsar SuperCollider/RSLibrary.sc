@@ -223,11 +223,13 @@ RSLibrary {
             LFDNoise3:(),
             Blip:(numharm:[1,100]),
             LPF:(),
+            BPF:(),
             HPF:(),
             RLPF:(),
-            BPF:(),
+            RHPF:(),
             MoogFF:(gain:[0,4]),
-            Linen:()
+            Linen:(),
+            FreeVerb:()
         )
     }
 }

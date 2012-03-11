@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2002DFC150CC528006B2AFC /* RSMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = C2002DFA150CC528006B2AFC /* RSMetro.h */; };
+		C2002DFD150CC528006B2AFC /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
+		C2002DFE150CC528006B2AFC /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
+		C2002DFF150CC528006B2AFC /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
 		C22ACDA214983B8F003EE04B /* MutLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7514983B8E003EE04B /* MutLockArray.m */; };
 		C22ACDA414983B8F003EE04B /* MutLockDict.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7714983B8E003EE04B /* MutLockDict.m */; };
 		C22ACDA614983B8F003EE04B /* MutNRLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7914983B8E003EE04B /* MutNRLockArray.m */; };
@@ -244,6 +248,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C279F009150D059D001A43BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C260A2DF150CB84400B802A7;
+			remoteInfo = "libscsynth OS X";
+		};
 		C2A9F18C15007893000ECC90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2D62F9C1498C751000F534B /* NodeCanvasKit.xcodeproj */;
@@ -317,6 +328,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2002DFA150CC528006B2AFC /* RSMetro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMetro.h; sourceTree = "<group>"; };
+		C2002DFB150CC528006B2AFC /* RSMetro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMetro.m; sourceTree = "<group>"; };
 		C22ACD7414983B8E003EE04B /* MutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockArray.h; sourceTree = "<group>"; };
 		C22ACD7514983B8E003EE04B /* MutLockArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutLockArray.m; sourceTree = "<group>"; };
 		C22ACD7614983B8E003EE04B /* MutLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockDict.h; sourceTree = "<group>"; };
@@ -662,6 +675,8 @@
 			children = (
 				C2D62E271498611B000F534B /* UI */,
 				C2D62DF8149860FC000F534B /* Model */,
+				C2002DFA150CC528006B2AFC /* RSMetro.h */,
+				C2002DFB150CC528006B2AFC /* RSMetro.m */,
 			);
 			name = Classes;
 			path = Pulsar;
@@ -692,7 +707,7 @@
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
 				C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */,
-				D5FCEDF7150D10E400957ED2 /* libscsynth OS X.a */,
+				C279F00A150D059D001A43BD /* libscsynth OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -912,6 +927,7 @@
 				C2C513E414AA550700F089C2 /* NSDictionary+OSCAdditions.h in Headers */,
 				C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */,
 				C2339B0514C3EDE7002E4251 /* SCWaveformView.h in Headers */,
+				C2002DFC150CC528006B2AFC /* RSMetro.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,6 +1030,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C279F00A150D059D001A43BD /* libscsynth OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libscsynth OS X.a";
+			remoteRef = C279F009150D059D001A43BD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C2A9F18D15007893000ECC90 /* NodeCanvasKit.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -1169,6 +1192,7 @@
 				C2C513E514AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0614C3EDE7002E4251 /* SCWaveformView.m in Sources */,
+				C2002DFD150CC528006B2AFC /* RSMetro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1239,6 +1263,7 @@
 				C2C513E714AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0814C3EDE7002E4251 /* SCWaveformView.m in Sources */,
+				C2002DFE150CC528006B2AFC /* RSMetro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1309,6 +1334,7 @@
 				C2C513E814AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0914C3EDE7002E4251 /* SCWaveformView.m in Sources */,
+				C2002DFF150CC528006B2AFC /* RSMetro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
