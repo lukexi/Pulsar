@@ -108,8 +108,8 @@
 {
     // self.destinationInput.synthDefControl.rate
     return self.sourceNode.synthDef.outputRate == SCSynthAudioRate ? 
-    @"RSAudioConnector" : 
-    @"RSControlConnector";
+        @"RSAudioConnector" : 
+        @"RSControlConnector";
 }
 
 @end

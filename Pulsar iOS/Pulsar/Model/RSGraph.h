@@ -10,6 +10,7 @@
 
 // Optional, to spawn the whole graph in another group.
 @property (nonatomic, strong) SCGroup *superGroup;
+
 @property (nonatomic, strong, readonly) SCGroup *graphGroup;
 @property (nonatomic) NSTimeInterval lagTime;
 
@@ -28,7 +29,8 @@
 - (RSNode *)nodeWithID:(NSString *)nodeID;
 
 // Manipulation
-- (RSNode *)addNodeFromSynthDef:(RSSynthDef *)synthDef;
+- (RSNode *)addNodeWithID:(NSString *)nodeID fromSynthDefNamed:(NSString *)synthDefName;
+- (RSNode *)addNodeFromSynthDef:(RSSynthDef *)synthDef; // Automatic node ID (synth def name + number of nodes in the graph using that synthdef — e.g. "SinOsc-KR0")
 - (void)addNode:(RSNode *)synth;
 - (void)deleteNode:(RSNode *)node;
 
@@ -41,6 +43,7 @@
 - (void)nodeDidSpawn:(RSNode *)aNode;
 
 // Utility
+// Finds and deletes any nodes whose output wires all have an amplitude of 0
 - (void)trimInactiveNodesAndWires;
 
 @property (nonatomic, strong, readonly) NSDictionary *dictionaryRepresentation;
@@ -48,8 +51,10 @@
 // It's sometimes useful to use a graph with slightly different synthdefs
 // e.g. replacing a pitch-generating ugen that's usually a buffer with a constant-value generator
 // while editing the graph, and then putting it back when done
-- (NSDictionary *)dictionaryRepresentationWithSynthDefReplacements:(NSDictionary *)replacementSynthDefNamesByNodeID;
 - (void)replaceSynthDefsOfNodesByID:(NSDictionary *)replacementSynthDefNamesByNodeID;
+
+- (NSDictionary *)dictionaryRepresentationWithSynthDefReplacements:(NSDictionary *)replacementSynthDefNamesByNodeID;
+
 
 
 
