@@ -10,6 +10,7 @@
 
 // Optional, to spawn the whole graph in another group.
 @property (nonatomic, strong) SCGroup *superGroup;
+
 @property (nonatomic, strong, readonly) SCGroup *graphGroup;
 @property (nonatomic) NSTimeInterval lagTime;
 

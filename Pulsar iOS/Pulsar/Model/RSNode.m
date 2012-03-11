@@ -200,6 +200,14 @@
      If we connect C to Z and always orderedBefore, C would get moved before Z, 
      but after D, breaking C's connection to D.
      */
+    
+    if (toNode.graph != self.graph) 
+    {
+        // To facilitate connecting nodes between graphs. Only the graphGroup needs to be moved.
+        // Maybe better to order all nodes globally to allow more complex connections?
+        return;
+    }
+    
     if (![self.graph moveNode:self beforeNode:toNode])
     {
         //PLog(kRS_DEBUG, @"%@ is already before %@. Not moving.", self.nodeID, toNode.nodeID);
