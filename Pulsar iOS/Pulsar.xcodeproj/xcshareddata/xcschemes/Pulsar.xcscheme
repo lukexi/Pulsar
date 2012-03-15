@@ -14,8 +14,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C2D62EC21498A849000F534B"
-               BuildableName = "libPulsarKit.a"
-               BlueprintName = "Pulsar"
+               BuildableName = "libPulsarKit iOS.a"
+               BlueprintName = "Pulsar iOS"
                ReferencedContainer = "container:Pulsar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

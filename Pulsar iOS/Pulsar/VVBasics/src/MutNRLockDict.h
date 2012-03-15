@@ -6,7 +6,6 @@
 //  Copyright 2009 Vidvox. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "MutLockDict.h"
 #import "ObjectHolder.h"
 

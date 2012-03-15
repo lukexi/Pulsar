@@ -1,7 +1,3 @@
-
-#import <UIKit/UIKit.h>
-
-
 #include <arpa/inet.h>
 
 #import "OSCPacket.h"

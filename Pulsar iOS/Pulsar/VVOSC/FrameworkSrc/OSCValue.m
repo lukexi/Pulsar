@@ -233,9 +233,11 @@
 		OSCValChar:
 			NSLog(@"\tERR: TRIED TO COPY CHAR");
 			break;
+#if TARGET_OS_IPHONE
 		OSCValColor:
 			returnMe = [[OSCValue allocWithZone:z] initWithColor:((__bridge id)value)];
 			break;
+#endif
 		OSCValMIDI:
 			returnMe = [[OSCValue allocWithZone:z]
 				initWithMIDIChannel:*((Byte *)value+0)
@@ -409,7 +411,7 @@
 			b[*t] = 's';
 			++*t;
 			break;
-			
+#if TARGET_OS_IPHONE
 		case OSCValColor:
 			
 			tmpColor = [(__bridge UIColor *)value CGColor];
@@ -424,7 +426,7 @@
 			b[*t] = 'r';
 			++*t;
 			break;
-			 
+#endif 
 		case OSCValMIDI:
 			memcpy(b+*d, value, sizeof(Byte)*4);
 			*d += 4;

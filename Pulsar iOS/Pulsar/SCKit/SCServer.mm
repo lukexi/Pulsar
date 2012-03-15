@@ -278,9 +278,11 @@ int vpost(const char *fmt, va_list ap)
         [self start];
         #endif
         
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
         // Make sure we're outputting to the speaker on the iPhone rather than the receiver
         unsigned long route = kAudioSessionOverrideAudioRoute_Speaker;
         AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(route), &route);
+#endif
         
         self.manager = [[SCOSCManager alloc] init];
         self.manager.delegate = self;

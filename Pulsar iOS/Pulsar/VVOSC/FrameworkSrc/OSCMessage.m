@@ -169,6 +169,7 @@
 			case 'c':			//	an ascii character, sent as 32 bits
 				tmpIndex = tmpIndex + 4;
 				break;
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 			case 'r':			//	32 bit RGBA color
 				//NSLog(@"%d, %d, %d, %d",*((unsigned char *)b+tmpIndex),*((unsigned char *)b+tmpIndex+1),*((unsigned char *)b+tmpIndex+2),*((unsigned char *)b+tmpIndex+3));
 
@@ -182,6 +183,7 @@
 
 				tmpIndex = tmpIndex + 4;
 				break;
+#endif
 			case 'm':			//	4 byte MIDI message.  bytes from MSB to LSB are: port id, status byte, data1, data2
 				oscValue = [OSCValue
 					createWithMIDIChannel:b[tmpIndex]
@@ -272,11 +274,14 @@
 	[self addValue:[OSCValue createWithString:n]];
 }
 
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 - (void) addColor:(UIColor *)c	{
 
 	//NSLog(@"%s",__func__);
 	[self addValue:[OSCValue createWithColor:c]];
 }
+#endif
+
 - (void) addBOOL:(BOOL)n	{
 	//NSLog(@"%s",__func__);
 	[self addValue:[OSCValue createWithBool:n]];

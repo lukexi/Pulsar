@@ -1,6 +1,3 @@
-
-#import <UIKit/UIKit.h>
-
 #include <stdio.h>
 #import "OSCBundle.h"
 #import "OSCMessage.h"
