@@ -28,6 +28,7 @@
 {
 #warning disabling this, think about more later. if node is already freed and reused, this just causes a random node to get freed :P
 //    // Can currently only connect to one output bus at a time. To support more, just make outConnectorNode(s) an array of RSAudioConnectors
+    
 //    [self.outConnectorNode free];
     // RSGraphs are currently mono, so if we connect to a stereo bus (like the out bus), we use a connector that
     // duplicates the signal to both channels

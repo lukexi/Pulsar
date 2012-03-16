@@ -118,7 +118,6 @@
 		C25A267F150D1F4B00DB2F19 /* RSTestSketches.h in Headers */ = {isa = PBXBuildFile; fileRef = C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */; };
 		C25A2680150D1F4B00DB2F19 /* SCWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2339B0314C3EDE7002E4251 /* SCWaveformView.h */; };
 		C25A2681150D1F4B00DB2F19 /* RSMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = C2002DFA150CC528006B2AFC /* RSMetro.h */; };
-		C25A26D8150D202E00DB2F19 /* libscsynth OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C25A26D5150D201A00DB2F19 /* libscsynth OS X.a */; };
 		C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */ = {isa = PBXBuildFile; fileRef = C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */; };
 		C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
@@ -318,20 +317,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C25A26D4150D201A00DB2F19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C25A26D1150D1FDC00DB2F19;
-			remoteInfo = "libscsynth OS X";
-		};
-		C25A26D6150D201F00DB2F19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C25A268F150D1FDC00DB2F19;
-			remoteInfo = "libscsynth OS X";
-		};
 		C2A9F18C15007893000ECC90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2D62F9C1498C751000F534B /* NodeCanvasKit.xcodeproj */;
@@ -595,7 +580,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C25A26D8150D202E00DB2F19 /* libscsynth OS X.a in Frameworks */,
 				C25A2674150D1F4B00DB2F19 /* AVFoundation.framework in Frameworks */,
 				C25A2675150D1F4B00DB2F19 /* Foundation.framework in Frameworks */,
 				C25A2677150D1F4B00DB2F19 /* QuartzCore.framework in Frameworks */,
@@ -794,7 +778,6 @@
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
 				C2A9F19B150078A1000ECC90 /* libscsynth.a */,
-				C25A26D5150D201A00DB2F19 /* libscsynth OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1063,7 +1046,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C25A26D7150D201F00DB2F19 /* PBXTargetDependency */,
 			);
 			name = "Pulsar OS X";
 			productName = Pulsar;
@@ -1148,13 +1130,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C25A26D5150D201A00DB2F19 /* libscsynth OS X.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libscsynth OS X.a";
-			remoteRef = C25A26D4150D201A00DB2F19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		C2A9F18D15007893000ECC90 /* NodeCanvasKit.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -1516,11 +1491,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C25A26D7150D201F00DB2F19 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "libscsynth OS X";
-			targetProxy = C25A26D6150D201F00DB2F19 /* PBXContainerItemProxy */;
-		};
 		C2A9F19D150078C2000ECC90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libscsynth;
