@@ -1,6 +1,4 @@
 
-#import <UIKit/UIKit.h>
-
 #import "MutLockArray.h"
 #import "ObjectHolder.h"
 

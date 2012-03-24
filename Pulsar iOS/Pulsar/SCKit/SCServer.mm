@@ -116,16 +116,20 @@ int vpost(const char *fmt, va_list ap)
 
 - (void)start
 {
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
     NSAssert(synthServerPort, @"Must set synth server port!");
 	if (world) World_Cleanup(world);
 	world = World_New(&options);
 	if (!world || !World_OpenUDP(world, synthServerPort)) return;
+#endif
 }
 
 - (void)stop
 {
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 	if (world) World_Cleanup(world);
 	world = nil;
+#endif
 }
 
 - (double)averageCPU
@@ -244,13 +248,17 @@ int vpost(const char *fmt, va_list ap)
     self = [super init];
     if (self)
     {
-        #if TARGET_IPHONE_SIMULATOR
         synthServerPort = 57110;
-        #else
+        
+        #if TARGET_OS_IPHONE
          // Choose random port between 50000 & 60000 in case a crashed app holds on to our port
         synthServerPort = arc4random() % 10000 + 50000;
         #endif
         
+        NSUInteger numInputBusChannels = 8; // defaults
+        NSUInteger numOutputBusChannels = 8;
+        
+        #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
         options = kDefaultWorldOptions;
         options.mBufLength = 256;
         // It's critical to increase these for Pulsar's operation, since it uses many audio & control buses for interconnection
@@ -258,11 +266,14 @@ int vpost(const char *fmt, va_list ap)
         options.mNumControlBusChannels = 4096;
         options.mMaxNodes = 16384;
         world = nil;
+        numInputBusChannels = options.mNumInputBusChannels;
+        numOutputBusChannels = options.mNumOutputBusChannels;
+        #endif
         
         self.nodeIDAllocator = [SCIDAllocator IDAllocatorStartingAt:1000];
         self.nodeIDAllocator.name = @"Node";
         self.busIDAllocator = [SCIDAllocator IDAllocatorStartingAt:
-                               options.mNumInputBusChannels + options.mNumOutputBusChannels];
+                               numInputBusChannels + numOutputBusChannels];
         self.busIDAllocator.name = @"Bus";
         self.bufferNumberAllocator = [SCIDAllocator IDAllocatorStartingAt:0];
         self.bufferNumberAllocator.name = @"Buffer";
@@ -274,13 +285,15 @@ int vpost(const char *fmt, va_list ap)
         [self copySynthDefs];
         
         // Boot up SCSynth on the device (doesn't work quite right yet on the simulator, so boot up your own SuperCollider.app and it should work)
-        #if !TARGET_IPHONE_SIMULATOR
+        #if TARGET_OS_IPHONE
         [self start];
         #endif
         
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
         // Make sure we're outputting to the speaker on the iPhone rather than the receiver
         unsigned long route = kAudioSessionOverrideAudioRoute_Speaker;
         AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(route), &route);
+#endif
         
         self.manager = [[SCOSCManager alloc] init];
         self.manager.delegate = self;

@@ -1,5 +1,3 @@
-
-#import <UIKit/UIKit.h>
 #import "OSCAddressSpace.h"
 #import "OSCZeroConfManager.h"
 #import "OSCInPort.h"

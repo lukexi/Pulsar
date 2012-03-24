@@ -1,5 +1,3 @@
-
-#import <UIKit/UIKit.h>
 #include <sys/time.h>
 
 

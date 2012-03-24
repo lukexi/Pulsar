@@ -1,11 +1,8 @@
-
-#import <UIKit/UIKit.h>
-#import "OSCMessage.h"
 #import "MutNRLockArray.h"
 #import "VVBasicMacros.h"
 
 
-
+@class OSCMessage;
 typedef enum	{
 	OSCNodeTypeUnknown,
 	OSCNodeDirectory,

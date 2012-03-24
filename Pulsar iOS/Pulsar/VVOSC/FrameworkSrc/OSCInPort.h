@@ -1,6 +1,3 @@
-
-#import <UIKit/UIKit.h>
-
 #import "VVThreadLoop.h"
 //#import <sys/types.h>
 //#import <sys/socket.h>

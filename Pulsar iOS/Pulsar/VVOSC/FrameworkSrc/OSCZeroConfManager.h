@@ -1,6 +1,3 @@
-
-#import <UIKit/UIKit.h>
-
 #import "OSCZeroConfDomain.h"
 #import <pthread.h>
 

@@ -1,5 +1,4 @@
 
-#import <UIKit/UIKit.h>
 #import "OSCValue.h"
 #import <pthread.h>
 
@@ -29,8 +28,10 @@ According to the OSC spec, a message consists of an address path (where the mess
 ///	Add the passed string to the message
 - (void) addString:(NSString *)n;
 
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 ///	Add the passed color to the message
 - (void) addColor:(UIColor *)c;
+#endif
 
 ///	Add the passed bool to the message
 - (void) addBOOL:(BOOL)n;

@@ -49,6 +49,75 @@
 		C24EE6FA148C3ED600E72DAF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24EE6F8148C3ED600E72DAF /* MainStoryboard_iPhone.storyboard */; };
 		C24EE6FD148C3ED600E72DAF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24EE6FB148C3ED600E72DAF /* MainStoryboard_iPad.storyboard */; };
 		C24EE700148C3ED600E72DAF /* Pulsar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C24EE6FE148C3ED600E72DAF /* Pulsar.xcdatamodeld */; };
+		C25A2631150D1F4B00DB2F19 /* Pulsar.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62EC91498A84A000F534B /* Pulsar.m */; };
+		C25A2637150D1F4B00DB2F19 /* _RSGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DEB149860FC000F534B /* _RSGraph.m */; };
+		C25A2638150D1F4B00DB2F19 /* _RSInput.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DED149860FC000F534B /* _RSInput.m */; };
+		C25A2639150D1F4B00DB2F19 /* _RSNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DEF149860FC000F534B /* _RSNode.m */; };
+		C25A263A150D1F4B00DB2F19 /* _RSOutNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DF1149860FC000F534B /* _RSOutNode.m */; };
+		C25A263B150D1F4B00DB2F19 /* _RSSynthDef.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DF3149860FC000F534B /* _RSSynthDef.m */; };
+		C25A263C150D1F4B00DB2F19 /* _RSSynthDefControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DF5149860FC000F534B /* _RSSynthDefControl.m */; };
+		C25A263D150D1F4B00DB2F19 /* _RSWire.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DF7149860FC000F534B /* _RSWire.m */; };
+		C25A263E150D1F4B00DB2F19 /* RSGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DFA149860FC000F534B /* RSGraph.m */; };
+		C25A263F150D1F4B00DB2F19 /* RSInput.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DFC149860FC000F534B /* RSInput.m */; };
+		C25A2640150D1F4B00DB2F19 /* RSNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62DFE149860FC000F534B /* RSNode.m */; };
+		C25A2641150D1F4B00DB2F19 /* RSOutNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E00149860FC000F534B /* RSOutNode.m */; };
+		C25A2642150D1F4B00DB2F19 /* RSPresetParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E02149860FC000F534B /* RSPresetParser.m */; };
+		C25A2643150D1F4B00DB2F19 /* RSSynthDef.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E04149860FC000F534B /* RSSynthDef.m */; };
+		C25A2644150D1F4B00DB2F19 /* RSSynthDefControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E06149860FC000F534B /* RSSynthDefControl.m */; };
+		C25A2645150D1F4B00DB2F19 /* RSWire.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E08149860FC000F534B /* RSWire.m */; };
+		C25A2647150D1F4B00DB2F19 /* SCBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E5F1498623F000F534B /* SCBuffer.m */; };
+		C25A2648150D1F4B00DB2F19 /* SCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E611498623F000F534B /* SCBundle.m */; };
+		C25A2649150D1F4B00DB2F19 /* SCBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E631498623F000F534B /* SCBus.m */; };
+		C25A264A150D1F4B00DB2F19 /* SCControlSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E651498623F000F534B /* SCControlSpec.m */; };
+		C25A264B150D1F4B00DB2F19 /* SCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E671498623F000F534B /* SCGroup.m */; };
+		C25A264C150D1F4B00DB2F19 /* SCIDAllocator.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E691498623F000F534B /* SCIDAllocator.m */; };
+		C25A264D150D1F4B00DB2F19 /* SCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E6C1498623F000F534B /* SCNode.m */; };
+		C25A264E150D1F4B00DB2F19 /* SCOSCInPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E6E1498623F000F534B /* SCOSCInPort.m */; };
+		C25A264F150D1F4B00DB2F19 /* SCOSCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E701498623F000F534B /* SCOSCManager.m */; };
+		C25A2650150D1F4B00DB2F19 /* SCOSCOutPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E721498623F000F534B /* SCOSCOutPort.m */; };
+		C25A2651150D1F4B00DB2F19 /* SCServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E751498623F000F534B /* SCServer.mm */; };
+		C25A2652150D1F4B00DB2F19 /* SCSoundFileLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E771498623F000F534B /* SCSoundFileLibrary.m */; };
+		C25A2653150D1F4B00DB2F19 /* SCSynth.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E791498623F000F534B /* SCSynth.m */; };
+		C25A2654150D1F4B00DB2F19 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E561498623F000F534B /* NSArray+Additions.m */; };
+		C25A2655150D1F4B00DB2F19 /* NSArray+SCSynthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E581498623F000F534B /* NSArray+SCSynthAdditions.m */; };
+		C25A2656150D1F4B00DB2F19 /* OSCMessage+AddArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E5A1498623F000F534B /* OSCMessage+AddArguments.m */; };
+		C25A2657150D1F4B00DB2F19 /* OSCValue+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E5C1498623F000F534B /* OSCValue+Additions.m */; };
+		C25A2658150D1F4B00DB2F19 /* OSCAddressSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD8914983B8E003EE04B /* OSCAddressSpace.m */; };
+		C25A2659150D1F4B00DB2F19 /* OSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD8B14983B8E003EE04B /* OSCBundle.m */; };
+		C25A265A150D1F4B00DB2F19 /* OSCInPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD8E14983B8E003EE04B /* OSCInPort.m */; };
+		C25A265B150D1F4B00DB2F19 /* OSCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9014983B8E003EE04B /* OSCManager.m */; };
+		C25A265C150D1F4B00DB2F19 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9214983B8E003EE04B /* OSCMessage.m */; };
+		C25A265D150D1F4B00DB2F19 /* OSCNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9414983B8E003EE04B /* OSCNode.m */; };
+		C25A265E150D1F4B00DB2F19 /* OSCOutPort.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9614983B8E003EE04B /* OSCOutPort.m */; };
+		C25A265F150D1F4B00DB2F19 /* OSCPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9814983B8E003EE04B /* OSCPacket.m */; };
+		C25A2660150D1F4B00DB2F19 /* OSCStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9A14983B8E003EE04B /* OSCStringAdditions.m */; };
+		C25A2661150D1F4B00DB2F19 /* OSCValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9C14983B8E003EE04B /* OSCValue.m */; };
+		C25A2662150D1F4B00DB2F19 /* OSCZeroConfDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD9E14983B8E003EE04B /* OSCZeroConfDomain.m */; };
+		C25A2663150D1F4B00DB2F19 /* OSCZeroConfManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACDA014983B8E003EE04B /* OSCZeroConfManager.m */; };
+		C25A2664150D1F4B00DB2F19 /* MutLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7514983B8E003EE04B /* MutLockArray.m */; };
+		C25A2665150D1F4B00DB2F19 /* MutLockDict.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7714983B8E003EE04B /* MutLockDict.m */; };
+		C25A2666150D1F4B00DB2F19 /* MutNRLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7914983B8E003EE04B /* MutNRLockArray.m */; };
+		C25A2667150D1F4B00DB2F19 /* MutNRLockDict.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7B14983B8E003EE04B /* MutNRLockDict.m */; };
+		C25A2668150D1F4B00DB2F19 /* NamedMutLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7D14983B8E003EE04B /* NamedMutLockArray.m */; };
+		C25A2669150D1F4B00DB2F19 /* ObjectHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7F14983B8E003EE04B /* ObjectHolder.m */; };
+		C25A266A150D1F4B00DB2F19 /* VVStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD8214983B8E003EE04B /* VVStopwatch.m */; };
+		C25A266B150D1F4B00DB2F19 /* VVThreadLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD8414983B8E003EE04B /* VVThreadLoop.m */; };
+		C25A266C150D1F4B00DB2F19 /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
+		C25A266D150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */; };
+		C25A266E150D1F4B00DB2F19 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
+		C25A2670150D1F4B00DB2F19 /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
+		C25A2674150D1F4B00DB2F19 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
+		C25A2675150D1F4B00DB2F19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
+		C25A2677150D1F4B00DB2F19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EBD14989D4C000F534B /* QuartzCore.framework */; };
+		C25A2678150D1F4B00DB2F19 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACDFA14983F7C003EE04B /* AudioToolbox.framework */; };
+		C25A2679150D1F4B00DB2F19 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6EA148C3ED600E72DAF /* CoreData.framework */; };
+		C25A267A150D1F4B00DB2F19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E8148C3ED600E72DAF /* CoreGraphics.framework */; };
+		C25A267B150D1F4B00DB2F19 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACE08149843A2003EE04B /* Accelerate.framework */; };
+		C25A267D150D1F4B00DB2F19 /* SCRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B3ACAF1498D32A00ED3B2B /* SCRenderer.h */; };
+		C25A267E150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C513E214AA550700F089C2 /* NSDictionary+OSCAdditions.h */; };
+		C25A267F150D1F4B00DB2F19 /* RSTestSketches.h in Headers */ = {isa = PBXBuildFile; fileRef = C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */; };
+		C25A2680150D1F4B00DB2F19 /* SCWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2339B0314C3EDE7002E4251 /* SCWaveformView.h */; };
+		C25A2681150D1F4B00DB2F19 /* RSMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = C2002DFA150CC528006B2AFC /* RSMetro.h */; };
 		C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */ = {isa = PBXBuildFile; fileRef = C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */; };
 		C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
@@ -118,7 +187,7 @@
 		C2D62ED11498A84A000F534B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE70D148C3ED700E72DAF /* SenTestingKit.framework */; };
 		C2D62ED21498A84A000F534B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E4148C3ED600E72DAF /* UIKit.framework */; };
 		C2D62ED31498A84A000F534B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
-		C2D62ED61498A84A000F534B /* libPulsarKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EC31498A849000F534B /* libPulsarKit.a */; };
+		C2D62ED61498A84A000F534B /* libPulsarKit iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EC31498A849000F534B /* libPulsarKit iOS.a */; };
 		C2D62EDC1498A84B000F534B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2D62EDA1498A84B000F534B /* InfoPlist.strings */; };
 		C2D62EDF1498A84B000F534B /* PulsarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62EDE1498A84B000F534B /* PulsarTests.m */; };
 		C2D62EFB1498B94E000F534B /* RSGraphEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E2B1498611B000F534B /* RSGraphEditorViewController.m */; };
@@ -387,6 +456,7 @@
 		C24EE6FC148C3ED600E72DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		C24EE6FF148C3ED600E72DAF /* Pulsar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pulsar.xcdatamodel; sourceTree = "<group>"; };
 		C24EE70D148C3ED700E72DAF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C25A2685150D1F4B00DB2F19 /* libPulsar OS X.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPulsar OS X.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTestSketches.h; sourceTree = "<group>"; };
 		C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTestSketches.m; sourceTree = "<group>"; };
 		C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKWireEditorViewController.xib; sourceTree = "<group>"; };
@@ -481,7 +551,7 @@
 		C2D62E9C149862E5000F534B /* synthdefs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = synthdefs; path = Pulsar/synthdefs; sourceTree = "<group>"; };
 		C2D62E9F1498631E000F534B /* PulsarMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PulsarMetadata.json; path = Pulsar/PulsarMetadata.json; sourceTree = "<group>"; };
 		C2D62EBD14989D4C000F534B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C2D62EC31498A849000F534B /* libPulsarKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPulsarKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D62EC31498A849000F534B /* libPulsarKit iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPulsarKit iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D62EC71498A84A000F534B /* PulsarKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PulsarKit-Prefix.pch"; path = "../Pulsar/PulsarKit-Prefix.pch"; sourceTree = "<group>"; };
 		C2D62EC81498A84A000F534B /* Pulsar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Pulsar.h; path = ../Pulsar/Pulsar.h; sourceTree = "<group>"; };
 		C2D62EC91498A84A000F534B /* Pulsar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Pulsar.m; path = ../Pulsar/Pulsar.m; sourceTree = "<group>"; };
@@ -513,6 +583,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C25A2671150D1F4B00DB2F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25A2674150D1F4B00DB2F19 /* AVFoundation.framework in Frameworks */,
+				C25A2675150D1F4B00DB2F19 /* Foundation.framework in Frameworks */,
+				C25A2677150D1F4B00DB2F19 /* QuartzCore.framework in Frameworks */,
+				C25A2678150D1F4B00DB2F19 /* AudioToolbox.framework in Frameworks */,
+				C25A2679150D1F4B00DB2F19 /* CoreData.framework in Frameworks */,
+				C25A267A150D1F4B00DB2F19 /* CoreGraphics.framework in Frameworks */,
+				C25A267B150D1F4B00DB2F19 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2D62EC01498A849000F534B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,7 +621,7 @@
 				C2D62ED11498A84A000F534B /* SenTestingKit.framework in Frameworks */,
 				C2D62ED21498A84A000F534B /* UIKit.framework in Frameworks */,
 				C2D62ED31498A84A000F534B /* Foundation.framework in Frameworks */,
-				C2D62ED61498A84A000F534B /* libPulsarKit.a in Frameworks */,
+				C2D62ED61498A84A000F534B /* libPulsarKit iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,8 +723,9 @@
 			isa = PBXGroup;
 			children = (
 				C24EE6E0148C3ED600E72DAF /* Pulsar.app */,
-				C2D62EC31498A849000F534B /* libPulsarKit.a */,
+				C2D62EC31498A849000F534B /* libPulsarKit iOS.a */,
 				C2D62ED01498A84A000F534B /* PulsarKitTests.octest */,
+				C25A2685150D1F4B00DB2F19 /* libPulsar OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -700,7 +785,6 @@
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
 				C2A9F19B150078A1000ECC90 /* libscsynth.a */,
-				6BBEBE0C151D4DD600C905DC /* libscsynth OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -912,6 +996,18 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		C25A267C150D1F4B00DB2F19 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25A267D150D1F4B00DB2F19 /* SCRenderer.h in Headers */,
+				C25A267E150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.h in Headers */,
+				C25A267F150D1F4B00DB2F19 /* RSTestSketches.h in Headers */,
+				C25A2680150D1F4B00DB2F19 /* SCWaveformView.h in Headers */,
+				C25A2681150D1F4B00DB2F19 /* RSMetro.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2D62EC11498A849000F534B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -946,9 +1042,26 @@
 			productReference = C24EE6E0148C3ED600E72DAF /* Pulsar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C2D62EC21498A849000F534B /* Pulsar */ = {
+		C25A262B150D1F4B00DB2F19 /* Pulsar OS X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2D62EE01498A84B000F534B /* Build configuration list for PBXNativeTarget "Pulsar" */;
+			buildConfigurationList = C25A2682150D1F4B00DB2F19 /* Build configuration list for PBXNativeTarget "Pulsar OS X" */;
+			buildPhases = (
+				C25A2630150D1F4B00DB2F19 /* Sources */,
+				C25A2671150D1F4B00DB2F19 /* Frameworks */,
+				C25A267C150D1F4B00DB2F19 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pulsar OS X";
+			productName = Pulsar;
+			productReference = C25A2685150D1F4B00DB2F19 /* libPulsar OS X.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C2D62EC21498A849000F534B /* Pulsar iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2D62EE01498A84B000F534B /* Build configuration list for PBXNativeTarget "Pulsar iOS" */;
 			buildPhases = (
 				C2D62EBF1498A849000F534B /* Sources */,
 				C2D62EC01498A849000F534B /* Frameworks */,
@@ -960,9 +1073,9 @@
 				C2A9F19F150078C5000ECC90 /* PBXTargetDependency */,
 				C2A9F19D150078C2000ECC90 /* PBXTargetDependency */,
 			);
-			name = Pulsar;
+			name = "Pulsar iOS";
 			productName = Pulsar;
-			productReference = C2D62EC31498A849000F534B /* libPulsarKit.a */;
+			productReference = C2D62EC31498A849000F534B /* libPulsarKit iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		C2D62ECF1498A84A000F534B /* PulsarKitTests */ = {
@@ -1016,7 +1129,8 @@
 			projectRoot = "";
 			targets = (
 				C24EE6DF148C3ED600E72DAF /* PulsarEditorApp */,
-				C2D62EC21498A849000F534B /* Pulsar */,
+				C2D62EC21498A849000F534B /* Pulsar iOS */,
+				C25A262B150D1F4B00DB2F19 /* Pulsar OS X */,
 				C2D62ECF1498A84A000F534B /* PulsarKitTests */,
 			);
 		};
@@ -1179,6 +1293,70 @@
 				C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0614C3EDE7002E4251 /* SCWaveformView.m in Sources */,
 				C2002DFD150CC528006B2AFC /* RSMetro.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25A2630150D1F4B00DB2F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25A2631150D1F4B00DB2F19 /* Pulsar.m in Sources */,
+				C25A2637150D1F4B00DB2F19 /* _RSGraph.m in Sources */,
+				C25A2638150D1F4B00DB2F19 /* _RSInput.m in Sources */,
+				C25A2639150D1F4B00DB2F19 /* _RSNode.m in Sources */,
+				C25A263A150D1F4B00DB2F19 /* _RSOutNode.m in Sources */,
+				C25A263B150D1F4B00DB2F19 /* _RSSynthDef.m in Sources */,
+				C25A263C150D1F4B00DB2F19 /* _RSSynthDefControl.m in Sources */,
+				C25A263D150D1F4B00DB2F19 /* _RSWire.m in Sources */,
+				C25A263E150D1F4B00DB2F19 /* RSGraph.m in Sources */,
+				C25A263F150D1F4B00DB2F19 /* RSInput.m in Sources */,
+				C25A2640150D1F4B00DB2F19 /* RSNode.m in Sources */,
+				C25A2641150D1F4B00DB2F19 /* RSOutNode.m in Sources */,
+				C25A2642150D1F4B00DB2F19 /* RSPresetParser.m in Sources */,
+				C25A2643150D1F4B00DB2F19 /* RSSynthDef.m in Sources */,
+				C25A2644150D1F4B00DB2F19 /* RSSynthDefControl.m in Sources */,
+				C25A2645150D1F4B00DB2F19 /* RSWire.m in Sources */,
+				C25A2647150D1F4B00DB2F19 /* SCBuffer.m in Sources */,
+				C25A2648150D1F4B00DB2F19 /* SCBundle.m in Sources */,
+				C25A2649150D1F4B00DB2F19 /* SCBus.m in Sources */,
+				C25A264A150D1F4B00DB2F19 /* SCControlSpec.m in Sources */,
+				C25A264B150D1F4B00DB2F19 /* SCGroup.m in Sources */,
+				C25A264C150D1F4B00DB2F19 /* SCIDAllocator.m in Sources */,
+				C25A264D150D1F4B00DB2F19 /* SCNode.m in Sources */,
+				C25A264E150D1F4B00DB2F19 /* SCOSCInPort.m in Sources */,
+				C25A264F150D1F4B00DB2F19 /* SCOSCManager.m in Sources */,
+				C25A2650150D1F4B00DB2F19 /* SCOSCOutPort.m in Sources */,
+				C25A2651150D1F4B00DB2F19 /* SCServer.mm in Sources */,
+				C25A2652150D1F4B00DB2F19 /* SCSoundFileLibrary.m in Sources */,
+				C25A2653150D1F4B00DB2F19 /* SCSynth.m in Sources */,
+				C25A2654150D1F4B00DB2F19 /* NSArray+Additions.m in Sources */,
+				C25A2655150D1F4B00DB2F19 /* NSArray+SCSynthAdditions.m in Sources */,
+				C25A2656150D1F4B00DB2F19 /* OSCMessage+AddArguments.m in Sources */,
+				C25A2657150D1F4B00DB2F19 /* OSCValue+Additions.m in Sources */,
+				C25A2658150D1F4B00DB2F19 /* OSCAddressSpace.m in Sources */,
+				C25A2659150D1F4B00DB2F19 /* OSCBundle.m in Sources */,
+				C25A265A150D1F4B00DB2F19 /* OSCInPort.m in Sources */,
+				C25A265B150D1F4B00DB2F19 /* OSCManager.m in Sources */,
+				C25A265C150D1F4B00DB2F19 /* OSCMessage.m in Sources */,
+				C25A265D150D1F4B00DB2F19 /* OSCNode.m in Sources */,
+				C25A265E150D1F4B00DB2F19 /* OSCOutPort.m in Sources */,
+				C25A265F150D1F4B00DB2F19 /* OSCPacket.m in Sources */,
+				C25A2660150D1F4B00DB2F19 /* OSCStringAdditions.m in Sources */,
+				C25A2661150D1F4B00DB2F19 /* OSCValue.m in Sources */,
+				C25A2662150D1F4B00DB2F19 /* OSCZeroConfDomain.m in Sources */,
+				C25A2663150D1F4B00DB2F19 /* OSCZeroConfManager.m in Sources */,
+				C25A2664150D1F4B00DB2F19 /* MutLockArray.m in Sources */,
+				C25A2665150D1F4B00DB2F19 /* MutLockDict.m in Sources */,
+				C25A2666150D1F4B00DB2F19 /* MutNRLockArray.m in Sources */,
+				C25A2667150D1F4B00DB2F19 /* MutNRLockDict.m in Sources */,
+				C25A2668150D1F4B00DB2F19 /* NamedMutLockArray.m in Sources */,
+				C25A2669150D1F4B00DB2F19 /* ObjectHolder.m in Sources */,
+				C25A266A150D1F4B00DB2F19 /* VVStopwatch.m in Sources */,
+				C25A266B150D1F4B00DB2F19 /* VVThreadLoop.m in Sources */,
+				C25A266C150D1F4B00DB2F19 /* SCRenderer.m in Sources */,
+				C25A266D150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.m in Sources */,
+				C25A266E150D1F4B00DB2F19 /* RSTestSketches.m in Sources */,
+				C25A2670150D1F4B00DB2F19 /* RSMetro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1349,7 +1527,7 @@
 		};
 		C2D62ED51498A84A000F534B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C2D62EC21498A849000F534B /* Pulsar */;
+			target = C2D62EC21498A849000F534B /* Pulsar iOS */;
 			targetProxy = C2D62ED41498A84A000F534B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1394,7 +1572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -1421,7 +1599,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1430,7 +1608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -1454,7 +1632,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1490,7 +1668,7 @@
 			};
 			name = Release;
 		};
-		C2D62EE11498A84B000F534B /* Debug */ = {
+		C25A2683150D1F4B00DB2F19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/Pulsar.dst;
@@ -1500,8 +1678,38 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "Pulsar OS X";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C25A2684150D1F4B00DB2F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Pulsar.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pulsar/PulsarKit-Prefix.pch";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "Pulsar OS X";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C2D62EE11498A84B000F534B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/Pulsar.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pulsar/PulsarKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = PulsarKit;
+				PRODUCT_NAME = "PulsarKit iOS";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1509,11 +1717,13 @@
 		C2D62EE21498A84B000F534B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/Pulsar.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pulsar/PulsarKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = PulsarKit;
+				PRODUCT_NAME = "PulsarKit iOS";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1573,7 +1783,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2D62EE01498A84B000F534B /* Build configuration list for PBXNativeTarget "Pulsar" */ = {
+		C25A2682150D1F4B00DB2F19 /* Build configuration list for PBXNativeTarget "Pulsar OS X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25A2683150D1F4B00DB2F19 /* Debug */,
+				C25A2684150D1F4B00DB2F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2D62EE01498A84B000F534B /* Build configuration list for PBXNativeTarget "Pulsar iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2D62EE11498A84B000F534B /* Debug */,

@@ -8,11 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "SCKit.h"
-#import "RSGraphEditorViewController.h"
-#import "RSGraphListViewController.h"
-#import "RSNodeControlInlet.h"
-#import "RSUGenListViewController.h"
-#import "RSGraphNoteEditorViewController.h"
 #import "RSServerObject.h"
 #import "RSGraph.h"
 #import "RSInput.h"
@@ -22,6 +17,14 @@
 #import "RSSynthDef.h"
 #import "RSSynthDefControl.h"
 #import "RSWire.h"
+
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#import "RSGraphEditorViewController.h"
+#import "RSGraphListViewController.h"
+#import "RSNodeControlInlet.h"
+#import "RSUGenListViewController.h"
+#import "RSGraphNoteEditorViewController.h"
+#endif
 
 typedef void(^RSGraphCreationBlock)(RSGraph *emptyGraph);
 
