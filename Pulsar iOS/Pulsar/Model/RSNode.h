@@ -20,4 +20,7 @@
 
 @property (nonatomic, strong, readonly) NSArray *inputNames;
 
+// New subscript support
+- (RSInput *)objectForKeyedSubscript:(id)key;
+
 @end

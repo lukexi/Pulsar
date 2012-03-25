@@ -41,7 +41,7 @@
     }
     return [NSString stringWithFormat:
             @"<%@ %p Center:%@ ModDepth:%@ InputSummingBusNumber:%i ScalerNodeID:%i DCNodeID:%i>", 
-            [self class], self, self.centerValue, self.modDepth, 
+            [self class], self, self.center, self.modDepth, 
             inputSummingBus.busID, scalerNode.nodeID, dcNode.nodeID];
 }
 
@@ -59,14 +59,14 @@
     }
 }
 
-- (void)setCenterValueValue:(float)aCenterValue
+- (void)setCenterValue:(float)aCenter
 {
-    [super setCenterValueValue:aCenterValue];
+    [super setCenterValue:aCenter];
     if (self.node.graph.isSpawned)
     {
         [self.scalerNode set:[NSArray arrayWithObjects:
-                              [OSCValue createWithString:@"centerValue"], 
-                              [OSCValue createWithFloat:self.centerValueValue], 
+                              [OSCValue createWithString:@"center"], 
+                              [OSCValue createWithFloat:self.centerValue], 
                               [OSCValue createWithString:@"t_lagTime"], 
                               [OSCValue createWithFloat:self.lagTime],
                               nil]];
@@ -82,8 +82,8 @@
                                    arguments:[NSArray arrayWithObjects:
                                               [OSCValue createWithString:@"inputSummingBus"], 
                                               [OSCValue createWithInt:self.inputSummingBus.busID],
-                                              [OSCValue createWithString:@"centerValue"], 
-                                              [OSCValue createWithFloat:self.centerValueValue],
+                                              [OSCValue createWithString:@"center"], 
+                                              [OSCValue createWithFloat:self.centerValue],
                                               [OSCValue createWithString:@"modDepth"], 
                                               [OSCValue createWithFloat:self.modDepthValue],
                                               nil]];

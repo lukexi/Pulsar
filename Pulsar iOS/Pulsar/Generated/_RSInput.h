@@ -22,13 +22,13 @@
 
 
 
-@property (nonatomic, retain) NSNumber *centerValue;
+@property (nonatomic, retain) NSNumber *center;
 
-@property float centerValueValue;
-- (float)centerValueValue;
-- (void)setCenterValueValue:(float)value_;
+@property float centerValue;
+- (float)centerValue;
+- (void)setCenterValue:(float)value_;
 
-//- (BOOL)validateCenterValue:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateCenter:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -73,11 +73,11 @@
 @interface _RSInput (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSNumber*)primitiveCenterValue;
-- (void)setPrimitiveCenterValue:(NSNumber*)value;
+- (NSNumber*)primitiveCenter;
+- (void)setPrimitiveCenter:(NSNumber*)value;
 
-- (float)primitiveCenterValueValue;
-- (void)setPrimitiveCenterValueValue:(float)value_;
+- (float)primitiveCenterValue;
+- (void)setPrimitiveCenterValue:(float)value_;
 
 
 

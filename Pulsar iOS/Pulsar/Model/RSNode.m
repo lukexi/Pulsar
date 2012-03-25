@@ -76,7 +76,7 @@
         RSInput *input = [RSInput insertInManagedObjectContext:self.managedObjectContext];
         input.synthDefControl = control;
         input.node = self;
-        input.centerValue = control.defaultValue;
+        input.center = control.defaultValue;
     }
 }
 
@@ -138,6 +138,11 @@
     
     // upon deletion of this node, any connected RSWires will be cascade-deleted too,
     // which triggers their own free method (if the graph is running).
+}
+
+- (RSInput *)objectForKeyedSubscript:(id)key
+{
+    return [self controlNamed:key];
 }
 
 @end

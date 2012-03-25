@@ -29,8 +29,8 @@
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
-	if ([key isEqualToString:@"centerValueValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"centerValue"];
+	if ([key isEqualToString:@"centerValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"center"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}
 	if ([key isEqualToString:@"modDepthValue"]) {
@@ -44,26 +44,26 @@
 
 
 
-@dynamic centerValue;
+@dynamic center;
 
 
 
-- (float)centerValueValue {
-	NSNumber *result = [self centerValue];
+- (float)centerValue {
+	NSNumber *result = [self center];
 	return [result floatValue];
 }
 
-- (void)setCenterValueValue:(float)value_ {
-	[self setCenterValue:[NSNumber numberWithFloat:value_]];
+- (void)setCenterValue:(float)value_ {
+	[self setCenter:[NSNumber numberWithFloat:value_]];
 }
 
-- (float)primitiveCenterValueValue {
-	NSNumber *result = [self primitiveCenterValue];
+- (float)primitiveCenterValue {
+	NSNumber *result = [self primitiveCenter];
 	return [result floatValue];
 }
 
-- (void)setPrimitiveCenterValueValue:(float)value_ {
-	[self setPrimitiveCenterValue:[NSNumber numberWithFloat:value_]];
+- (void)setPrimitiveCenterValue:(float)value_ {
+	[self setPrimitiveCenter:[NSNumber numberWithFloat:value_]];
 }
 
 

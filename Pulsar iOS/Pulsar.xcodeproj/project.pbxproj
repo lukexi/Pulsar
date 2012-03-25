@@ -122,6 +122,48 @@
 		C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
+		C2A68C3D151F2A2C000A543E /* PSClock.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C31151F2A2C000A543E /* PSClock.h */; };
+		C2A68C3E151F2A2C000A543E /* PSClock.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C31151F2A2C000A543E /* PSClock.h */; };
+		C2A68C3F151F2A2C000A543E /* PSClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* PSClock.m */; };
+		C2A68C40151F2A2C000A543E /* PSClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* PSClock.m */; };
+		C2A68C41151F2A2C000A543E /* PSClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* PSClock.m */; };
+		C2A68C42151F2A2C000A543E /* PSClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* PSClock.m */; };
+		C2A68C43151F2A2C000A543E /* PSPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C33151F2A2C000A543E /* PSPlayer.h */; };
+		C2A68C44151F2A2C000A543E /* PSPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C33151F2A2C000A543E /* PSPlayer.h */; };
+		C2A68C45151F2A2C000A543E /* PSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C34151F2A2C000A543E /* PSPlayer.m */; };
+		C2A68C46151F2A2C000A543E /* PSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C34151F2A2C000A543E /* PSPlayer.m */; };
+		C2A68C47151F2A2C000A543E /* PSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C34151F2A2C000A543E /* PSPlayer.m */; };
+		C2A68C48151F2A2C000A543E /* PSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C34151F2A2C000A543E /* PSPlayer.m */; };
+		C2A68C49151F2A2C000A543E /* PSStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C35151F2A2C000A543E /* PSStream.h */; };
+		C2A68C4A151F2A2C000A543E /* PSStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C35151F2A2C000A543E /* PSStream.h */; };
+		C2A68C4B151F2A2C000A543E /* PSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C36151F2A2C000A543E /* PSStream.m */; };
+		C2A68C4C151F2A2C000A543E /* PSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C36151F2A2C000A543E /* PSStream.m */; };
+		C2A68C4D151F2A2C000A543E /* PSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C36151F2A2C000A543E /* PSStream.m */; };
+		C2A68C4E151F2A2C000A543E /* PSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C36151F2A2C000A543E /* PSStream.m */; };
+		C2A68C4F151F2A2C000A543E /* PSPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C37151F2A2C000A543E /* PSPattern.h */; };
+		C2A68C50151F2A2C000A543E /* PSPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C37151F2A2C000A543E /* PSPattern.h */; };
+		C2A68C51151F2A2C000A543E /* PSPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C38151F2A2C000A543E /* PSPattern.m */; };
+		C2A68C52151F2A2C000A543E /* PSPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C38151F2A2C000A543E /* PSPattern.m */; };
+		C2A68C53151F2A2C000A543E /* PSPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C38151F2A2C000A543E /* PSPattern.m */; };
+		C2A68C54151F2A2C000A543E /* PSPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C38151F2A2C000A543E /* PSPattern.m */; };
+		C2A68C55151F2A2C000A543E /* PSPatternables.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C39151F2A2C000A543E /* PSPatternables.h */; };
+		C2A68C56151F2A2C000A543E /* PSPatternables.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C39151F2A2C000A543E /* PSPatternables.h */; };
+		C2A68C57151F2A2C000A543E /* PSPatternables.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3A151F2A2C000A543E /* PSPatternables.m */; };
+		C2A68C58151F2A2C000A543E /* PSPatternables.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3A151F2A2C000A543E /* PSPatternables.m */; };
+		C2A68C59151F2A2C000A543E /* PSPatternables.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3A151F2A2C000A543E /* PSPatternables.m */; };
+		C2A68C5A151F2A2C000A543E /* PSPatternables.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3A151F2A2C000A543E /* PSPatternables.m */; };
+		C2A68C5B151F2A2C000A543E /* PSSubscripts.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C3B151F2A2C000A543E /* PSSubscripts.h */; };
+		C2A68C5C151F2A2C000A543E /* PSSubscripts.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C3B151F2A2C000A543E /* PSSubscripts.h */; };
+		C2A68C5D151F2A2C000A543E /* PSSubscripts.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3C151F2A2C000A543E /* PSSubscripts.m */; };
+		C2A68C5E151F2A2C000A543E /* PSSubscripts.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3C151F2A2C000A543E /* PSSubscripts.m */; };
+		C2A68C5F151F2A2C000A543E /* PSSubscripts.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3C151F2A2C000A543E /* PSSubscripts.m */; };
+		C2A68C60151F2A2C000A543E /* PSSubscripts.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C3C151F2A2C000A543E /* PSSubscripts.m */; };
+		C2A68C63151F2A81000A543E /* PSScale.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C61151F2A81000A543E /* PSScale.h */; };
+		C2A68C64151F2A81000A543E /* PSScale.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C61151F2A81000A543E /* PSScale.h */; };
+		C2A68C65151F2A81000A543E /* PSScale.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C62151F2A81000A543E /* PSScale.m */; };
+		C2A68C66151F2A81000A543E /* PSScale.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C62151F2A81000A543E /* PSScale.m */; };
+		C2A68C67151F2A81000A543E /* PSScale.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C62151F2A81000A543E /* PSScale.m */; };
+		C2A68C68151F2A81000A543E /* PSScale.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C62151F2A81000A543E /* PSScale.m */; };
 		C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F18F15007893000ECC90 /* libNodeCanvasKit.a */; };
 		C2A9F1A1150078D6000ECC90 /* libscsynth iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */; };
 		C2A9F1A615007909000ECC90 /* NKWireEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */; };
@@ -317,7 +359,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6BBEBE0B151D4DD600C905DC /* PBXContainerItemProxy */ = {
+		C2A68C2D151F29F7000A543E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
 			proxyType = 2;
@@ -459,6 +501,20 @@
 		C25A2685150D1F4B00DB2F19 /* libPulsar OS X.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPulsar OS X.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTestSketches.h; sourceTree = "<group>"; };
 		C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTestSketches.m; sourceTree = "<group>"; };
+		C2A68C31151F2A2C000A543E /* PSClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSClock.h; sourceTree = "<group>"; };
+		C2A68C32151F2A2C000A543E /* PSClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSClock.m; sourceTree = "<group>"; };
+		C2A68C33151F2A2C000A543E /* PSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPlayer.h; sourceTree = "<group>"; };
+		C2A68C34151F2A2C000A543E /* PSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPlayer.m; sourceTree = "<group>"; };
+		C2A68C35151F2A2C000A543E /* PSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStream.h; sourceTree = "<group>"; };
+		C2A68C36151F2A2C000A543E /* PSStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStream.m; sourceTree = "<group>"; };
+		C2A68C37151F2A2C000A543E /* PSPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPattern.h; sourceTree = "<group>"; };
+		C2A68C38151F2A2C000A543E /* PSPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPattern.m; sourceTree = "<group>"; };
+		C2A68C39151F2A2C000A543E /* PSPatternables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPatternables.h; sourceTree = "<group>"; };
+		C2A68C3A151F2A2C000A543E /* PSPatternables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPatternables.m; sourceTree = "<group>"; };
+		C2A68C3B151F2A2C000A543E /* PSSubscripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSubscripts.h; sourceTree = "<group>"; };
+		C2A68C3C151F2A2C000A543E /* PSSubscripts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSubscripts.m; sourceTree = "<group>"; };
+		C2A68C61151F2A81000A543E /* PSScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSScale.h; sourceTree = "<group>"; };
+		C2A68C62151F2A81000A543E /* PSScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSScale.m; sourceTree = "<group>"; };
 		C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKWireEditorViewController.xib; sourceTree = "<group>"; };
 		C2A9F1A415007909000ECC90 /* NKNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKNodeView.xib; sourceTree = "<group>"; };
 		C2A9F1A515007909000ECC90 /* NKOutNodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NKOutNodeView.xib; sourceTree = "<group>"; };
@@ -751,6 +807,7 @@
 		C24EE6EC148C3ED600E72DAF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C2A68C2A151F29F6000A543E /* Clocks */,
 				C2D62E271498611B000F534B /* UI */,
 				C2D62DF8149860FC000F534B /* Model */,
 				C2002DFA150CC528006B2AFC /* RSMetro.h */,
@@ -771,6 +828,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C2A68C2A151F29F6000A543E /* Clocks */ = {
+			isa = PBXGroup;
+			children = (
+				C2A68C31151F2A2C000A543E /* PSClock.h */,
+				C2A68C32151F2A2C000A543E /* PSClock.m */,
+				C2A68C33151F2A2C000A543E /* PSPlayer.h */,
+				C2A68C34151F2A2C000A543E /* PSPlayer.m */,
+				C2A68C35151F2A2C000A543E /* PSStream.h */,
+				C2A68C36151F2A2C000A543E /* PSStream.m */,
+				C2A68C37151F2A2C000A543E /* PSPattern.h */,
+				C2A68C38151F2A2C000A543E /* PSPattern.m */,
+				C2A68C39151F2A2C000A543E /* PSPatternables.h */,
+				C2A68C3A151F2A2C000A543E /* PSPatternables.m */,
+				C2A68C3B151F2A2C000A543E /* PSSubscripts.h */,
+				C2A68C3C151F2A2C000A543E /* PSSubscripts.m */,
+				C2A68C61151F2A81000A543E /* PSScale.h */,
+				C2A68C62151F2A81000A543E /* PSScale.m */,
+			);
+			name = Clocks;
+			sourceTree = "<group>";
+		};
 		C2A9F18815007893000ECC90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,7 +862,8 @@
 			isa = PBXGroup;
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
-				C2A9F19B150078A1000ECC90 /* libscsynth.a */,
+				C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */,
+				C2A68C2E151F29F7000A543E /* libscsynth OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1005,6 +1084,13 @@
 				C25A267F150D1F4B00DB2F19 /* RSTestSketches.h in Headers */,
 				C25A2680150D1F4B00DB2F19 /* SCWaveformView.h in Headers */,
 				C25A2681150D1F4B00DB2F19 /* RSMetro.h in Headers */,
+				C2A68C3E151F2A2C000A543E /* PSClock.h in Headers */,
+				C2A68C44151F2A2C000A543E /* PSPlayer.h in Headers */,
+				C2A68C4A151F2A2C000A543E /* PSStream.h in Headers */,
+				C2A68C50151F2A2C000A543E /* PSPattern.h in Headers */,
+				C2A68C56151F2A2C000A543E /* PSPatternables.h in Headers */,
+				C2A68C5C151F2A2C000A543E /* PSSubscripts.h in Headers */,
+				C2A68C64151F2A81000A543E /* PSScale.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,6 +1103,13 @@
 				C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */,
 				C2339B0514C3EDE7002E4251 /* SCWaveformView.h in Headers */,
 				C2002DFC150CC528006B2AFC /* RSMetro.h in Headers */,
+				C2A68C3D151F2A2C000A543E /* PSClock.h in Headers */,
+				C2A68C43151F2A2C000A543E /* PSPlayer.h in Headers */,
+				C2A68C49151F2A2C000A543E /* PSStream.h in Headers */,
+				C2A68C4F151F2A2C000A543E /* PSPattern.h in Headers */,
+				C2A68C55151F2A2C000A543E /* PSPatternables.h in Headers */,
+				C2A68C5B151F2A2C000A543E /* PSSubscripts.h in Headers */,
+				C2A68C63151F2A81000A543E /* PSScale.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1137,11 +1230,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6BBEBE0C151D4DD600C905DC /* libscsynth OS X.a */ = {
+		C2A68C2E151F29F7000A543E /* libscsynth OS X.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libscsynth OS X.a";
-			remoteRef = 6BBEBE0B151D4DD600C905DC /* PBXContainerItemProxy */;
+			remoteRef = C2A68C2D151F29F7000A543E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C2A9F18D15007893000ECC90 /* NodeCanvasKit.app */ = {
@@ -1165,7 +1258,7 @@
 			remoteRef = C2A9F198150078A1000ECC90 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C2A9F19B150078A1000ECC90 /* libscsynth.a */ = {
+		C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libscsynth iOS.a";
@@ -1293,6 +1386,13 @@
 				C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0614C3EDE7002E4251 /* SCWaveformView.m in Sources */,
 				C2002DFD150CC528006B2AFC /* RSMetro.m in Sources */,
+				C2A68C3F151F2A2C000A543E /* PSClock.m in Sources */,
+				C2A68C45151F2A2C000A543E /* PSPlayer.m in Sources */,
+				C2A68C4B151F2A2C000A543E /* PSStream.m in Sources */,
+				C2A68C51151F2A2C000A543E /* PSPattern.m in Sources */,
+				C2A68C57151F2A2C000A543E /* PSPatternables.m in Sources */,
+				C2A68C5D151F2A2C000A543E /* PSSubscripts.m in Sources */,
+				C2A68C65151F2A81000A543E /* PSScale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1357,6 +1457,13 @@
 				C25A266D150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.m in Sources */,
 				C25A266E150D1F4B00DB2F19 /* RSTestSketches.m in Sources */,
 				C25A2670150D1F4B00DB2F19 /* RSMetro.m in Sources */,
+				C2A68C41151F2A2C000A543E /* PSClock.m in Sources */,
+				C2A68C47151F2A2C000A543E /* PSPlayer.m in Sources */,
+				C2A68C4D151F2A2C000A543E /* PSStream.m in Sources */,
+				C2A68C53151F2A2C000A543E /* PSPattern.m in Sources */,
+				C2A68C59151F2A2C000A543E /* PSPatternables.m in Sources */,
+				C2A68C5F151F2A2C000A543E /* PSSubscripts.m in Sources */,
+				C2A68C67151F2A81000A543E /* PSScale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1428,6 +1535,13 @@
 				C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0814C3EDE7002E4251 /* SCWaveformView.m in Sources */,
 				C2002DFE150CC528006B2AFC /* RSMetro.m in Sources */,
+				C2A68C40151F2A2C000A543E /* PSClock.m in Sources */,
+				C2A68C46151F2A2C000A543E /* PSPlayer.m in Sources */,
+				C2A68C4C151F2A2C000A543E /* PSStream.m in Sources */,
+				C2A68C52151F2A2C000A543E /* PSPattern.m in Sources */,
+				C2A68C58151F2A2C000A543E /* PSPatternables.m in Sources */,
+				C2A68C5E151F2A2C000A543E /* PSSubscripts.m in Sources */,
+				C2A68C66151F2A81000A543E /* PSScale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1499,6 +1613,13 @@
 				C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0914C3EDE7002E4251 /* SCWaveformView.m in Sources */,
 				C2002DFF150CC528006B2AFC /* RSMetro.m in Sources */,
+				C2A68C42151F2A2C000A543E /* PSClock.m in Sources */,
+				C2A68C48151F2A2C000A543E /* PSPlayer.m in Sources */,
+				C2A68C4E151F2A2C000A543E /* PSStream.m in Sources */,
+				C2A68C54151F2A2C000A543E /* PSPattern.m in Sources */,
+				C2A68C5A151F2A2C000A543E /* PSPatternables.m in Sources */,
+				C2A68C60151F2A2C000A543E /* PSSubscripts.m in Sources */,
+				C2A68C68151F2A81000A543E /* PSScale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

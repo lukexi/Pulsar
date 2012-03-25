@@ -17,6 +17,13 @@
 #import "RSSynthDef.h"
 #import "RSSynthDefControl.h"
 #import "RSWire.h"
+#import "PSClock.h"
+#import "PSPlayer.h"
+#import "PSPattern.h"
+#import "PSStream.h"
+#import "PSPatternables.h"
+#import "PSSubscripts.h"
+#import "PSScale.h"
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import "RSGraphEditorViewController.h"

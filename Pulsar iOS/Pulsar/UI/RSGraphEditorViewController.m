@@ -168,9 +168,9 @@
             RSNodeControlInlet *inlet = (RSNodeControlInlet *)[nodeView inletNamed:inputName];
             if ([inlet isKindOfClass:[RSNodeControlInlet class]]) 
             {
-//                inlet.centerValue = [control.spec unmap:input.centerValueValue];
+//                inlet.center = [control.spec unmap:input.centerValue];
 //                inlet.modValue = [control.spec unmap:input.modDepthValue];
-                inlet.centerValue = input.centerValueValue;
+                inlet.center = input.centerValue;
                 inlet.modValue = input.modDepthValue;
             }
         }
@@ -363,7 +363,7 @@ wireForConnectionFromOutletNamed:(NSString *)outletName
     
     RSNodeControlInlet *inlet = [RSNodeControlInlet nodeControlInletWithName:inletName 
                                                                     modValue:control.modDepthValue 
-                                                                 centerValue:control.centerValueValue 
+                                                                 center:control.centerValue 
                                                                     delegate:self
                                                                   inNodeView:nodeView];
     inlet.units = control.synthDefControl.units;
@@ -394,10 +394,10 @@ wireForConnectionFromOutletNamed:(NSString *)outletName
     input.modDepthValue = modValue;
 }
 
-- (void)nodeControlInlet:(RSNodeControlInlet *)nodeControlInlet didChangeCenter:(CGFloat)centerValue
+- (void)nodeControlInlet:(RSNodeControlInlet *)nodeControlInlet didChangeCenter:(CGFloat)center
 {
     RSInput *input = [[self.currentGraph nodeWithID:nodeControlInlet.parentNode.nodeID] controlNamed:nodeControlInlet.name];
-    input.centerValueValue = centerValue;
+    input.centerValue = center;
 }
 
 #pragma mark - UITextFieldDelegate

@@ -97,6 +97,8 @@
     self.spawnedOrderedNodes = [NSMutableArray array];
 }
 
+
+
 - (RSNode *)addNodeWithID:(NSString *)nodeID fromSynthDefNamed:(NSString *)synthDefName
 {
     RSSynthDef *synthDef = [RSSynthDef synthDefNamed:synthDefName inContext:self.managedObjectContext];
@@ -177,6 +179,31 @@
             [node free];
         }
     }
+}
+
+- (RSWire *)connect:(NSString *)fromNodeID toAudioInputOf:(NSString *)toNodeID atAmp:(CGFloat)amp
+{
+    return [self connect:fromNodeID to:@"a_in" of:toNodeID atAmp:amp];
+}
+
+- (RSWire *)connect:(NSString *)fromNodeID to:(NSString *)inputName of:(NSString *)toNodeID atAmp:(CGFloat)amp
+{
+    return [RSWire wireFrom:self[fromNodeID] to:self[toNodeID][inputName] atAmp:amp];
+}
+
+- (RSWire *)connect:(NSString *)fromNodeID toGraphOutputAtAmp:(CGFloat)amp
+{
+    return [RSWire wireFrom:self[fromNodeID] to:self.outNode[@"a_in"] atAmp:amp];
+}
+
+- (void)setObject:(NSString *)object forKeyedSubscript:(NSString *)key
+{
+    [self addNodeWithID:key fromSynthDefNamed:object];
+}
+
+- (RSNode *)objectForKeyedSubscript:(id)key
+{
+    return [self nodeWithID:key];
 }
 
 - (RSNode *)nodeWithID:(NSString *)synthName
@@ -263,8 +290,8 @@
         
         for (RSInput *input in node.inputs) 
         {
-            NSString *centerKey = [NSString stringWithFormat:@"%@.%@.centerValue", node.nodeID, input.synthDefControl.name];
-            [params setObject:input.centerValue forKey:centerKey];
+            NSString *centerKey = [NSString stringWithFormat:@"%@.%@.center", node.nodeID, input.synthDefControl.name];
+            [params setObject:input.center forKey:centerKey];
             NSString *modKey = [NSString stringWithFormat:@"%@.%@.modDepth", node.nodeID, input.synthDefControl.name];
             [params setObject:input.modDepth forKey:modKey];
         }
@@ -339,9 +366,9 @@
     } setSynthControl:^(NSString *synthName, NSString *controlName, NSString *metaName, CGFloat amp) {
         RSNode *synth = [self nodeWithID:synthName];
         RSInput *input = [synth controlNamed:controlName];
-        if ([metaName isEqualToString:@"centerValue"])
+        if ([metaName isEqualToString:@"center"])
         {
-            [input setCenterValueValue:amp];
+            [input setCenterValue:amp];
         }
         else if ([metaName isEqualToString:@"modDepth"])
         {

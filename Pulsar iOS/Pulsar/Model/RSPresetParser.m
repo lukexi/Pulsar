@@ -110,7 +110,7 @@
     BOOL isMetaSetting = [components count] == 3;
     NSString *synthName = [components objectAtIndex:0];
     NSString *controlName = [components objectAtIndex:1];
-    NSString *metaName = isMetaSetting ? [components objectAtIndex:2] : @"centerValue";
+    NSString *metaName = isMetaSetting ? [components objectAtIndex:2] : @"center";
     
     if (setSynthControlBlock) 
     {

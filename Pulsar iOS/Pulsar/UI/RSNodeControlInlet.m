@@ -22,21 +22,21 @@
 
 @implementation RSNodeControlInlet
 @synthesize titleLabel;
-@synthesize modValue, centerValue;
+@synthesize modValue, center;
 @synthesize delegate;
 @synthesize units;
 @synthesize range;
 
 + (RSNodeControlInlet *)nodeControlInletWithName:(NSString *)name 
                                         modValue:(CGFloat)modValue 
-                                     centerValue:(CGFloat)centerValue 
+                                     center:(CGFloat)center 
                                         delegate:(id <RSNodeControlInletDelegate>)delegate
                                       inNodeView:(NKNodeView *)nodeView
 {
     RSNodeControlInlet *inlet = [super XLetForNode:nodeView];
     inlet.name = name;
     inlet.modValue = modValue;
-    inlet.centerValue = centerValue;
+    inlet.center = center;
     inlet.delegate = delegate;
     return inlet;
 }
@@ -87,11 +87,11 @@
     modButton.value = aModValue;
 }
 
-- (void)setCenterValue:(CGFloat)aCenterValue
+- (void)setCenter:(CGFloat)aCenter
 {
-    CGFloat constrainedValue = self.range.length ? MIN(MAX(aCenterValue, self.range.location), NSMaxRange(self.range)) : aCenterValue;
-    centerValue = constrainedValue;
-    centerButton.value = centerValue;
+    CGFloat constrainedValue = self.range.length ? MIN(MAX(aCenter, self.range.location), NSMaxRange(self.range)) : aCenter;
+    center = constrainedValue;
+    centerButton.value = center;
 }
 
 - (IBAction)modValueChanged:(id)sender 
@@ -101,11 +101,11 @@
     [self.delegate nodeControlInlet:self didChangeMod:self.modValue];
 }
 
-- (IBAction)centerValueChanged:(id)sender 
+- (IBAction)centerChanged:(id)sender 
 {
     NKDragButton *button = sender;
-    self.centerValue = button.value;
-    [self.delegate nodeControlInlet:self didChangeCenter:self.centerValue];
+    self.center = button.value;
+    [self.delegate nodeControlInlet:self didChangeCenter:self.center];
 }
 
 // Overrides

@@ -5,6 +5,7 @@
 @class SCGroup;
 @class RSOutNodeInstance;
 @class RSSynthDef;
+@class RSWire;
 
 @interface RSGraph : _RSGraph <RSServerObject> {}
 
@@ -55,8 +56,16 @@
 
 - (NSDictionary *)dictionaryRepresentationWithSynthDefReplacements:(NSDictionary *)replacementSynthDefNamesByNodeID;
 
+// New subscript support
+- (RSNode
+   *)objectForKeyedSubscript:(id)key;
+// Object is string name of a synthdef, key becomes node ID
+- (void)setObject:(NSString *)object forKeyedSubscript:(NSString *)key;
 
-
+// Testing syntax
+- (RSWire *)connect:(NSString *)fromNodeID toAudioInputOf:(NSString *)toNodeID atAmp:(CGFloat)amp;
+- (RSWire *)connect:(NSString *)fromNodeID to:(NSString *)inputName of:(NSString *)toNodeID atAmp:(CGFloat)amp;
+- (RSWire *)connect:(NSString *)fromNodeID toGraphOutputAtAmp:(CGFloat)amp;
 
 #pragma mark - Testing
 - (void)applyTestSnapshot;

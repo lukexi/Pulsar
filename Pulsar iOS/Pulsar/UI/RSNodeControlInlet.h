@@ -13,7 +13,7 @@
 @protocol RSNodeControlInletDelegate <NSObject>
 
 - (void)nodeControlInlet:(RSNodeControlInlet *)nodeControlInlet didChangeMod:(CGFloat)modValue;
-- (void)nodeControlInlet:(RSNodeControlInlet *)nodeControlInlet didChangeCenter:(CGFloat)centerValue;
+- (void)nodeControlInlet:(RSNodeControlInlet *)nodeControlInlet didChangeCenter:(CGFloat)center;
 
 @end
 
@@ -21,14 +21,14 @@
 
 + (RSNodeControlInlet *)nodeControlInletWithName:(NSString *)name 
                                         modValue:(CGFloat)modValue 
-                                     centerValue:(CGFloat)centerValue 
+                                     center:(CGFloat)center 
                                         delegate:(id <RSNodeControlInletDelegate>)delegate
                                       inNodeView:(NKNodeView *)nodeView;
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (nonatomic) CGFloat modValue;
-@property (nonatomic) CGFloat centerValue;
+@property (nonatomic) CGFloat center;
 @property (nonatomic) NSRange range;
 @property (nonatomic, strong) NSString *units;
 
