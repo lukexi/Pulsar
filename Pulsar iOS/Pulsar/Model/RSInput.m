@@ -65,7 +65,7 @@
     if (self.node.graph.isSpawned)
     {
         [self.scalerNode set:[NSArray arrayWithObjects:
-                              [OSCValue createWithString:@"center"], 
+                              [OSCValue createWithString:@"centerValue"], 
                               [OSCValue createWithFloat:self.centerValue], 
                               [OSCValue createWithString:@"t_lagTime"], 
                               [OSCValue createWithFloat:self.lagTime],
@@ -82,7 +82,7 @@
                                    arguments:[NSArray arrayWithObjects:
                                               [OSCValue createWithString:@"inputSummingBus"], 
                                               [OSCValue createWithInt:self.inputSummingBus.busID],
-                                              [OSCValue createWithString:@"center"], 
+                                              [OSCValue createWithString:@"centerValue"], 
                                               [OSCValue createWithFloat:self.centerValue],
                                               [OSCValue createWithString:@"modDepth"], 
                                               [OSCValue createWithFloat:self.modDepthValue],
