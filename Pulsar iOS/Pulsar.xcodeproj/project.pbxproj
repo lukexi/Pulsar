@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2002DFC150CC528006B2AFC /* RSMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = C2002DFA150CC528006B2AFC /* RSMetro.h */; };
-		C2002DFD150CC528006B2AFC /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
-		C2002DFE150CC528006B2AFC /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
-		C2002DFF150CC528006B2AFC /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
 		C22ACDA214983B8F003EE04B /* MutLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7514983B8E003EE04B /* MutLockArray.m */; };
 		C22ACDA414983B8F003EE04B /* MutLockDict.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7714983B8E003EE04B /* MutLockDict.m */; };
 		C22ACDA614983B8F003EE04B /* MutNRLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7914983B8E003EE04B /* MutNRLockArray.m */; };
@@ -39,6 +35,20 @@
 		C2339B0914C3EDE7002E4251 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2339B0414C3EDE7002E4251 /* SCWaveformView.m */; };
 		C2339B0E14C3EED6002E4251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
 		C2339B0F14C3EEE2002E4251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
+		C2372C4E152C3F570097575E /* PSScales.json in Resources */ = {isa = PBXBuildFile; fileRef = C2372C4D152C3F570097575E /* PSScales.json */; };
+		C2372C4F152C3F570097575E /* PSScales.json in Resources */ = {isa = PBXBuildFile; fileRef = C2372C4D152C3F570097575E /* PSScales.json */; };
+		C2372C56152C44060097575E /* PSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C2372C54152C44060097575E /* PSEvent.h */; };
+		C2372C57152C44060097575E /* PSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C2372C54152C44060097575E /* PSEvent.h */; };
+		C2372C58152C44060097575E /* PSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C55152C44060097575E /* PSEvent.m */; };
+		C2372C59152C44060097575E /* PSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C55152C44060097575E /* PSEvent.m */; };
+		C2372C5A152C44060097575E /* PSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C55152C44060097575E /* PSEvent.m */; };
+		C2372C5B152C44060097575E /* PSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C55152C44060097575E /* PSEvent.m */; };
+		C2372C5E152D73440097575E /* NSObject+BlockRecognition.h in Headers */ = {isa = PBXBuildFile; fileRef = C2372C5C152D73440097575E /* NSObject+BlockRecognition.h */; };
+		C2372C5F152D73440097575E /* NSObject+BlockRecognition.h in Headers */ = {isa = PBXBuildFile; fileRef = C2372C5C152D73440097575E /* NSObject+BlockRecognition.h */; };
+		C2372C60152D73440097575E /* NSObject+BlockRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */; };
+		C2372C61152D73440097575E /* NSObject+BlockRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */; };
+		C2372C62152D73440097575E /* NSObject+BlockRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */; };
+		C2372C63152D73440097575E /* NSObject+BlockRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */; };
 		C24EE6E5148C3ED600E72DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E4148C3ED600E72DAF /* UIKit.framework */; };
 		C24EE6E7148C3ED600E72DAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
 		C24EE6E9148C3ED600E72DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E8148C3ED600E72DAF /* CoreGraphics.framework */; };
@@ -105,7 +115,6 @@
 		C25A266C150D1F4B00DB2F19 /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
 		C25A266D150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */; };
 		C25A266E150D1F4B00DB2F19 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
-		C25A2670150D1F4B00DB2F19 /* RSMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = C2002DFB150CC528006B2AFC /* RSMetro.m */; };
 		C25A2674150D1F4B00DB2F19 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
 		C25A2675150D1F4B00DB2F19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
 		C25A2677150D1F4B00DB2F19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EBD14989D4C000F534B /* QuartzCore.framework */; };
@@ -117,7 +126,6 @@
 		C25A267E150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C513E214AA550700F089C2 /* NSDictionary+OSCAdditions.h */; };
 		C25A267F150D1F4B00DB2F19 /* RSTestSketches.h in Headers */ = {isa = PBXBuildFile; fileRef = C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */; };
 		C25A2680150D1F4B00DB2F19 /* SCWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2339B0314C3EDE7002E4251 /* SCWaveformView.h */; };
-		C25A2681150D1F4B00DB2F19 /* RSMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = C2002DFA150CC528006B2AFC /* RSMetro.h */; };
 		C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */ = {isa = PBXBuildFile; fileRef = C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */; };
 		C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
@@ -432,8 +440,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C2002DFA150CC528006B2AFC /* RSMetro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMetro.h; sourceTree = "<group>"; };
-		C2002DFB150CC528006B2AFC /* RSMetro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMetro.m; sourceTree = "<group>"; };
 		C22ACD7414983B8E003EE04B /* MutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockArray.h; sourceTree = "<group>"; };
 		C22ACD7514983B8E003EE04B /* MutLockArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutLockArray.m; sourceTree = "<group>"; };
 		C22ACD7614983B8E003EE04B /* MutLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockDict.h; sourceTree = "<group>"; };
@@ -483,6 +489,11 @@
 		C2339B0314C3EDE7002E4251 /* SCWaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWaveformView.h; sourceTree = "<group>"; };
 		C2339B0414C3EDE7002E4251 /* SCWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWaveformView.m; sourceTree = "<group>"; };
 		C2339B0D14C3EED6002E4251 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C2372C4D152C3F570097575E /* PSScales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PSScales.json; sourceTree = "<group>"; };
+		C2372C54152C44060097575E /* PSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSEvent.h; sourceTree = "<group>"; };
+		C2372C55152C44060097575E /* PSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSEvent.m; sourceTree = "<group>"; };
+		C2372C5C152D73440097575E /* NSObject+BlockRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockRecognition.h"; sourceTree = "<group>"; };
+		C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlockRecognition.m"; sourceTree = "<group>"; };
 		C24EE6E0148C3ED600E72DAF /* Pulsar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulsar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24EE6E4148C3ED600E72DAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C24EE6E6148C3ED600E72DAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -807,11 +818,16 @@
 		C24EE6EC148C3ED600E72DAF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C2372C5C152D73440097575E /* NSObject+BlockRecognition.h */,
+				C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */,
+				C2A68C3B151F2A2C000A543E /* PSSubscripts.h */,
+				C2A68C3C151F2A2C000A543E /* PSSubscripts.m */,
+				C2A68C61151F2A81000A543E /* PSScale.h */,
+				C2A68C62151F2A81000A543E /* PSScale.m */,
+				C2372C4D152C3F570097575E /* PSScales.json */,
 				C2A68C2A151F29F6000A543E /* Clocks */,
 				C2D62E271498611B000F534B /* UI */,
 				C2D62DF8149860FC000F534B /* Model */,
-				C2002DFA150CC528006B2AFC /* RSMetro.h */,
-				C2002DFB150CC528006B2AFC /* RSMetro.m */,
 			);
 			name = Classes;
 			path = Pulsar;
@@ -835,16 +851,14 @@
 				C2A68C32151F2A2C000A543E /* PSClock.m */,
 				C2A68C33151F2A2C000A543E /* PSPlayer.h */,
 				C2A68C34151F2A2C000A543E /* PSPlayer.m */,
+				C2372C54152C44060097575E /* PSEvent.h */,
+				C2372C55152C44060097575E /* PSEvent.m */,
 				C2A68C35151F2A2C000A543E /* PSStream.h */,
 				C2A68C36151F2A2C000A543E /* PSStream.m */,
 				C2A68C37151F2A2C000A543E /* PSPattern.h */,
 				C2A68C38151F2A2C000A543E /* PSPattern.m */,
 				C2A68C39151F2A2C000A543E /* PSPatternables.h */,
 				C2A68C3A151F2A2C000A543E /* PSPatternables.m */,
-				C2A68C3B151F2A2C000A543E /* PSSubscripts.h */,
-				C2A68C3C151F2A2C000A543E /* PSSubscripts.m */,
-				C2A68C61151F2A81000A543E /* PSScale.h */,
-				C2A68C62151F2A81000A543E /* PSScale.m */,
 			);
 			name = Clocks;
 			sourceTree = "<group>";
@@ -1083,7 +1097,6 @@
 				C25A267E150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.h in Headers */,
 				C25A267F150D1F4B00DB2F19 /* RSTestSketches.h in Headers */,
 				C25A2680150D1F4B00DB2F19 /* SCWaveformView.h in Headers */,
-				C25A2681150D1F4B00DB2F19 /* RSMetro.h in Headers */,
 				C2A68C3E151F2A2C000A543E /* PSClock.h in Headers */,
 				C2A68C44151F2A2C000A543E /* PSPlayer.h in Headers */,
 				C2A68C4A151F2A2C000A543E /* PSStream.h in Headers */,
@@ -1091,6 +1104,8 @@
 				C2A68C56151F2A2C000A543E /* PSPatternables.h in Headers */,
 				C2A68C5C151F2A2C000A543E /* PSSubscripts.h in Headers */,
 				C2A68C64151F2A81000A543E /* PSScale.h in Headers */,
+				C2372C57152C44060097575E /* PSEvent.h in Headers */,
+				C2372C5F152D73440097575E /* NSObject+BlockRecognition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,7 +1117,6 @@
 				C2C513E414AA550700F089C2 /* NSDictionary+OSCAdditions.h in Headers */,
 				C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */,
 				C2339B0514C3EDE7002E4251 /* SCWaveformView.h in Headers */,
-				C2002DFC150CC528006B2AFC /* RSMetro.h in Headers */,
 				C2A68C3D151F2A2C000A543E /* PSClock.h in Headers */,
 				C2A68C43151F2A2C000A543E /* PSPlayer.h in Headers */,
 				C2A68C49151F2A2C000A543E /* PSStream.h in Headers */,
@@ -1110,6 +1124,8 @@
 				C2A68C55151F2A2C000A543E /* PSPatternables.h in Headers */,
 				C2A68C5B151F2A2C000A543E /* PSSubscripts.h in Headers */,
 				C2A68C63151F2A81000A543E /* PSScale.h in Headers */,
+				C2372C56152C44060097575E /* PSEvent.h in Headers */,
+				C2372C5E152D73440097575E /* NSObject+BlockRecognition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1286,6 +1302,7 @@
 				C2A9F1A615007909000ECC90 /* NKWireEditorViewController.xib in Resources */,
 				C2A9F1A815007909000ECC90 /* NKNodeView.xib in Resources */,
 				C2A9F1AA15007909000ECC90 /* NKOutNodeView.xib in Resources */,
+				C2372C4E152C3F570097575E /* PSScales.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1295,6 +1312,7 @@
 			files = (
 				C2D62EDC1498A84B000F534B /* InfoPlist.strings in Resources */,
 				C2D62F311498BA4F000F534B /* README.txt in Resources */,
+				C2372C4F152C3F570097575E /* PSScales.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1385,7 +1403,6 @@
 				C2C513E514AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0614C3EDE7002E4251 /* SCWaveformView.m in Sources */,
-				C2002DFD150CC528006B2AFC /* RSMetro.m in Sources */,
 				C2A68C3F151F2A2C000A543E /* PSClock.m in Sources */,
 				C2A68C45151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4B151F2A2C000A543E /* PSStream.m in Sources */,
@@ -1393,6 +1410,8 @@
 				C2A68C57151F2A2C000A543E /* PSPatternables.m in Sources */,
 				C2A68C5D151F2A2C000A543E /* PSSubscripts.m in Sources */,
 				C2A68C65151F2A81000A543E /* PSScale.m in Sources */,
+				C2372C58152C44060097575E /* PSEvent.m in Sources */,
+				C2372C60152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1456,7 +1475,6 @@
 				C25A266C150D1F4B00DB2F19 /* SCRenderer.m in Sources */,
 				C25A266D150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.m in Sources */,
 				C25A266E150D1F4B00DB2F19 /* RSTestSketches.m in Sources */,
-				C25A2670150D1F4B00DB2F19 /* RSMetro.m in Sources */,
 				C2A68C41151F2A2C000A543E /* PSClock.m in Sources */,
 				C2A68C47151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4D151F2A2C000A543E /* PSStream.m in Sources */,
@@ -1464,6 +1482,8 @@
 				C2A68C59151F2A2C000A543E /* PSPatternables.m in Sources */,
 				C2A68C5F151F2A2C000A543E /* PSSubscripts.m in Sources */,
 				C2A68C67151F2A81000A543E /* PSScale.m in Sources */,
+				C2372C5A152C44060097575E /* PSEvent.m in Sources */,
+				C2372C62152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1534,7 +1554,6 @@
 				C2C513E714AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0814C3EDE7002E4251 /* SCWaveformView.m in Sources */,
-				C2002DFE150CC528006B2AFC /* RSMetro.m in Sources */,
 				C2A68C40151F2A2C000A543E /* PSClock.m in Sources */,
 				C2A68C46151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4C151F2A2C000A543E /* PSStream.m in Sources */,
@@ -1542,6 +1561,8 @@
 				C2A68C58151F2A2C000A543E /* PSPatternables.m in Sources */,
 				C2A68C5E151F2A2C000A543E /* PSSubscripts.m in Sources */,
 				C2A68C66151F2A81000A543E /* PSScale.m in Sources */,
+				C2372C59152C44060097575E /* PSEvent.m in Sources */,
+				C2372C61152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1612,7 +1633,6 @@
 				C2C513E814AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0914C3EDE7002E4251 /* SCWaveformView.m in Sources */,
-				C2002DFF150CC528006B2AFC /* RSMetro.m in Sources */,
 				C2A68C42151F2A2C000A543E /* PSClock.m in Sources */,
 				C2A68C48151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4E151F2A2C000A543E /* PSStream.m in Sources */,
@@ -1620,6 +1640,8 @@
 				C2A68C5A151F2A2C000A543E /* PSPatternables.m in Sources */,
 				C2A68C60151F2A2C000A543E /* PSSubscripts.m in Sources */,
 				C2A68C68151F2A81000A543E /* PSScale.m in Sources */,
+				C2372C5B152C44060097575E /* PSEvent.m in Sources */,
+				C2372C63152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

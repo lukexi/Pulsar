@@ -12,7 +12,7 @@
 
 - (PSPattern *)asPattern
 {
-    return [PSPattern patternWithValues:@[self]];
+    return [PSListPattern listPatternWithValues:@[self]];
 }
 
 @end
@@ -21,7 +21,7 @@
 
 - (PSPattern *)asPattern
 {
-    return [PSPattern patternWithValues:self];
+    return [PSListPattern listPatternWithValues:self];
 }
 
 @end
