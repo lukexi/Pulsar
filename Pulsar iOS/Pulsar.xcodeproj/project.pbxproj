@@ -489,7 +489,7 @@
 		C2339B0314C3EDE7002E4251 /* SCWaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWaveformView.h; sourceTree = "<group>"; };
 		C2339B0414C3EDE7002E4251 /* SCWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWaveformView.m; sourceTree = "<group>"; };
 		C2339B0D14C3EED6002E4251 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		C2372C4D152C3F570097575E /* PSScales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PSScales.json; sourceTree = "<group>"; };
+		C2372C4D152C3F570097575E /* PSScales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PSScales.json; path = Pulsar/PSScales.json; sourceTree = "<group>"; };
 		C2372C54152C44060097575E /* PSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSEvent.h; sourceTree = "<group>"; };
 		C2372C55152C44060097575E /* PSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSEvent.m; sourceTree = "<group>"; };
 		C2372C5C152D73440097575E /* NSObject+BlockRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockRecognition.h"; sourceTree = "<group>"; };
@@ -824,7 +824,6 @@
 				C2A68C3C151F2A2C000A543E /* PSSubscripts.m */,
 				C2A68C61151F2A81000A543E /* PSScale.h */,
 				C2A68C62151F2A81000A543E /* PSScale.m */,
-				C2372C4D152C3F570097575E /* PSScales.json */,
 				C2A68C2A151F29F6000A543E /* Clocks */,
 				C2D62E271498611B000F534B /* UI */,
 				C2D62DF8149860FC000F534B /* Model */,
@@ -1082,6 +1081,7 @@
 				C2D62E321498611B000F534B /* RSGraphNoteEditorViewController.xib */,
 				C2D62E371498611B000F534B /* RSNodeControlInlet.xib */,
 				C2D62E3A1498611B000F534B /* RSUGenListViewController.xib */,
+				C2372C4D152C3F570097575E /* PSScales.json */,
 			);
 			name = "Pulsar Bundle";
 			sourceTree = "<group>";

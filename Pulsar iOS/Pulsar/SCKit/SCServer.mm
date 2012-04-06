@@ -156,6 +156,7 @@ int vpost(const char *fmt, va_list ap)
 
 - (void)sendMessage:(OSCMessage *)message
 {
+    NSLog(@"Sending message: %@", message);
     [self.outPort sendThisMessage:message];
 }
 

@@ -57,3 +57,15 @@
 @property (nonatomic, readonly) NSInteger places;
 
 @end
+
+@interface PSScramble : PSFilterPattern
+
++ (PSScramble *)scramble;
+
+@end
+
+@interface PSReverse : PSFilterPattern
+
++ (PSReverse *)reverse;
+
+@end

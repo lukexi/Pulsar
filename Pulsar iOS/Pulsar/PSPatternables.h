@@ -16,3 +16,11 @@
 @interface NSArray (Patternable) <PSPatternable>
 
 @end
+
+@interface NSOrderedSet (Patternable) <PSPatternable>
+
+@end
+
+@interface NSSet (Patternable) <PSPatternable>
+
+@end

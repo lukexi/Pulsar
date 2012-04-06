@@ -16,6 +16,11 @@ float mtof(float f)
     else return (8.17579891564 * exp(.0577622650 * f));
 }
 
+float midiratio(float midi)
+{
+    return powf(2.0 , midi * 0.083333333333);
+}
+
 @interface PSScale ()
 
 @end
@@ -34,6 +39,7 @@ float mtof(float f)
         _degrees = degrees;
         _name = name;
         _pitchesPerOctave = pitchesPerOctave;
+        _tuning = [PSTuning defaultWithPitchesPerOctave:pitchesPerOctave];
     }
     return self;
 }
@@ -46,6 +52,36 @@ float mtof(float f)
 - (CGFloat)octaveRatio
 {
     return [self.tuning octaveRatio];
+}
+
+- (NSArray *)semitones
+{
+    NSMutableArray *semitones = [NSMutableArray array];
+    __weak PSScale *weakSelf = self;
+    [self.degrees enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [semitones addObject:[NSNumber numberWithFloat:[weakSelf.tuning tuningAtWrappedIndex:idx]]];
+    }];
+    return semitones;
+}
+
+- (NSArray *)ratios
+{
+    NSMutableArray *ratios = [NSMutableArray array];
+    [[self semitones] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        CGFloat semitone = [obj floatValue];
+        [ratios addObject:[NSNumber numberWithFloat:midiratio(semitone)]];
+    }];
+    return ratios;
+}
+
+- (CGFloat)degreeToRatio:(CGFloat)degree octave:(CGFloat)octave
+{
+    return [[[self ratios] objectAtIndex:degree] floatValue] * powf([self octaveRatio], octave);
+}
+
+- (CGFloat)degreeToFreq:(CGFloat)degree rootFreq:(CGFloat)rootFreq octave:(CGFloat)octave
+{
+    return [self degreeToRatio:degree octave:octave] * rootFreq;
 }
 
 - (NSUInteger)degreeAtIndex:(NSUInteger)index
@@ -84,7 +120,8 @@ float mtof(float f)
     static NSDictionary *scales;
     if (!scales)
     {
-        NSData *data = [NSData dataWithContentsOfFile:@"PSScales.json"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"PSScales" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:path];
         NSError *error;
         scales = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
         if (!scales)
@@ -95,7 +132,7 @@ float mtof(float f)
     return scales;
 }
 
-+ (PSScale *)scale:(NSString *)identifier
++ (PSScale *)scaleNamed:(NSString *)identifier
 {
     NSDictionary *description = [self scales][identifier];
     if (!description)
@@ -133,6 +170,22 @@ float mtof(float f)
     return log2(self.octaveRatio) * 12.0f;
 }
 
+- (CGFloat)tuningAtWrappedIndex:(NSUInteger)index
+{
+    NSUInteger wrappedIndex = index % [self count];
+    return [self tuningAtIndex:wrappedIndex];
+}
+
+- (CGFloat)tuningAtIndex:(NSUInteger)index
+{
+    return [[self.tuning objectAtIndex:index] floatValue];
+}
+
+- (NSUInteger)count
+{
+    return [self.tuning count];
+}
+
 + (PSTuning *)defaultWithPitchesPerOctave:(NSUInteger)pitchesPerOctave
 {
     return [self equalTemperedWithPitchesPerOctave:pitchesPerOctave];
@@ -140,12 +193,12 @@ float mtof(float f)
 
 + (PSTuning *)equalTemperedWithPitchesPerOctave:(NSUInteger)pitchesPerOctave
 {
-    return [self tuningWithTunings:[self tuningsForEqualTemperedWithPtichesPerOctave:pitchesPerOctave]
+    return [self tuningWithTunings:[self tuningsForEqualTemperedWithPitchesPerOctave:pitchesPerOctave]
                        octaveRatio:2.0
                               name:[self equalTemperedNameForPitchesPerOctave:pitchesPerOctave]];
 }
 
-+ (NSArray *)tuningsForEqualTemperedWithPtichesPerOctave:(NSUInteger)pitchesPerOctave
++ (NSArray *)tuningsForEqualTemperedWithPitchesPerOctave:(NSUInteger)pitchesPerOctave
 {
     NSMutableArray *tunings = [NSMutableArray arrayWithCapacity:pitchesPerOctave];
     CGFloat twelveOver = 12.0f / pitchesPerOctave;

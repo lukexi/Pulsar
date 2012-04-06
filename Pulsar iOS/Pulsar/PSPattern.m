@@ -148,3 +148,46 @@
 }
 
 @end
+
+@implementation PSScramble
+
++ (PSScramble *)scramble
+{
+    return [[self alloc] init];
+}
+
+- (NSArray *)filter:(PSListPattern *)listPattern
+{
+    NSMutableArray *newValues = [NSMutableArray arrayWithCapacity:[listPattern.values count]];
+    
+    NSMutableArray *remainingValues = [listPattern.values mutableCopy];
+    while ([remainingValues count])
+    {
+        NSUInteger randomIndex = arc4random() % [remainingValues count];
+        [newValues addObject:[remainingValues objectAtIndex:randomIndex]];
+        [remainingValues removeObjectAtIndex:randomIndex];
+    }
+    return newValues;
+}
+
+@end
+
+@implementation PSReverse
+
++ (PSReverse *)reverse
+{
+    return [[self alloc] init];
+}
+
+- (NSArray *)filter:(PSListPattern *)listPattern
+{
+    NSMutableArray *newValues = [NSMutableArray arrayWithCapacity:[listPattern.values count]];
+    NSEnumerator *reverseEnumerator = [listPattern.values reverseObjectEnumerator];
+    
+    for (NSUInteger i = 0; i < [listPattern.values count]; i++)
+    {
+        [newValues addObject:[reverseEnumerator nextObject]];
+    }
+    return newValues;
+}
+@end

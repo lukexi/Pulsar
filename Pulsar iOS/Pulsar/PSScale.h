@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 float mtof(float f);
+float midiratio(float midi);
 
 @class PSTuning;
 @interface PSScale : NSObject
@@ -25,23 +26,29 @@ float mtof(float f);
 - (NSUInteger)count;
 - (NSUInteger)degreeAtIndex:(NSUInteger)index;
 - (NSUInteger)degreeAtWrappedIndex:(NSUInteger)index;
+
+- (CGFloat)degreeToRatio:(CGFloat)degree octave:(CGFloat)octave;
+- (CGFloat)degreeToFreq:(CGFloat)degree rootFreq:(CGFloat)rootFreq octave:(CGFloat)octave;
+
 - (CGFloat)performDegreeToKey:(CGFloat)scaleDegree
                stepsPerOctave:(CGFloat)stepsPerOctave
                    accidental:(CGFloat)accidental;
 
 // Scales
-+ (PSScale *)scale:(NSString *)identifier;
++ (PSScale *)scaleNamed:(NSString *)identifier;
 
 @end
 
 @interface PSTuning : NSObject
 
 + (PSTuning *)tuningWithTunings:(NSArray *)tunings octaveRatio:(CGFloat)octaveRatio name:(NSString *)name;
++ (PSTuning *)defaultWithPitchesPerOctave:(NSUInteger)pitchesPerOctave;
 
 @property (nonatomic, strong, readonly) NSArray *tuning;
 @property (nonatomic, readonly) CGFloat octaveRatio;
 @property (nonatomic, strong, readonly) NSString *name;
 
 - (CGFloat)stepsPerOctave;
+- (CGFloat)tuningAtWrappedIndex:(NSUInteger)index;
 
 @end

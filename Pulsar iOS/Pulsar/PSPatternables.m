@@ -25,3 +25,21 @@
 }
 
 @end
+
+@implementation NSOrderedSet (Patternable)
+
+- (PSPattern *)asPattern
+{
+    return [PSListPattern listPatternWithValues:[[self array] copy]];
+}
+
+@end
+
+@implementation NSSet (Patternable)
+
+- (PSPattern *)asPattern
+{
+    return [PSListPattern listPatternWithValues:[self allObjects]];
+}
+
+@end

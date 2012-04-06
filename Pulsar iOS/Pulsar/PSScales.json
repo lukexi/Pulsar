@@ -1,148 +1,98 @@
 {
-    // TWELVE TONES PER OCTAVE
-    // 5 note scales
-    'identifier':'minorPentatonic', 'degrees':[0,3,5,7,10], 'pitchesPerOctave':12, 'name':'Minor Pentatonic',
-    'identifier':'majorPentatonic', 'degrees':[0,2,4,7,9], 'pitchesPerOctave':12, 'name':'Major Pentatonic',
-    // another mode of major pentatonic
-    'identifier':'ritusen', 'degrees':[0,2,5,7,9], 'pitchesPerOctave':12, 'name':'Ritusen',
-    // another mode of major pentatonic
-    'identifier':'egyptian', 'degrees':[0,2,5,7,10], 'pitchesPerOctave':12, 'name':'Egyptian',
-    
-    'identifier':'kumoi', 'degrees':[0,2,3,7,9], 'pitchesPerOctave':12, 'name':'Kumai',
-    'identifier':'hirajoshi', 'degrees':[0,2,3,7,8], 'pitchesPerOctave':12, 'name':'Hirajoshi',
-    'identifier':'iwato', 'degrees':[0,1,5,6,10], 'pitchesPerOctave':12, 'name':'Iwato', // mode of hirajoshi
-    'identifier':'chinese', 'degrees':[0,4,6,7,11], 'pitchesPerOctave':12, 'name':'Chinese', // mode of hirajoshi
-    'identifier':'indian', 'degrees':[0,4,5,7,10], 'pitchesPerOctave':12, 'name':'Indian',
-    'identifier':'pelog', 'degrees':[0,1,3,7,8], 'pitchesPerOctave':12, 'name':'Pelog',
-    
-    'identifier':'prometheus', 'degrees':[0,2,4,6,11], 'pitchesPerOctave':12, 'name':'Prometheus',
-    'identifier':'scriabin', 'degrees':[0,1,4,7,9], 'pitchesPerOctave':12, 'name':'Scriabin',
-    
-    // han chinese pentatonic scales
-    'identifier':'gong', 'degrees':[0,2,4,7,9], 'pitchesPerOctave':12, 'name':'Gong',
-    'identifier':'shang', 'degrees':[0,2,5,7,10], 'pitchesPerOctave':12, 'name':'Shang',
-    'identifier':'jiao', 'degrees':[0,3,5,8,10], 'pitchesPerOctave':12, 'name':'Jiao',
-    'identifier':'zhi', 'degrees':[0,2,5,7,9], 'pitchesPerOctave':12, 'name':'Zhi',
-    'identifier':'yu', 'degrees':[0,3,5,7,10], 'pitchesPerOctave':12, 'name':'Yu',
-    
-    
-    // 6 note scales
-    'identifier':'whole', 'degrees':[0,2,4,6,8,10], 'pitchesPerOctave':12, 'name':'Whole Tone',
-    'identifier':'augmented', 'degrees':[0,3,4,7,8,11], 'pitchesPerOctave':12, 'name':'Augmented',
-    'identifier':'augmented2', 'degrees':[0,1,4,5,8,9], 'pitchesPerOctave':12, 'name':'Augmented 2',
-    
-    // hexatonic modes with no tritone
-    'identifier':'hexMajor7', 'degrees':[0,2,4,7,9,11], 'pitchesPerOctave':12, 'name':'Hex Major 7',
-    'identifier':'hexDorian', 'degrees':[0,2,3,5,7,10], 'pitchesPerOctave':12, 'name':'Hex Dorian',
-    'identifier':'hexPhrygian', 'degrees':[0,1,3,5,8,10], 'pitchesPerOctave':12, 'name':'Hex Phrygian',
-    'identifier':'hexSus', 'degrees':[0,2,5,7,9,10], 'pitchesPerOctave':12, 'name':'Hex Sus',
-    'identifier':'hexMajor6', 'degrees':[0,2,4,5,7,9], 'pitchesPerOctave':12, 'name':'Hex Major 6',
-    'identifier':'hexAeolian', 'degrees':[0,3,5,7,8,10], 'pitchesPerOctave':12, 'name':'Hex Aeolian',
-    
-    // 7 note scales
-    'identifier':'major', 'degrees':[0,2,4,5,7,9,11], 'pitchesPerOctave':12, 'name':'Major',
-    'identifier':'ionian', 'degrees':[0,2,4,5,7,9,11], 'pitchesPerOctave':12, 'name':'Ionian',
-    'identifier':'dorian', 'degrees':[0,2,3,5,7,9,10], 'pitchesPerOctave':12, 'name':'Dorian',
-    'identifier':'phrygian', 'degrees':[0,1,3,5,7,8,10], 'pitchesPerOctave':12, 'name':'Phrygian',
-    'identifier':'lydian', 'degrees':[0,2,4,6,7,9,11], 'pitchesPerOctave':12, 'name':'Lydian',
-    'identifier':'mixolydian', 'degrees':[0,2,4,5,7,9,10], 'pitchesPerOctave':12, 'name':'Mixolydian',
-    'identifier':'aeolian', 'degrees':[0,2,3,5,7,8,10], 'pitchesPerOctave':12, 'name':'Aeolian',
-    'identifier':'minor', 'degrees':[0,2,3,5,7,8,10], 'pitchesPerOctave':12, 'name':'Natural Minor',
-    'identifier':'locrian', 'degrees':[0,1,3,5,6,8,10], 'pitchesPerOctave':12, 'name':'Locrian',
-    
-    'identifier':'harmonicMinor', 'degrees':[0,2,3,5,7,8,11], 'pitchesPerOctave':12, 'name':'Harmonic Minor',
-    'identifier':'harmonicMajor', 'degrees':[0,2,4,5,7,8,11], 'pitchesPerOctave':12, 'name':'Harmonic Major',
-    
-    'identifier':'melodicMinor', 'degrees':[0,2,3,5,7,9,11], 'pitchesPerOctave':12, 'name':'Melodic Minor',
-    'identifier':'melodicMinorDesc', 'degrees':[0,2,3,5,7,8,10], 'pitchesPerOctave':12, 'name':'Melodic Minor Descending',
-    'identifier':'melodicMajor', 'degrees':[0,2,4,5,7,8,10], 'pitchesPerOctave':12, 'name':'Melodic Major',
-    
-    'identifier':'bartok', 'degrees':[0,2,4,5,7,8,10], 'pitchesPerOctave':12, 'name':'Bartok',
-    'identifier':'hindu', 'degrees':[0,2,4,5,7,8,10], 'pitchesPerOctave':12, 'name':'Hindu',
-    
-    // raga modes
-    'identifier':'todi', 'degrees':[0,1,3,6,7,8,11], 'pitchesPerOctave':12, 'name':'Todi',
-    'identifier':'purvi', 'degrees':[0,1,4,6,7,8,11], 'pitchesPerOctave':12, 'name':'Purvi',
-    'identifier':'marva', 'degrees':[0,1,4,6,7,9,11], 'pitchesPerOctave':12, 'name':'Marva',
-    'identifier':'bhairav', 'degrees':[0,1,4,5,7,8,11], 'pitchesPerOctave':12, 'name':'Bhairav',
-    'identifier':'ahirbhairav', 'degrees':[0,1,4,5,7,9,10], 'pitchesPerOctave':12, 'name':'Ahirbhairav',
-    
-    'identifier':'superLocrian', 'degrees':[0,1,3,4,6,8,10], 'pitchesPerOctave':12, 'name':'Super Locrian',
-    'identifier':'romanianMinor', 'degrees':[0,2,3,6,7,9,10], 'pitchesPerOctave':12, 'name':'Romanian Minor',         
-    'identifier':'hungarianMinor', 'degrees':[0,2,3,6,7,8,11], 'pitchesPerOctave':12, 'name':'Hungarian Minor',
-    'identifier':'neapolitanMinor', 'degrees':[0,1,3,5,7,8,11], 'pitchesPerOctave':12, 'name':'Neapolitan Minor',
-    'identifier':'enigmatic', 'degrees':[0,1,4,6,8,10,11], 'pitchesPerOctave':12, 'name':'Enigmatic',
-    'identifier':'spanish', 'degrees':[0,1,4,5,7,8,10], 'pitchesPerOctave':12, 'name':'Spanish',
-    
-    // modes of whole tones with added note ->
-    'identifier':'leadingWhole', 'degrees':[0,2,4,6,8,10,11], 'pitchesPerOctave':12, 'name':'Leading Whole Tone',
-    'identifier':'lydianMinor', 'degrees':[0,2,4,6,7,8,10], 'pitchesPerOctave':12, 'name':'Lydian Minor',
-    'identifier':'neapolitanMajor', 'degrees':[0,1,3,5,7,9,11], 'pitchesPerOctave':12, 'name':'Neapolitan Major',
-    'identifier':'locrianMajor', 'degrees':[0,2,4,5,6,8,10], 'pitchesPerOctave':12, 'name':'Locrian Major',
-    
-    // 8 note scales
-    'identifier':'diminished', 'degrees':[0,1,3,4,6,7,9,10], 'pitchesPerOctave':12, 'name':'Diminished',
-    'identifier':'diminished2', 'degrees':[0,2,3,5,6,8,9,11], 'pitchesPerOctave':12, 'name':'Diminished 2',
-    
-    // 12 note scales
-    'identifier':'chromatic', 'degrees':[0,1,2,3,4,5,6,7,8,9,10,11], 'pitchesPerOctave':12, 'name':'Chromatic',
-    
-    // TWENTY-FOUR TONES PER OCTAVE
-    
-    'identifier':'chromatic24', 'degrees':[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23], 'pitchesPerOctave':24, 'name':'Chromatic 24',
-    
-    // maqam ajam
-    'identifier':'ajam', 'degrees':[0,4,8,10,14,18,22], 'pitchesPerOctave':24, 'name':'Ajam',
-    'identifier':'jiharkah', 'degrees':[0,4,8,10,14,18,21], 'pitchesPerOctave':24, 'name':'Jiharkah',
-    'identifier':'shawqAfza', 'degrees':[0,4,8,10,14,16,22], 'pitchesPerOctave':24, 'name':'Shawq Afza',
-    
-    // maqam sikah
-    'identifier':'sikah', 'degrees':[0,3,7,11,14,17,21], 'pitchesPerOctave':24, 'name':'Sikah',
-    'identifier':'sikahDesc', 'degrees':[0,3,7,11,13,17,21], 'pitchesPerOctave':24, 'name':'Sikah Descending',
-    'identifier':'huzam', 'degrees':[0,3,7,9,15,17,21], 'pitchesPerOctave':24, 'name':'Huzam',
-    'identifier':'iraq', 'degrees':[0,3,7,10,13,17,21], 'pitchesPerOctave':24, 'name':'Iraq',
-    'identifier':'bastanikar', 'degrees':[0,3,7,10,13,15,21], 'pitchesPerOctave':24, 'name':'Bastanikar',
-    'identifier':'mustar', 'degrees':[0,5,7,11,13,17,21], 'pitchesPerOctave':24, 'name':'Mustar',
-    
-    // maqam bayati
-    'identifier':'bayati', 'degrees':[0,3,6,10,14,16,20], 'pitchesPerOctave':24, 'name':'Bayati',
-    'identifier':'karjighar', 'degrees':[0,3,6,10,12,18,20], 'pitchesPerOctave':24, 'name':'Karjighar',
-    'identifier':'husseini', 'degrees':[0,3,6,10,14,17,21], 'pitchesPerOctave':24, 'name':'Husseini',
-    
-    // maqam nahawand
-    'identifier':'nahawand', 'degrees':[0,4,6,10,14,16,22], 'pitchesPerOctave':24, 'name':'Nahawand',
-    'identifier':'nahawandDesc', 'degrees':[0,4,6,10,14,16,20], 'pitchesPerOctave':24, 'name':'Nahawand Descending',
-    'identifier':'farahfaza', 'degrees':[0,4,6,10,14,16,20], 'pitchesPerOctave':24, 'name':'Farahfaza',
-    'identifier':'murassah', 'degrees':[0,4,6,10,12,18,20], 'pitchesPerOctave':24, 'name':'Murassah',
-    'identifier':'ushaqMashri', 'degrees':[0,4,6,10,14,17,21], 'pitchesPerOctave':24, 'name':'Ushaq Mashri',
-    
-    // maqam rast
-    'identifier':'rast', 'degrees':[0,4,7,10,14,18,21], 'pitchesPerOctave':24, 'name':'Rast',
-    'identifier':'rastDesc', 'degrees':[0,4,7,10,14,18,20], 'pitchesPerOctave':24, 'name':'Rast Descending',
-    'identifier':'suznak', 'degrees':[0,4,7,10,14,16,22], 'pitchesPerOctave':24, 'name':'Suznak',
-    'identifier':'nairuz', 'degrees':[0,4,7,10,14,17,20], 'pitchesPerOctave':24, 'name':'Nairuz',
-    'identifier':'yakah', 'degrees':[0,4,7,10,14,18,21], 'pitchesPerOctave':24, 'name':'Yakah',
-    'identifier':'yakahDesc', 'degrees':[0,4,7,10,14,18,20], 'pitchesPerOctave':24, 'name':'Yakah Descending',
-    'identifier':'mahur', 'degrees':[0,4,7,10,14,18,22], 'pitchesPerOctave':24, 'name':'Mahur',
-    
-    // maqam hijaz
-    'identifier':'hijaz', 'degrees':[0,2,8,10,14,17,20], 'pitchesPerOctave':24, 'name':'Hijaz',
-    'identifier':'hijazDesc', 'degrees':[0,2,8,10,14,16,20], 'pitchesPerOctave':24, 'name':'Hijaz Descending',
-    'identifier':'zanjaran', 'degrees':[0,2,8,10,14,18,20], 'pitchesPerOctave':24, 'name':'Zanjaran',
-    
-    // maqam hijazKar
-    'identifier':'zanjaran', 'degrees':[0,2,8,10,14,16,22], 'pitchesPerOctave':24, 'name':'Zanjaran',
-    
-    // maqam saba
-    'identifier':'saba', 'degrees':[0,3,6,8,12,16,20], 'pitchesPerOctave':24, 'name':'Saba',
-    'identifier':'zamzam', 'degrees':[0,2,6,8,14,16,20], 'pitchesPerOctave':24, 'name':'Zamzam',
-    
-    // maqam kurd
-    'identifier':'kurd', 'degrees':[0,2,6,10,14,16,20], 'pitchesPerOctave':24, 'name':'Kurd',
-    'identifier':'kijazKarKurd', 'degrees':[0,2,8,10,14,16,22], 'pitchesPerOctave':24, 'name':'Kijaz Kar Kurd',
-    
-    // maqam nawa Athar
-    'identifier':'nawaAthar', 'degrees':[0,4,6,12,14,16,22], 'pitchesPerOctave':24, 'name':'Nawa Athar',
-    'identifier':'nikriz', 'degrees':[0,4,6,12,14,18,20], 'pitchesPerOctave':24, 'name':'Nikriz',
-    'identifier':'atharKurd', 'degrees':[0,2,6,12,14,16,22], 'pitchesPerOctave':24, 'name':'Athar Kurd'
+    "minorPentatonic":{"degrees":[0,3,5,7,10], "pitchesPerOctave":12, "name":"Minor Pentatonic"},
+    "majorPentatonic":{"degrees":[0,2,4,7,9], "pitchesPerOctave":12, "name":"Major Pentatonic"},
+    "ritusen":{"degrees":[0,2,5,7,9], "pitchesPerOctave":12, "name":"Ritusen"},
+    "egyptian":{"degrees":[0,2,5,7,10], "pitchesPerOctave":12, "name":"Egyptian"},
+    "kumoi":{"degrees":[0,2,3,7,9], "pitchesPerOctave":12, "name":"Kumai"},
+    "hirajoshi":{"degrees":[0,2,3,7,8], "pitchesPerOctave":12, "name":"Hirajoshi"},
+    "iwato":{"degrees":[0,1,5,6,10], "pitchesPerOctave":12, "name":"Iwato"},
+    "chinese":{"degrees":[0,4,6,7,11], "pitchesPerOctave":12, "name":"Chinese"},
+    "indian":{"degrees":[0,4,5,7,10], "pitchesPerOctave":12, "name":"Indian"},
+    "pelog":{"degrees":[0,1,3,7,8], "pitchesPerOctave":12, "name":"Pelog"},
+    "prometheus":{"degrees":[0,2,4,6,11], "pitchesPerOctave":12, "name":"Prometheus"},
+    "scriabin":{"degrees":[0,1,4,7,9], "pitchesPerOctave":12, "name":"Scriabin"},
+    "gong":{"degrees":[0,2,4,7,9], "pitchesPerOctave":12, "name":"Gong"},
+    "shang":{"degrees":[0,2,5,7,10], "pitchesPerOctave":12, "name":"Shang"},
+    "jiao":{"degrees":[0,3,5,8,10], "pitchesPerOctave":12, "name":"Jiao"},
+    "zhi":{"degrees":[0,2,5,7,9], "pitchesPerOctave":12, "name":"Zhi"},
+    "yu":{"degrees":[0,3,5,7,10], "pitchesPerOctave":12, "name":"Yu"},
+    "whole":{"degrees":[0,2,4,6,8,10], "pitchesPerOctave":12, "name":"Whole Tone"},
+    "augmented":{"degrees":[0,3,4,7,8,11], "pitchesPerOctave":12, "name":"Augmented"},
+    "augmented2":{"degrees":[0,1,4,5,8,9], "pitchesPerOctave":12, "name":"Augmented 2"},
+    "hexMajor7":{"degrees":[0,2,4,7,9,11], "pitchesPerOctave":12, "name":"Hex Major 7"},
+    "hexDorian":{"degrees":[0,2,3,5,7,10], "pitchesPerOctave":12, "name":"Hex Dorian"},
+    "hexPhrygian":{"degrees":[0,1,3,5,8,10], "pitchesPerOctave":12, "name":"Hex Phrygian"},
+    "hexSus":{"degrees":[0,2,5,7,9,10], "pitchesPerOctave":12, "name":"Hex Sus"},
+    "hexMajor6":{"degrees":[0,2,4,5,7,9], "pitchesPerOctave":12, "name":"Hex Major 6"},
+    "hexAeolian":{"degrees":[0,3,5,7,8,10], "pitchesPerOctave":12, "name":"Hex Aeolian"},
+    "major":{"degrees":[0,2,4,5,7,9,11], "pitchesPerOctave":12, "name":"Major"},
+    "ionian":{"degrees":[0,2,4,5,7,9,11], "pitchesPerOctave":12, "name":"Ionian"},
+    "dorian":{"degrees":[0,2,3,5,7,9,10], "pitchesPerOctave":12, "name":"Dorian"},
+    "phrygian":{"degrees":[0,1,3,5,7,8,10], "pitchesPerOctave":12, "name":"Phrygian"},
+    "lydian":{"degrees":[0,2,4,6,7,9,11], "pitchesPerOctave":12, "name":"Lydian"},
+    "mixolydian":{"degrees":[0,2,4,5,7,9,10], "pitchesPerOctave":12, "name":"Mixolydian"},
+    "aeolian":{"degrees":[0,2,3,5,7,8,10], "pitchesPerOctave":12, "name":"Aeolian"},
+    "minor":{"degrees":[0,2,3,5,7,8,10], "pitchesPerOctave":12, "name":"Natural Minor"},
+    "locrian":{"degrees":[0,1,3,5,6,8,10], "pitchesPerOctave":12, "name":"Locrian"},
+    "harmonicMinor":{"degrees":[0,2,3,5,7,8,11], "pitchesPerOctave":12, "name":"Harmonic Minor"},
+    "harmonicMajor":{"degrees":[0,2,4,5,7,8,11], "pitchesPerOctave":12, "name":"Harmonic Major"},
+    "melodicMinor":{"degrees":[0,2,3,5,7,9,11], "pitchesPerOctave":12, "name":"Melodic Minor"},
+    "melodicMinorDesc":{"degrees":[0,2,3,5,7,8,10], "pitchesPerOctave":12, "name":"Melodic Minor Descending"},
+    "melodicMajor":{"degrees":[0,2,4,5,7,8,10], "pitchesPerOctave":12, "name":"Melodic Major"},
+    "bartok":{"degrees":[0,2,4,5,7,8,10], "pitchesPerOctave":12, "name":"Bartok"},
+    "hindu":{"degrees":[0,2,4,5,7,8,10], "pitchesPerOctave":12, "name":"Hindu"},
+    "todi":{"degrees":[0,1,3,6,7,8,11], "pitchesPerOctave":12, "name":"Todi"},
+    "purvi":{"degrees":[0,1,4,6,7,8,11], "pitchesPerOctave":12, "name":"Purvi"},
+    "marva":{"degrees":[0,1,4,6,7,9,11], "pitchesPerOctave":12, "name":"Marva"},
+    "bhairav":{"degrees":[0,1,4,5,7,8,11], "pitchesPerOctave":12, "name":"Bhairav"},
+    "ahirbhairav":{"degrees":[0,1,4,5,7,9,10], "pitchesPerOctave":12, "name":"Ahirbhairav"},
+    "superLocrian":{"degrees":[0,1,3,4,6,8,10], "pitchesPerOctave":12, "name":"Super Locrian"},
+    "romanianMinor":{"degrees":[0,2,3,6,7,9,10], "pitchesPerOctave":12, "name":"Romanian Minor"},        
+    "hungarianMinor":{"degrees":[0,2,3,6,7,8,11], "pitchesPerOctave":12, "name":"Hungarian Minor"},
+    "neapolitanMinor":{"degrees":[0,1,3,5,7,8,11], "pitchesPerOctave":12, "name":"Neapolitan Minor"},
+    "enigmatic":{"degrees":[0,1,4,6,8,10,11], "pitchesPerOctave":12, "name":"Enigmatic"},
+    "spanish":{"degrees":[0,1,4,5,7,8,10], "pitchesPerOctave":12, "name":"Spanish"},
+    "leadingWhole":{"degrees":[0,2,4,6,8,10,11], "pitchesPerOctave":12, "name":"Leading Whole Tone"},
+    "lydianMinor":{"degrees":[0,2,4,6,7,8,10], "pitchesPerOctave":12, "name":"Lydian Minor"},
+    "neapolitanMajor":{"degrees":[0,1,3,5,7,9,11], "pitchesPerOctave":12, "name":"Neapolitan Major"},
+    "locrianMajor":{"degrees":[0,2,4,5,6,8,10], "pitchesPerOctave":12, "name":"Locrian Major"},
+    "diminished":{"degrees":[0,1,3,4,6,7,9,10], "pitchesPerOctave":12, "name":"Diminished"},
+    "diminished2":{"degrees":[0,2,3,5,6,8,9,11], "pitchesPerOctave":12, "name":"Diminished 2"},
+    "chromatic":{"degrees":[0,1,2,3,4,5,6,7,8,9,10,11], "pitchesPerOctave":12, "name":"Chromatic"},
+    "chromatic24":{"degrees":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23], "pitchesPerOctave":24, "name":"Chromatic 24"},
+    "ajam":{"degrees":[0,4,8,10,14,18,22], "pitchesPerOctave":24, "name":"Ajam"},
+    "jiharkah":{"degrees":[0,4,8,10,14,18,21], "pitchesPerOctave":24, "name":"Jiharkah"},
+    "shawqAfza":{"degrees":[0,4,8,10,14,16,22], "pitchesPerOctave":24, "name":"Shawq Afza"},
+    "sikah":{"degrees":[0,3,7,11,14,17,21], "pitchesPerOctave":24, "name":"Sikah"},
+    "sikahDesc":{"degrees":[0,3,7,11,13,17,21], "pitchesPerOctave":24, "name":"Sikah Descending"},
+    "huzam":{"degrees":[0,3,7,9,15,17,21], "pitchesPerOctave":24, "name":"Huzam"},
+    "iraq":{"degrees":[0,3,7,10,13,17,21], "pitchesPerOctave":24, "name":"Iraq"},
+    "bastanikar":{"degrees":[0,3,7,10,13,15,21], "pitchesPerOctave":24, "name":"Bastanikar"},
+    "mustar":{"degrees":[0,5,7,11,13,17,21], "pitchesPerOctave":24, "name":"Mustar"},
+    "bayati":{"degrees":[0,3,6,10,14,16,20], "pitchesPerOctave":24, "name":"Bayati"},
+    "karjighar":{"degrees":[0,3,6,10,12,18,20], "pitchesPerOctave":24, "name":"Karjighar"},
+    "husseini":{"degrees":[0,3,6,10,14,17,21], "pitchesPerOctave":24, "name":"Husseini"},
+    "nahawand":{"degrees":[0,4,6,10,14,16,22], "pitchesPerOctave":24, "name":"Nahawand"},
+    "nahawandDesc":{"degrees":[0,4,6,10,14,16,20], "pitchesPerOctave":24, "name":"Nahawand Descending"},
+    "farahfaza":{"degrees":[0,4,6,10,14,16,20], "pitchesPerOctave":24, "name":"Farahfaza"},
+    "murassah":{"degrees":[0,4,6,10,12,18,20], "pitchesPerOctave":24, "name":"Murassah"},
+    "ushaqMashri":{"degrees":[0,4,6,10,14,17,21], "pitchesPerOctave":24, "name":"Ushaq Mashri"},
+    "rast":{"degrees":[0,4,7,10,14,18,21], "pitchesPerOctave":24, "name":"Rast"},
+    "rastDesc":{"degrees":[0,4,7,10,14,18,20], "pitchesPerOctave":24, "name":"Rast Descending"},
+    "suznak":{"degrees":[0,4,7,10,14,16,22], "pitchesPerOctave":24, "name":"Suznak"},
+    "nairuz":{"degrees":[0,4,7,10,14,17,20], "pitchesPerOctave":24, "name":"Nairuz"},
+    "yakah":{"degrees":[0,4,7,10,14,18,21], "pitchesPerOctave":24, "name":"Yakah"},
+    "yakahDesc":{"degrees":[0,4,7,10,14,18,20], "pitchesPerOctave":24, "name":"Yakah Descending"},
+    "mahur":{"degrees":[0,4,7,10,14,18,22], "pitchesPerOctave":24, "name":"Mahur"},
+    "hijaz":{"degrees":[0,2,8,10,14,17,20], "pitchesPerOctave":24, "name":"Hijaz"},
+    "hijazDesc":{"degrees":[0,2,8,10,14,16,20], "pitchesPerOctave":24, "name":"Hijaz Descending"},
+    "zanjaran":{"degrees":[0,2,8,10,14,18,20], "pitchesPerOctave":24, "name":"Zanjaran"},
+    "zanjaranDesc":{"degrees":[0,2,8,10,14,16,22], "pitchesPerOctave":24, "name":"Zanjaran"},
+    "saba":{"degrees":[0,3,6,8,12,16,20], "pitchesPerOctave":24, "name":"Saba"},
+    "zamzam":{"degrees":[0,2,6,8,14,16,20], "pitchesPerOctave":24, "name":"Zamzam"},
+    "kurd":{"degrees":[0,2,6,10,14,16,20], "pitchesPerOctave":24, "name":"Kurd"},
+    "kijazKarKurd":{"degrees":[0,2,8,10,14,16,22], "pitchesPerOctave":24, "name":"Kijaz Kar Kurd"},
+    "nawaAthar":{"degrees":[0,4,6,12,14,16,22], "pitchesPerOctave":24, "name":"Nawa Athar"},
+    "nikriz":{"degrees":[0,4,6,12,14,18,20], "pitchesPerOctave":24, "name":"Nikriz"},
+    "atharKurd":{"degrees":[0,2,6,12,14,16,22], "pitchesPerOctave":24, "name":"Athar Kurd"}
 }
