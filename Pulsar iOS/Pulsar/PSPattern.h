@@ -33,6 +33,14 @@
 
 @end
 
+@interface PSBlockPattern : PSPattern
+
++ (id)blockPatternWithBlock:(id)block;
+
+@property (nonatomic, copy) id block;
+
+@end
+
 @interface PSEvery : PSPattern
 
 + (id)every:(NSUInteger)times apply:(PSFilterPattern *)filterPattern to:(PSListPattern *)listPattern;

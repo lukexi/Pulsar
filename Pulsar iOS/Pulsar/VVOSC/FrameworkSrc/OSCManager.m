@@ -235,7 +235,7 @@
 	
 	[inPortArray rdlock];
 		while (!found)	{
-			tmpString = [NSString stringWithFormat:@"%@ %ld",[self inPortLabelBase],index];
+			tmpString = [NSString stringWithFormat:@"%@ %i",[self inPortLabelBase],index];
 			
 			alreadyInUse = NO;
 			it = [inPortArray objectEnumerator];
@@ -265,7 +265,7 @@
 	
 	[outPortArray rdlock];
 		while (!found)	{
-			tmpString = [NSString stringWithFormat:@"OSC Out Port %ld",index];
+			tmpString = [NSString stringWithFormat:@"OSC Out Port %d",index];
 			
 			alreadyInUse = NO;
 			it = [outPortArray objectEnumerator];
@@ -424,7 +424,7 @@
 - (NSString *) inPortLabelBase	{
 	if ((delegate!=nil)&&([delegate respondsToSelector:@selector(inPortLabelBase)]))
 		return [delegate inPortLabelBase];
-	return [NSString stringWithString:@"VVOSC"];
+	return @"VVOSC";
 }
 /*!
 	by default, this method returns [OSCOutPort class].  it’s called when creating an input port. this method exists so if you subclass OSCOutPort you can override this method to have your manager create your custom subclass with the default port creation methods

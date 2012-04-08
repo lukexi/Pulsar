@@ -24,6 +24,7 @@
 #import "PSPatternables.h"
 #import "PSSubscripts.h"
 #import "PSScale.h"
+#import "PSBlock.h"
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import "RSGraphEditorViewController.h"

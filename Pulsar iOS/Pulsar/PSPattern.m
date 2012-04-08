@@ -57,6 +57,30 @@
 
 @end
 
+@implementation PSBlockPattern
+
++ (id)blockPatternWithBlock:(id)block
+{
+    return [[self alloc] initWithBlock:block];
+}
+
+- (id)initWithBlock:(id)block
+{
+    self = [super init];
+    if (self)
+    {
+        _block = [block copy];
+    }
+    return self;
+}
+
+- (NSArray *)embedInStream
+{
+    return @[self.block];
+}
+
+@end
+
 @implementation PSEvery
 
 + (id)every:(NSUInteger)times apply:(PSFilterPattern *)filterPattern to:(PSListPattern *)listPattern

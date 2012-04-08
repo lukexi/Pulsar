@@ -27,12 +27,18 @@ float midiratio(float midi)
 
 @implementation PSScale
 
-+ (PSScale *)scaleWithDegrees:(NSArray *)degrees name:(NSString *)name pitchesPerOctave:(NSUInteger)pitchesPerOctave
++ (PSScale *)scaleWithDegrees:(NSArray *)degrees
+                         name:(NSString *)name
+             pitchesPerOctave:(NSUInteger)pitchesPerOctave
 {
-    return [[self alloc] initWithDegrees:degrees name:name pitchesPerOctave:pitchesPerOctave];
+    return [[self alloc] initWithDegrees:degrees
+                                    name:name
+                        pitchesPerOctave:pitchesPerOctave];
 }
 
-- (id)initWithDegrees:(NSArray *)degrees name:(NSString *)name pitchesPerOctave:(NSUInteger)pitchesPerOctave
+- (id)initWithDegrees:(NSArray *)degrees
+                 name:(NSString *)name
+     pitchesPerOctave:(NSUInteger)pitchesPerOctave
 {
     self = [super init];
     if (self) {

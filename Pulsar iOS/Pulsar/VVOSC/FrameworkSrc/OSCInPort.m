@@ -9,7 +9,7 @@
 
 
 - (NSString *) description	{
-	return [NSString stringWithFormat:@"<OSCInPort: %ld>",port];
+	return [NSString stringWithFormat:@"<OSCInPort: %hu>",port];
 }
 + (id) createWithPort:(unsigned short)p	{
 	OSCInPort		*returnMe = [[OSCInPort alloc] initWithPort:p labelled:nil];

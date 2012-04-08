@@ -11,10 +11,10 @@
 /*
  E.g.
  player = [PSPlayer playerWithPatterns:
-              @{
-                  @"note":[PSEvery every:3 apply:[PSRotate rotate:-3] to:[PSListPattern listPatternWithValues:self.notes]],
-                  @"dur":@[@0.25, @0.5, @0.125]
-              }
+              @[
+                  @"note", [PSEvery every:3 apply:[PSRotate rotate:-3] to:[PSListPattern listPatternWithValues:self.notes]],
+                  @"dur", @[@0.25, @0.5, @0.125]
+              ]
                                     block:^(NSDictionary *event)
               {
                   graph[@"sin"][@"freq"].center = event[@"note"];
@@ -35,10 +35,11 @@ typedef void(^PSEventBlock)(NSDictionary *event);
 
 @interface PSPlayer : NSObject
 
-+ (PSPlayer *)playerWithPatterns:(NSDictionary *)patternsByKey
+// Pattern descriptions must be arrays so later keys can depend on earlier ones.
++ (PSPlayer *)playerWithPatterns:(NSArray *)patternsByKey
                           blocks:(NSArray *)blocks;
 
-+ (PSPlayer *)playerWithPatterns:(NSDictionary *)patternsByKey
++ (PSPlayer *)playerWithPatterns:(NSArray *)patternsByKey
                            block:(PSEventBlock)block;
 
 - (void)play;

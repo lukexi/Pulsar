@@ -100,10 +100,9 @@ int vpost(const char *fmt, va_list ap)
     {
         synthServerPort = 57110;
         
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
         // Choose random port between 50000 & 60000 in case a crashed app holds on to our port
-#warning disabling port randomization because we're somehow getting TARGET_OS_IPHONE on the simulator
-        //synthServerPort = arc4random() % 10000 + 50000;
+        synthServerPort = arc4random() % 10000 + 50000;
 #endif
         
         NSUInteger numInputBusChannels = 8; // defaults
@@ -135,8 +134,8 @@ int vpost(const char *fmt, va_list ap)
         
         [self copySynthDefs];
         
-        // Boot up SCSynth on the device (doesn't work quite right yet on the simulator, so boot up your own SuperCollider.app and it should work)
-#if TARGET_OS_IPHONE
+        // Boot up SCSynth on the device (doesn't work quite right yet on the simulator, so boot up your own SuperCollider.app and it should work after following directions in README)
+#if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
         [self start];
 #endif
         
@@ -201,7 +200,6 @@ int vpost(const char *fmt, va_list ap)
 - (void)start
 {
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-    NSAssert(synthServerPort, @"Must set synth server port!");
 	if (world) World_Cleanup(world);
 	world = World_New(&options);
 	if (!world || !World_OpenUDP(world, synthServerPort)) return;

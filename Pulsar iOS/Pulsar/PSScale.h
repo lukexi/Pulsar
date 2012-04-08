@@ -8,13 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-float mtof(float f);
-float midiratio(float midi);
+#ifdef __cplusplus
+#define PS_EXTERN_C extern "C"
+#else
+#define PS_EXTERN_C extern
+#endif
+
+PS_EXTERN_C float mtof(float f);
+PS_EXTERN_C float midiratio(float midi);
 
 @class PSTuning;
 @interface PSScale : NSObject
 
-+ (PSScale *)scaleWithDegrees:(NSArray *)degrees name:(NSString *)name pitchesPerOctave:(NSUInteger)pitchesPerOctave;
++ (PSScale *)scaleWithDegrees:(NSArray *)degrees
+                         name:(NSString *)name
+             pitchesPerOctave:(NSUInteger)pitchesPerOctave;
 
 @property (nonatomic, strong, readonly) NSArray *degrees;
 @property (nonatomic, strong, readonly) NSString *name;

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C207475F152FA542002C9DD2 /* PSBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = C207475D152FA542002C9DD2 /* PSBlock.h */; };
+		C2074760152FA542002C9DD2 /* PSBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = C207475D152FA542002C9DD2 /* PSBlock.h */; };
+		C2074761152FA542002C9DD2 /* PSBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C207475E152FA542002C9DD2 /* PSBlock.m */; };
+		C2074762152FA542002C9DD2 /* PSBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C207475E152FA542002C9DD2 /* PSBlock.m */; };
+		C2074763152FA542002C9DD2 /* PSBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C207475E152FA542002C9DD2 /* PSBlock.m */; };
+		C2074764152FA542002C9DD2 /* PSBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = C207475E152FA542002C9DD2 /* PSBlock.m */; };
 		C22ACDA214983B8F003EE04B /* MutLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7514983B8E003EE04B /* MutLockArray.m */; };
 		C22ACDA414983B8F003EE04B /* MutLockDict.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7714983B8E003EE04B /* MutLockDict.m */; };
 		C22ACDA614983B8F003EE04B /* MutNRLockArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7914983B8E003EE04B /* MutNRLockArray.m */; };
@@ -440,6 +446,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C207475D152FA542002C9DD2 /* PSBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSBlock.h; sourceTree = "<group>"; };
+		C207475E152FA542002C9DD2 /* PSBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSBlock.m; sourceTree = "<group>"; };
 		C22ACD7414983B8E003EE04B /* MutLockArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockArray.h; sourceTree = "<group>"; };
 		C22ACD7514983B8E003EE04B /* MutLockArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutLockArray.m; sourceTree = "<group>"; };
 		C22ACD7614983B8E003EE04B /* MutLockDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutLockDict.h; sourceTree = "<group>"; };
@@ -608,7 +616,6 @@
 		C2D62E701498623F000F534B /* SCOSCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCOSCManager.m; sourceTree = "<group>"; };
 		C2D62E711498623F000F534B /* SCOSCOutPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOSCOutPort.h; sourceTree = "<group>"; };
 		C2D62E721498623F000F534B /* SCOSCOutPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCOSCOutPort.m; sourceTree = "<group>"; };
-		C2D62E731498623F000F534B /* SCPulsar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPulsar.h; sourceTree = "<group>"; };
 		C2D62E741498623F000F534B /* SCServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCServer.h; sourceTree = "<group>"; };
 		C2D62E751498623F000F534B /* SCServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SCServer.mm; sourceTree = "<group>"; };
 		C2D62E761498623F000F534B /* SCSoundFileLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSoundFileLibrary.h; sourceTree = "<group>"; };
@@ -850,14 +857,16 @@
 				C2A68C32151F2A2C000A543E /* PSClock.m */,
 				C2A68C33151F2A2C000A543E /* PSPlayer.h */,
 				C2A68C34151F2A2C000A543E /* PSPlayer.m */,
-				C2372C54152C44060097575E /* PSEvent.h */,
-				C2372C55152C44060097575E /* PSEvent.m */,
+				C207475D152FA542002C9DD2 /* PSBlock.h */,
+				C207475E152FA542002C9DD2 /* PSBlock.m */,
 				C2A68C35151F2A2C000A543E /* PSStream.h */,
 				C2A68C36151F2A2C000A543E /* PSStream.m */,
 				C2A68C37151F2A2C000A543E /* PSPattern.h */,
 				C2A68C38151F2A2C000A543E /* PSPattern.m */,
 				C2A68C39151F2A2C000A543E /* PSPatternables.h */,
 				C2A68C3A151F2A2C000A543E /* PSPatternables.m */,
+				C2372C54152C44060097575E /* PSEvent.h */,
+				C2372C55152C44060097575E /* PSEvent.m */,
 			);
 			name = Clocks;
 			sourceTree = "<group>";
@@ -1014,7 +1023,6 @@
 				C2D62E701498623F000F534B /* SCOSCManager.m */,
 				C2D62E711498623F000F534B /* SCOSCOutPort.h */,
 				C2D62E721498623F000F534B /* SCOSCOutPort.m */,
-				C2D62E731498623F000F534B /* SCPulsar.h */,
 				C2B3ACAF1498D32A00ED3B2B /* SCRenderer.h */,
 				C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */,
 				C2D62E741498623F000F534B /* SCServer.h */,
@@ -1106,6 +1114,7 @@
 				C2A68C64151F2A81000A543E /* PSScale.h in Headers */,
 				C2372C57152C44060097575E /* PSEvent.h in Headers */,
 				C2372C5F152D73440097575E /* NSObject+BlockRecognition.h in Headers */,
+				C2074760152FA542002C9DD2 /* PSBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1126,6 +1135,7 @@
 				C2A68C63151F2A81000A543E /* PSScale.h in Headers */,
 				C2372C56152C44060097575E /* PSEvent.h in Headers */,
 				C2372C5E152D73440097575E /* NSObject+BlockRecognition.h in Headers */,
+				C207475F152FA542002C9DD2 /* PSBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,6 +1422,7 @@
 				C2A68C65151F2A81000A543E /* PSScale.m in Sources */,
 				C2372C58152C44060097575E /* PSEvent.m in Sources */,
 				C2372C60152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
+				C2074761152FA542002C9DD2 /* PSBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1484,6 +1495,7 @@
 				C2A68C67151F2A81000A543E /* PSScale.m in Sources */,
 				C2372C5A152C44060097575E /* PSEvent.m in Sources */,
 				C2372C62152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
+				C2074763152FA542002C9DD2 /* PSBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1563,6 +1575,7 @@
 				C2A68C66151F2A81000A543E /* PSScale.m in Sources */,
 				C2372C59152C44060097575E /* PSEvent.m in Sources */,
 				C2372C61152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
+				C2074762152FA542002C9DD2 /* PSBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1642,6 +1655,7 @@
 				C2A68C68151F2A81000A543E /* PSScale.m in Sources */,
 				C2372C5B152C44060097575E /* PSEvent.m in Sources */,
 				C2372C63152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
+				C2074764152FA542002C9DD2 /* PSBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
