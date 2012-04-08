@@ -81,21 +81,47 @@
 
 @end
 
-@implementation PSEvery
+@implementation PSWhite
 
-+ (id)every:(NSUInteger)times apply:(PSFilterPattern *)filterPattern to:(PSListPattern *)listPattern
++ (id)between:(CGFloat)lowValue and:(CGFloat)highValue
 {
-    return [[self alloc] initWithEvery:times apply:filterPattern to:listPattern];
+    return [[self alloc] initWithLow:lowValue high:highValue];
 }
 
-- (id)initWithEvery:(NSUInteger)times apply:(PSFilterPattern *)filterPattern to:(PSListPattern *)listPattern
+- (id)initWithLow:(CGFloat)lowValue high:(CGFloat)highValue
+{
+    self = [super init];
+    if (self)
+    {
+        _lowValue = lowValue;
+        _highValue = highValue;
+    }
+    return self;
+}
+
+- (NSArray *)embedInStream
+{
+    CGFloat range = self.highValue - self.lowValue;
+    CGFloat rangeScaled = (CGFloat)arc4random() / 0x100000000 * range;
+    return @[[NSNumber numberWithFloat:(self.lowValue + rangeScaled)]];
+}
+
+@end
+
+@implementation PSEvery
+
++ (id)every:(NSUInteger)times apply:(PSFilterPattern *)filterPattern
+{
+    return [[self alloc] initWithEvery:times apply:filterPattern];
+}
+
+- (id)initWithEvery:(NSUInteger)times apply:(PSFilterPattern *)filterPattern
 {
     self = [super init];
     if (self)
     {
         _every = times;
         _filter = filterPattern;
-        _listPattern = listPattern;
     }
     return self;
 }
@@ -107,12 +133,11 @@
     {
         if (i == self.every - 1)
         {
-            NSArray *filteredValues = [self.filter filter:self.listPattern];
-            [array addObjectsFromArray:filteredValues];
+            [array addObjectsFromArray:[self.filter filteredValues]];
         }
         else
         {
-            [array addObjectsFromArray:self.listPattern.values];
+            [array addObjectsFromArray:self.filter.listPattern.values];
         }
     }
     return array;
@@ -122,23 +147,38 @@
 
 @implementation PSFilterPattern
 
-- (NSArray *)filter:(PSListPattern *)listPattern
+- (id)initWithListPattern:(PSListPattern *)listPattern
 {
-    return listPattern.values;
+    self = [super init];
+    if (self)
+    {
+        _listPattern = listPattern;
+    }
+    return self;
+}
+
+- (NSArray *)embedInStream
+{
+    return [self filteredValues];
+}
+
+- (NSArray *)filteredValues
+{
+    return self.listPattern.values;
 }
 
 @end
 
 @implementation PSRotate
 
-+ (PSRotate *)rotate:(NSInteger)places
++ (PSRotate *)rotate:(PSListPattern *)listPattern places:(NSInteger)places
 {
-    return [[self alloc] initWithPlaces:places];
+    return [[self alloc] initWithListPattern:listPattern places:places];
 }
 
-- (id)initWithPlaces:(NSUInteger)places
+- (id)initWithListPattern:(PSListPattern *)listPattern places:(NSUInteger)places
 {
-    self = [super init];
+    self = [super initWithListPattern:listPattern];
     if (self)
     {
         _places = places;
@@ -146,9 +186,9 @@
     return self;
 }
 
-- (NSArray *)filter:(PSListPattern *)listPattern
+- (NSArray *)filteredValues
 {
-    NSMutableArray *mutableValues = [listPattern.values mutableCopy];
+    NSMutableArray *mutableValues = [self.listPattern.values mutableCopy];
     NSUInteger absPlaces = abs(self.places);
     if (self.places < 0)
     {
@@ -175,16 +215,16 @@
 
 @implementation PSScramble
 
-+ (PSScramble *)scramble
++ (PSScramble *)scramble:(PSListPattern *)listPattern
 {
-    return [[self alloc] init];
+    return [[self alloc] initWithListPattern:listPattern];
 }
 
-- (NSArray *)filter:(PSListPattern *)listPattern
+- (NSArray *)filteredValues
 {
-    NSMutableArray *newValues = [NSMutableArray arrayWithCapacity:[listPattern.values count]];
+    NSMutableArray *newValues = [NSMutableArray arrayWithCapacity:[self.listPattern.values count]];
     
-    NSMutableArray *remainingValues = [listPattern.values mutableCopy];
+    NSMutableArray *remainingValues = [self.listPattern.values mutableCopy];
     while ([remainingValues count])
     {
         NSUInteger randomIndex = arc4random() % [remainingValues count];
@@ -198,17 +238,17 @@
 
 @implementation PSReverse
 
-+ (PSReverse *)reverse
++ (PSReverse *)reverse:(PSListPattern *)listPattern
 {
-    return [[self alloc] init];
+    return [[self alloc] initWithListPattern:listPattern];
 }
 
-- (NSArray *)filter:(PSListPattern *)listPattern
+- (NSArray *)filteredValues
 {
-    NSMutableArray *newValues = [NSMutableArray arrayWithCapacity:[listPattern.values count]];
-    NSEnumerator *reverseEnumerator = [listPattern.values reverseObjectEnumerator];
+    NSMutableArray *newValues = [NSMutableArray arrayWithCapacity:[self.listPattern.values count]];
+    NSEnumerator *reverseEnumerator = [self.listPattern.values reverseObjectEnumerator];
     
-    for (NSUInteger i = 0; i < [listPattern.values count]; i++)
+    for (NSUInteger i = 0; i < [self.listPattern.values count]; i++)
     {
         [newValues addObject:[reverseEnumerator nextObject]];
     }

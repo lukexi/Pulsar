@@ -41,26 +41,36 @@
 
 @end
 
+@interface PSWhite : PSPattern
+
++ (id)between:(CGFloat)lowValue and:(CGFloat)highValue;
+
+@property (nonatomic, readonly) CGFloat lowValue;
+@property (nonatomic, readonly) CGFloat highValue;
+
+@end
+
 @interface PSEvery : PSPattern
 
-+ (id)every:(NSUInteger)times apply:(PSFilterPattern *)filterPattern to:(PSListPattern *)listPattern;
++ (id)every:(NSUInteger)times apply:(PSFilterPattern *)filterPattern;
 
 @property (nonatomic, readonly) NSUInteger every;
 @property (nonatomic, strong, readonly) PSFilterPattern *filter;
-@property (nonatomic, strong, readonly) PSListPattern *listPattern;
 
 @end
 
 // Abstract class
 @interface PSFilterPattern : PSPattern
 
-- (NSArray *)filter:(PSListPattern *)listPattern;
+@property (nonatomic, strong, readonly) PSListPattern *listPattern;
+
+- (NSArray *)filteredValues;
 
 @end
 
 @interface PSRotate : PSFilterPattern
 
-+ (PSRotate *)rotate:(NSInteger)places;
++ (PSRotate *)rotate:(PSListPattern *)listPattern places:(NSInteger)places;
 
 @property (nonatomic, readonly) NSInteger places;
 
@@ -68,12 +78,12 @@
 
 @interface PSScramble : PSFilterPattern
 
-+ (PSScramble *)scramble;
++ (PSScramble *)scramble:(PSListPattern *)listPattern;
 
 @end
 
 @interface PSReverse : PSFilterPattern
 
-+ (PSReverse *)reverse;
++ (PSReverse *)reverse:(PSListPattern *)listPattern;
 
 @end
