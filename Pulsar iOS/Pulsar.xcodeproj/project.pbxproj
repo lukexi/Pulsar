@@ -1196,7 +1196,7 @@
 		C24EE6D7148C3ED600E72DAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = Eeoo;
 			};
 			buildConfigurationList = C24EE6DA148C3ED600E72DAF /* Build configuration list for PBXProject "Pulsar" */;
