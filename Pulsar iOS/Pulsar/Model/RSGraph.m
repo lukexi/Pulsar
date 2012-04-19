@@ -174,6 +174,8 @@
         [self.graphGroup free];
         
         self.isSpawned = NO;
+        
+        // We must call this after setting isSpawned to no, so that RSNodes don't try to free themselves again.
         for (RSNode *node in self.nodes) 
         {
             [node free];
@@ -256,7 +258,7 @@
 
 - (void)connectOutToBus:(SCBus *)bus
 {
-    [self.outNode connectToBus:bus];
+    self.outNode.outNodeOutputBus = bus;
 }
 
 - (void)replaceSynthDefsOfNodesByID:(NSDictionary *)replacementSynthDefNamesByNodeID

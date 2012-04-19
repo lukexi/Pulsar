@@ -188,7 +188,6 @@ static NSString *RSSynthDefCacheKey = @"RSSynthDefCacheKey";
             control.warpSpecifier = @"lin";
             control.units = @"";
         }
-        
         index++;
     }
 }

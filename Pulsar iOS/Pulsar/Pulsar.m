@@ -36,7 +36,6 @@
 
 - (RSGraph *)graph
 {
-#warning should put this in a temporary inmemory context and add API for switching between temporary and persistent
     return [NSEntityDescription insertNewObjectForEntityForName:@"RSGraph" 
                                          inManagedObjectContext:self.managedObjectContext];
 }

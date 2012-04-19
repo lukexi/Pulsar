@@ -45,9 +45,16 @@
             inputSummingBus.busID, scalerNode.nodeID, dcNode.nodeID];
 }
 
-- (void)setModDepthValue:(float)aModDepth
+- (void)setModDepth:(NSNumber *)modDepth
 {
-    [super setModDepthValue:aModDepth];
+    [self willChangeValueForKey:@"modDepth"];
+    [self setPrimitiveValue:modDepth forKey:@"modDepth"];
+    [self didChangeValueForKey:@"modDepth"];
+    [self sendModDepth];
+}
+
+- (void)sendModDepth
+{
     if (self.node.graph.isSpawned)
     {
         [self.scalerNode set:[NSArray arrayWithObjects:
@@ -59,13 +66,20 @@
     }
 }
 
-- (void)setCenterValue:(float)aCenter
+- (void)setCenter:(NSNumber *)center
 {
-    [super setCenterValue:aCenter];
+    [self willChangeValueForKey:@"center"];
+    [self setPrimitiveValue:center forKey:@"center"];
+    [self didChangeValueForKey:@"center"];
+    [self sendCenter];
+}
+
+- (void)sendCenter
+{
     if (self.node.graph.isSpawned)
     {
         [self.scalerNode set:[NSArray arrayWithObjects:
-                              [OSCValue createWithString:@"center"], 
+                              [OSCValue createWithString:@"centerValue"], 
                               [OSCValue createWithFloat:self.centerValue], 
                               [OSCValue createWithString:@"t_lagTime"], 
                               [OSCValue createWithFloat:self.lagTime],
@@ -82,7 +96,7 @@
                                    arguments:[NSArray arrayWithObjects:
                                               [OSCValue createWithString:@"inputSummingBus"], 
                                               [OSCValue createWithInt:self.inputSummingBus.busID],
-                                              [OSCValue createWithString:@"center"], 
+                                              [OSCValue createWithString:@"centerValue"], 
                                               [OSCValue createWithFloat:self.centerValue],
                                               [OSCValue createWithString:@"modDepth"], 
                                               [OSCValue createWithFloat:self.modDepthValue],

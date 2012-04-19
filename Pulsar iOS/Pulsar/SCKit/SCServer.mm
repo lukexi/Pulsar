@@ -91,6 +91,89 @@ int vpost(const char *fmt, va_list ap)
     return sharedInstance;
 }
 
+#define kSharedSCOSCPortLabel @"SharedSCOSCPortLabel"
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        synthServerPort = 57110;
+        
+#if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
+        // Choose random port between 50000 & 60000 in case a crashed app holds on to our port
+        synthServerPort = arc4random() % 10000 + 50000;
+#endif
+        
+        NSUInteger numInputBusChannels = 8; // defaults
+        NSUInteger numOutputBusChannels = 8;
+        
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
+        options = kDefaultWorldOptions;
+        options.mBufLength = 256;
+        // It's critical to increase these for Pulsar's operation, since it uses many audio & control buses for interconnection
+        options.mNumAudioBusChannels = 4096;
+        options.mNumControlBusChannels = 4096;
+        options.mMaxNodes = 16384;
+        world = nil;
+        numInputBusChannels = options.mNumInputBusChannels;
+        numOutputBusChannels = options.mNumOutputBusChannels;
+#endif
+        
+        self.nodeIDAllocator = [SCIDAllocator IDAllocatorStartingAt:1000];
+        self.nodeIDAllocator.name = @"Node";
+        self.busIDAllocator = [SCIDAllocator IDAllocatorStartingAt:
+                               numInputBusChannels + numOutputBusChannels];
+        self.busIDAllocator.name = @"Bus";
+        self.bufferNumberAllocator = [SCIDAllocator IDAllocatorStartingAt:0];
+        self.bufferNumberAllocator.name = @"Buffer";
+        
+        self.nodesToFreeByEndingNodeID = [NSMutableDictionary dictionary];
+        
+        //SetPrintFunc(vpost);
+        
+        [self copySynthDefs];
+        
+        // Boot up SCSynth on the device (doesn't work quite right yet on the simulator, so boot up your own SuperCollider.app and it should work after following directions in README)
+#if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
+        [self start];
+#endif
+        
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
+        // Make sure we're outputting to the speaker on the iPhone rather than the receiver
+        unsigned long route = kAudioSessionOverrideAudioRoute_Speaker;
+        AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(route), &route);
+#endif
+        
+        self.manager = [[SCOSCManager alloc] init];
+        self.manager.delegate = self;
+        
+        NSString *serverAddress = @"127.0.0.1";
+        //NSString *serverAddress = @"10.0.1.180"; // to send to a remote computer running SC instead...
+        self.outPort = (SCOSCOutPort *)[self.manager createNewOutputToAddress:serverAddress 
+                                                                       atPort:synthServerPort 
+                                                                    withLabel:kSharedSCOSCPortLabel];
+        self.inPort = (SCOSCInPort *)[self.manager createNewInputForPort:synthServerPort + 1 
+                                                               withLabel:kSharedSCOSCPortLabel];
+        
+        [self enableNotification];
+        
+        // WARNING this can break processing of osc messages (e.g., the "amp" of RSAudioConnector wasn't being set correctly)
+        // so use SCBundle debugging first, and this only as a last resort.
+        //[self dumpOSC:YES];
+    }
+    return self;
+}
+
+- (void)enableNotification
+{
+    // Register for notification messages from the server, 
+    // such as /done and those sent by SendTrig/SendReply
+    OSCMessage *notifyMessage = [OSCMessage createWithAddress:@"/notify"];
+    [notifyMessage addInt:1];
+    [self.outPort sendThisMessage:notifyMessage];
+}
+
 - (void)copySynthDefs
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -117,7 +200,6 @@ int vpost(const char *fmt, va_list ap)
 - (void)start
 {
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-    NSAssert(synthServerPort, @"Must set synth server port!");
 	if (world) World_Cleanup(world);
 	world = World_New(&options);
 	if (!world || !World_OpenUDP(world, synthServerPort)) return;
@@ -238,90 +320,6 @@ int vpost(const char *fmt, va_list ap)
 - (void)freeBufferNumber:(SCBufferNumber)bufferNumber
 {
     [self.bufferNumberAllocator freeID:bufferNumber];
-}
-
-
-#define kSharedSCOSCPortLabel @"SharedSCOSCPortLabel"
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        synthServerPort = 57110;
-        
-        #if TARGET_OS_IPHONE
-         // Choose random port between 50000 & 60000 in case a crashed app holds on to our port
-        synthServerPort = arc4random() % 10000 + 50000;
-        #endif
-        
-        NSUInteger numInputBusChannels = 8; // defaults
-        NSUInteger numOutputBusChannels = 8;
-        
-        #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-        options = kDefaultWorldOptions;
-        options.mBufLength = 256;
-        // It's critical to increase these for Pulsar's operation, since it uses many audio & control buses for interconnection
-        options.mNumAudioBusChannels = 4096;
-        options.mNumControlBusChannels = 4096;
-        options.mMaxNodes = 16384;
-        world = nil;
-        numInputBusChannels = options.mNumInputBusChannels;
-        numOutputBusChannels = options.mNumOutputBusChannels;
-        #endif
-        
-        self.nodeIDAllocator = [SCIDAllocator IDAllocatorStartingAt:1000];
-        self.nodeIDAllocator.name = @"Node";
-        self.busIDAllocator = [SCIDAllocator IDAllocatorStartingAt:
-                               numInputBusChannels + numOutputBusChannels];
-        self.busIDAllocator.name = @"Bus";
-        self.bufferNumberAllocator = [SCIDAllocator IDAllocatorStartingAt:0];
-        self.bufferNumberAllocator.name = @"Buffer";
-        
-        self.nodesToFreeByEndingNodeID = [NSMutableDictionary dictionary];
-        
-        //SetPrintFunc(vpost);
-        
-        [self copySynthDefs];
-        
-        // Boot up SCSynth on the device (doesn't work quite right yet on the simulator, so boot up your own SuperCollider.app and it should work)
-        #if TARGET_OS_IPHONE
-        [self start];
-        #endif
-        
-#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-        // Make sure we're outputting to the speaker on the iPhone rather than the receiver
-        unsigned long route = kAudioSessionOverrideAudioRoute_Speaker;
-        AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute, sizeof(route), &route);
-#endif
-        
-        self.manager = [[SCOSCManager alloc] init];
-        self.manager.delegate = self;
-        
-        NSString *serverAddress = @"127.0.0.1";
-        //NSString *serverAddress = @"10.0.1.180"; // to send to a remote computer running SC instead...
-        self.outPort = (SCOSCOutPort *)[self.manager createNewOutputToAddress:serverAddress 
-                                                                       atPort:synthServerPort 
-                                                                    withLabel:kSharedSCOSCPortLabel];
-        self.inPort = (SCOSCInPort *)[self.manager createNewInputForPort:synthServerPort + 1 
-                                                               withLabel:kSharedSCOSCPortLabel];
-        
-        [self enableNotification];
-        
-        // WARNING this can break processing of osc messages (e.g., the "amp" of RSAudioConnector wasn't being set correctly)
-        // so use SCBundle debugging first, and this only as a last resort.
-        //[self dumpOSC:YES];
-    }
-    return self;
-}
-
-- (void)enableNotification
-{
-    // Register for notification messages from the server, 
-    // such as /done and those sent by SendTrig/SendReply
-    OSCMessage *notifyMessage = [OSCMessage createWithAddress:@"/notify"];
-    [notifyMessage addInt:1];
-    [self.outPort sendThisMessage:notifyMessage];
 }
 
 - (void)receivedOSCMessage:(OSCMessage *)message

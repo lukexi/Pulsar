@@ -23,7 +23,8 @@
 - (id)initWithPattern:(PSPattern *)aPattern
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         pattern = aPattern;
     }
     return self;
@@ -34,7 +35,7 @@
     id object = [currentEnumerator nextObject];
     if (!object)
     {
-        currentEnumerator = [[pattern values] objectEnumerator];
+        currentEnumerator = [[pattern embedInStream] objectEnumerator];
         object = [currentEnumerator nextObject];
     }
     return object;

@@ -10,7 +10,7 @@
 - (NSString *) description	{
 	switch (type)	{
 		case OSCValInt:
-			return [NSString stringWithFormat:@"<OSCVal i %ld>",*(int *)value];
+			return [NSString stringWithFormat:@"<OSCVal i %i>",*(int *)value];
 		case OSCValFloat:
 			return [NSString stringWithFormat:@"<OSCVal f %f>",*(float *)value];
 		case OSCValString:
@@ -18,20 +18,20 @@
 		case OSCValColor:
 			return [NSString stringWithFormat:@"<OSCVal r %@>",(__bridge id)value];
 		case OSCValMIDI:
-			return [NSString stringWithFormat:@"<OSCVal m %ld-%ld-%ld-%ld>",((Byte *)value)[0],((Byte *)value)[1],((Byte *)value)[2],((Byte *)value)[3]];
+			return [NSString stringWithFormat:@"<OSCVal m %c-%c-%c-%c>",((Byte *)value)[0],((Byte *)value)[1],((Byte *)value)[2],((Byte *)value)[3]];
 		case OSCValBool:
 			if (*(BOOL *)value)
-				return [NSString stringWithString:@"<OSCVal T>"];
+				return @"<OSCVal T>";
 			else
-				return [NSString stringWithString:@"<OSCVal F>"];
+				return @"<OSCVal F>";
         case OSCValArrayOpen:
-            return [NSString stringWithString:@"<OSCVal [ >"];
+            return @"<OSCVal [ >";
         case OSCValArrayClose:
-            return [NSString stringWithString:@"<OSCVal ] >"];
+            return @"<OSCVal ] >";
 		case OSCValNil:
-			return [NSString stringWithFormat:@"<OSCVal nil>"];
+			return @"<OSCVal nil>";
 		case OSCValInfinity:
-			return [NSString stringWithFormat:@"<OSCVal infinity>"];
+			return @"<OSCVal infinity>";
 		case OSCValBlob:
 			return [NSString stringWithFormat:@"<OSCVal blob: %@>",value];
         default:

@@ -73,7 +73,7 @@
         case OSCValColor:
             return (__bridge id)value;
         case OSCValMIDI:
-            return [NSString stringWithFormat:@"<OSCVal m %ld-%ld-%ld-%ld>",((Byte *)value)[0],((Byte *)value)[1],((Byte *)value)[2],((Byte *)value)[3]];
+            return [NSString stringWithFormat:@"<OSCVal m %c-%c-%c-%c>",((Byte *)value)[0],((Byte *)value)[1],((Byte *)value)[2],((Byte *)value)[3]];
         case OSCValBool:
             return [NSNumber numberWithBool:*(BOOL *)value];
         case OSCValArrayOpen:
@@ -96,7 +96,7 @@
 {
     switch (type)	{
         case OSCValInt:
-            return [NSString stringWithFormat:@"i%ld",*(int *)value];
+            return [NSString stringWithFormat:@"i%d",*(int *)value];
         case OSCValFloat:
             return [NSString stringWithFormat:@"f%f",*(float *)value];
         case OSCValString:
@@ -104,16 +104,16 @@
         case OSCValColor:
             return [NSString stringWithFormat:@"r%@",(__bridge id)value];
         case OSCValMIDI:
-            return [NSString stringWithFormat:@"m%ld-%ld-%ld-%ld",((Byte *)value)[0],((Byte *)value)[1],((Byte *)value)[2],((Byte *)value)[3]];
+            return [NSString stringWithFormat:@"m%c-%c-%c-%c",((Byte *)value)[0],((Byte *)value)[1],((Byte *)value)[2],((Byte *)value)[3]];
         case OSCValBool:
             if (*(BOOL *)value)
-                return [NSString stringWithString:@"bT"];
+                return @"bT";
             else
-                return [NSString stringWithString:@"bF"];
+                return @"bF";
         case OSCValArrayOpen:
-            return [NSString stringWithString:@"a["];
+            return @"a[";
         case OSCValArrayClose:
-            return [NSString stringWithString:@"a]"];
+            return @"a]";
         case OSCValNil:
             return [NSString stringWithFormat:@"nil"];
         case OSCValInfinity:

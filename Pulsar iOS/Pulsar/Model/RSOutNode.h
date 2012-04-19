@@ -4,7 +4,8 @@
 
 + (id)outNodeInContext:(NSManagedObjectContext *)context;
 
-- (void)connectToMainOutput;
-- (void)connectToBus:(SCBus *)externalBus;
+// Will be connected to the SCBus mainOutputBus by default, but you can change it
+// to route this graph into another.
+@property (nonatomic, strong) SCBus *outNodeOutputBus;
 
 @end
