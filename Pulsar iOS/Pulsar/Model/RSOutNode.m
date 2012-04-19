@@ -10,6 +10,7 @@
 
 @implementation RSOutNode
 @synthesize outNodeOutputBus=_outNodeOutputBus;
+@synthesize outConnectorNode=_outConnectorNode;
 
 + (id)outNodeInContext:(NSManagedObjectContext *)context
 {
