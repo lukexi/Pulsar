@@ -100,7 +100,7 @@ int vpost(const char *fmt, va_list ap)
     {
         synthServerPort = 57110;
         
-#if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE //&& !TARGET_IPHONE_SIMULATOR
         // Choose random port between 50000 & 60000 in case a crashed app holds on to our port
         synthServerPort = arc4random() % 10000 + 50000;
 #endif
@@ -135,7 +135,7 @@ int vpost(const char *fmt, va_list ap)
         [self copySynthDefs];
         
         // Boot up SCSynth on the device (doesn't work quite right yet on the simulator, so boot up your own SuperCollider.app and it should work after following directions in README)
-#if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE// && !TARGET_IPHONE_SIMULATOR
         [self start];
 #endif
         
