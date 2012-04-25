@@ -218,7 +218,7 @@ float midiratio(float midi)
 
 + (NSString *)equalTemperedNameForPitchesPerOctave:(NSUInteger)pitchesPerOctave
 {
-    return [NSString stringWithFormat:@"ET%u", pitchesPerOctave];
+    return [NSString stringWithFormat:@"ET%i", (int)pitchesPerOctave];
 }
 
 @end

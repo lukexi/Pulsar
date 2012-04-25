@@ -375,9 +375,11 @@
 	float				tmpFloat = 0.0;
 	unsigned char		*charPtr = NULL;
 	void				*voidPtr = NULL;
+    #if TARGET_OS_IPHONE
 	unsigned char		tmpChar = 0;
 	CGColorRef			tmpColor;
 	const CGFloat		*tmpCGFloatPtr;
+    #endif
 
 	
 	switch (type)	{

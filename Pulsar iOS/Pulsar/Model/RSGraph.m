@@ -42,7 +42,7 @@
                            componentsJoinedByString:@">"];
     
     return [NSString stringWithFormat:@"<%@ %p Spawned:%@ GroupID:%i IDs:[%@] SynthDefs:[%@]>", 
-            [self class], self, isSpawned ? @"YES" : @"NO", self.graphGroup.nodeID, IDs, synthDefs];
+            [self class], self, isSpawned ? @"YES" : @"NO", (int)self.graphGroup.nodeID, IDs, synthDefs];
 }
 
 - (void)prepareForDeletion
@@ -117,9 +117,9 @@
 
 - (NSString *)nodeIDForNewNodeWithSynthDef:(RSSynthDef *)synthDef
 {
-    return [NSString stringWithFormat:@"%@%u", 
+    return [NSString stringWithFormat:@"%@%i", 
             synthDef.name, 
-            [self countOfNodesWithSynthDef:synthDef]];
+            (int)[self countOfNodesWithSynthDef:synthDef]];
 }
 
 // Useful for automatically determining an ID for a new synthDef node

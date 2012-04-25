@@ -42,7 +42,7 @@
     return [NSString stringWithFormat:
             @"<%@ %p Center:%@ ModDepth:%@ InputSummingBusNumber:%i ScalerNodeID:%i DCNodeID:%i>", 
             [self class], self, self.center, self.modDepth, 
-            inputSummingBus.busID, scalerNode.nodeID, dcNode.nodeID];
+            (int)inputSummingBus.busID, (int)scalerNode.nodeID, (int)dcNode.nodeID];
 }
 
 - (void)setModDepth:(NSNumber *)modDepth
