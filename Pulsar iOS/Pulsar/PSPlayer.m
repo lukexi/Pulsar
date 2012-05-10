@@ -68,10 +68,9 @@ typedef NSArray *(^PSCollectPairsBlock)(id left, id right);
 
 @implementation PSPlayer
 {
-    NSArray *patternsByKey;
-    NSArray *streamsByKey;
+    NSMutableArray *streamsByKey;
     BOOL isPlaying;
-    NSArray *blocks;
+    NSMutableArray *blocks;
     PSClock *clock;
 }
 
@@ -90,27 +89,42 @@ typedef NSArray *(^PSCollectPairsBlock)(id left, id right);
     self = [super init];
     if (self) {
         clock = [PSClock defaultClock];
-        patternsByKey = thePatternsByKey;
-        blocks = theBlocks;
+        blocks = [theBlocks mutableCopy];
+        streamsByKey = [NSMutableArray array];
+        [self addPatterns:thePatternsByKey];
     }
     return self;
 }
 
-- (void)play
+- (void)addPatterns:(NSArray *)patternsByKey
 {
-    isPlaying = YES;
-    
     // Create a stream "instance" of each pattern that can be looped through
-    streamsByKey = [patternsByKey ps_collectPairs:^NSArray *(id key, id value) {
+    [patternsByKey ps_enumeratePairs:^(id key, id value) {
         // Any object can implement asPattern to transform itself into a pattern;
         // By default an NSObject becomes a PSListPattern with one element,
         // but NSArray & NSSets become PSListPatterns with all their elements.
         PSPattern *pattern = [value asPattern];
         // We create an "instance" of the pattern as an iterable stream.
         PSStream *stream = [pattern asStream];
-        return @[key, stream];
+        
+        [streamsByKey addObjectsFromArray:@[key, stream]];
     }];
-    
+}
+
+- (void)removePatternsForKeys:(NSArray *)keys
+{
+    [[streamsByKey copy] ps_enumeratePairs:^(id key, id value) {
+        if ([keys containsObject:key])
+        {
+            [streamsByKey removeObject:key];
+            [streamsByKey removeObject:value];
+        }
+    }];
+}
+
+- (void)play
+{
+    isPlaying = YES;
     [clock scheduleEventAtNextBeat:^{
         [self next];
     }];
@@ -129,6 +143,16 @@ typedef NSArray *(^PSCollectPairsBlock)(id left, id right);
         prototypeDictionary = @{PSDurationKey:@1.0};
     }
     return prototypeDictionary;
+}
+
+- (void)addBlock:(PSEventBlock)aBlock
+{
+    [blocks addObject:aBlock];
+}
+
+- (void)removeBlock:(PSEventBlock)aBlock
+{
+    [blocks removeObject:aBlock];
 }
 
 - (void)next
@@ -157,7 +181,7 @@ typedef NSArray *(^PSCollectPairsBlock)(id left, id right);
     
     //NSLog(@"Playing; %@", event);
     
-    for (PSEventBlock eventBlock in blocks)
+    for (PSEventBlock eventBlock in [blocks copy])
     {
         eventBlock(event);
     }

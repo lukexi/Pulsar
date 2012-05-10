@@ -42,6 +42,12 @@ typedef void(^PSEventBlock)(NSDictionary *event);
 + (PSPlayer *)playerWithPatterns:(NSArray *)patternsByKey
                            block:(PSEventBlock)block;
 
+- (void)addPatterns:(NSArray *)patternsByKey;
+- (void)removePatternsForKeys:(NSArray *)keys;
+
+- (void)addBlock:(PSEventBlock)aBlock;
+- (void)removeBlock:(PSEventBlock)aBlock;
+
 - (void)play;
 - (void)stop;
 
