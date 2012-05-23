@@ -35,6 +35,7 @@
 - (void)addNode:(RSNode *)synth;
 - (void)deleteNode:(RSNode *)node;
 
+// RSGraphs are by default connected to [SCBus defaultBus]
 - (void)connectOutToBus:(SCBus *)bus;
 - (void)applyDictionaryRepresentation:(NSDictionary *)snapshot;
 
@@ -57,8 +58,7 @@
 - (NSDictionary *)dictionaryRepresentationWithSynthDefReplacements:(NSDictionary *)replacementSynthDefNamesByNodeID;
 
 // New subscript support
-- (RSNode
-   *)objectForKeyedSubscript:(id)key;
+- (RSNode *)objectForKeyedSubscript:(id)key;
 // Object is string name of a synthdef, key becomes node ID
 - (void)setObject:(NSString *)object forKeyedSubscript:(NSString *)key;
 

@@ -22,7 +22,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@ %p BusID:%i NumberOfChannels:%i Rate:>", [self class], self, self.busID, self.numberOfChannels, self.rate == SCSynthAudioRate ? @"Audio" : @"Control"];
+    return [NSString stringWithFormat:@"<%@ %p BusID:%i NumberOfChannels:%i Rate:%@>", [self class], self, (int)self.busID, (int)self.numberOfChannels, self.rate == SCSynthAudioRate ? @"Audio" : @"Control"];
 }
 
 + (SCBus *)mainOutputBus

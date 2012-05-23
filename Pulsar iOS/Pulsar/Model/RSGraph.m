@@ -42,7 +42,7 @@
                            componentsJoinedByString:@">"];
     
     return [NSString stringWithFormat:@"<%@ %p Spawned:%@ GroupID:%i IDs:[%@] SynthDefs:[%@]>", 
-            [self class], self, isSpawned ? @"YES" : @"NO", self.graphGroup.nodeID, IDs, synthDefs];
+            [self class], self, isSpawned ? @"YES" : @"NO", (int)self.graphGroup.nodeID, IDs, synthDefs];
 }
 
 - (void)prepareForDeletion
@@ -117,9 +117,9 @@
 
 - (NSString *)nodeIDForNewNodeWithSynthDef:(RSSynthDef *)synthDef
 {
-    return [NSString stringWithFormat:@"%@%u", 
+    return [NSString stringWithFormat:@"%@%i", 
             synthDef.name, 
-            [self countOfNodesWithSynthDef:synthDef]];
+            (int)[self countOfNodesWithSynthDef:synthDef]];
 }
 
 // Useful for automatically determining an ID for a new synthDef node
@@ -174,6 +174,8 @@
         [self.graphGroup free];
         
         self.isSpawned = NO;
+        
+        // We must call this after setting isSpawned to no, so that RSNodes don't try to free themselves again.
         for (RSNode *node in self.nodes) 
         {
             [node free];
@@ -256,7 +258,7 @@
 
 - (void)connectOutToBus:(SCBus *)bus
 {
-    [self.outNode connectToBus:bus];
+    self.outNode.outNodeOutputBus = bus;
 }
 
 - (void)replaceSynthDefsOfNodesByID:(NSDictionary *)replacementSynthDefNamesByNodeID

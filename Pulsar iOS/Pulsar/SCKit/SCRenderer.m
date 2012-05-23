@@ -100,8 +100,8 @@
     if (!path) 
     {
         path = [NSTemporaryDirectory() stringByAppendingPathComponent:
-                [NSString stringWithFormat:@"Buffer%i-%d.aiff", 
-                 renderingBuffer.bufferNumber, 
+                [NSString stringWithFormat:@"Buffer%i-%f.aiff", 
+                 (int)renderingBuffer.bufferNumber, 
                  [[NSDate date] timeIntervalSinceReferenceDate]]];
     }
     return path;

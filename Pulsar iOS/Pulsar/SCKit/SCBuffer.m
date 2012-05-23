@@ -73,7 +73,7 @@ SCBufferSampleFormat const SCBufferSampleFormatAlaw = @"alaw";
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@ %p bufferNumber:%i numberOfFrames:%i numberOfChannels:%i>", [self class], self, self.bufferNumber, self.numberOfFrames, self.numberOfChannels];
+    return [NSString stringWithFormat:@"<%@ %p bufferNumber:%i numberOfFrames:%i numberOfChannels:%i>", [self class], self, (int)self.bufferNumber, (int)self.numberOfFrames, (int)self.numberOfChannels];
 }
 
 - (void)setSamples:(NSArray *)samples
@@ -122,7 +122,7 @@ SCBufferSampleFormat const SCBufferSampleFormatAlaw = @"alaw";
             OSCMessage *message = [SCBuffer b_getnMessageWithBufferNumber:self.bufferNumber 
                                                             startingIndex:i 
                                                              samplesCount:samplesCount];
-            NSLog(@"Message from %i to %i (max %i)", i, i + samplesCount, self.numberOfFrames);
+            NSLog(@"Message from %i to %i (max %i)", (int)i, (int)(i + samplesCount), (int)self.numberOfFrames);
             [SCBundle sendMessage:message];
         }
     }];
@@ -144,7 +144,7 @@ SCBufferSampleFormat const SCBufferSampleFormatAlaw = @"alaw";
         //[strings addObject:[NSString stringWithFormat:@"%f", [sample floatValue]]];
         [strings addObject:[NSString stringWithFormat:@"%@", sample]];
     }
-    NSLog(@"~buffer%i = Buffer.loadCollection(s, [%@]);", self.bufferNumber, [strings componentsJoinedByString:@","]);
+    NSLog(@"~buffer%i = Buffer.loadCollection(s, [%@]);", (int)self.bufferNumber, [strings componentsJoinedByString:@","]);
 }
 
 #pragma mark - Message Creation

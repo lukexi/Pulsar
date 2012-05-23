@@ -26,7 +26,7 @@
 	NSString		*tmpString = nil;
 	for (NSString *pathComponent in pathArray)	{
 		if (tmpString == nil)
-			tmpString = [NSString stringWithString:@""];
+			tmpString = @"";
 		else
 			tmpString = [NSString stringWithFormat:@"%@/%@",tmpString,pathComponent];
 	}

@@ -24,7 +24,7 @@
     NSArray *defs = [context executeFetchRequest:request error:&error];
     if (!defs || [defs count] == 0) 
     {
-        NSLog(@"Error fetching synthdef '%@' (synthdefs found: %i): %@", name, [defs count], error);
+        NSLog(@"Error fetching synthdef '%@' (synthdefs found: %i): %@", name, (int)[defs count], error);
         return nil;
     }
     RSSynthDef *synthDef = [defs objectAtIndex:0];
@@ -188,7 +188,6 @@ static NSString *RSSynthDefCacheKey = @"RSSynthDefCacheKey";
             control.warpSpecifier = @"lin";
             control.units = @"";
         }
-        
         index++;
     }
 }

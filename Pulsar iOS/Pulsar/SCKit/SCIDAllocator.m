@@ -68,7 +68,7 @@
 {
     //NSLog(@"%@ Freeing %i", self.name, anID);
     NSNumber *freedID = [NSNumber numberWithInteger:anID];
-    NSAssert3(![self.freedIDs containsObject:freedID], @"Double free of an ID! Pool '%@' already contains ID %@", self.name, freedID, self.freedIDs);
+    NSAssert3(![self.freedIDs containsObject:freedID], @"Double free of an ID! Pool '%@' already contains ID %@ (freed IDs are: %@)", self.name, freedID, self.freedIDs);
     [self.freedIDs addObject:freedID];
 #if SCTestAllocatedNodeIDs
     [self.allocatedIDs removeObject:freedID];

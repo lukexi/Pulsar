@@ -8,7 +8,7 @@
 
 
 - (NSString *) description	{
-	return [NSString stringWithFormat:@"<OSCOutPort %@:%ld>",addressString,port];
+	return [NSString stringWithFormat:@"<OSCOutPort %@:%i>",addressString,port];
 }
 + (id) createWithAddress:(NSString *)a andPort:(unsigned short)p	{
 	OSCOutPort		*returnMe = [[OSCOutPort alloc] initWithAddress:a andPort:p];

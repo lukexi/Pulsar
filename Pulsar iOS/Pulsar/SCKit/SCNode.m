@@ -29,7 +29,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@ %p NodeID:%i>", [self class], self, self.nodeID];
+    return [NSString stringWithFormat:@"<%@ %p NodeID:%i>", [self class], self, (int)self.nodeID];
 }
 
 - (void)send
