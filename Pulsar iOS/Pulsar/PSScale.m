@@ -63,9 +63,9 @@ float midiratio(float midi)
 - (NSArray *)semitones
 {
     NSMutableArray *semitones = [NSMutableArray array];
-    __weak PSScale *weakSelf = self;
     [self.degrees enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [semitones addObject:[NSNumber numberWithFloat:[weakSelf.tuning tuningAtWrappedIndex:idx]]];
+        NSNumber *degree = obj;
+        [semitones addObject:[NSNumber numberWithFloat:[self.tuning tuningAtWrappedIndex:[degree integerValue]]]];
     }];
     return semitones;
 }
@@ -82,7 +82,8 @@ float midiratio(float midi)
 
 - (CGFloat)degreeToRatio:(CGFloat)degree octave:(CGFloat)octave
 {
-    return [[[self ratios] objectAtIndex:degree] floatValue] * powf([self octaveRatio], octave);
+    NSArray *ratios = [self ratios];
+    return [[ratios objectAtIndex:(NSInteger)degree % [ratios count]] floatValue] * powf([self octaveRatio], octave);
 }
 
 - (CGFloat)degreeToFreq:(CGFloat)degree rootFreq:(CGFloat)rootFreq octave:(CGFloat)octave

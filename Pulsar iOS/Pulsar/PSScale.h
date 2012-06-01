@@ -42,6 +42,9 @@ PS_EXTERN_C float midiratio(float midi);
                stepsPerOctave:(CGFloat)stepsPerOctave
                    accidental:(CGFloat)accidental;
 
+- (NSArray *)semitones;
+- (NSArray *)ratios;
+
 // Scales
 + (PSScale *)scaleNamed:(NSString *)identifier;
 

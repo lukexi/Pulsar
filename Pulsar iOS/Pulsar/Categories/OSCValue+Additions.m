@@ -7,29 +7,7 @@
 //
 
 #import "OSCValue+Additions.h"
-
-@implementation NSValue (TypeAdditions)
-
-- (BOOL)sc_isIntegerType
-{
-    return strcmp([self objCType], @encode(int)) == 0 || 
-           strcmp([self objCType], @encode(NSInteger)) == 0 || 
-           strcmp([self objCType], @encode(NSUInteger)) == 0;
-}
-
-- (BOOL)sc_isFloatType
-{
-    return strcmp([self objCType], @encode(float)) == 0 || 
-           strcmp([self objCType], @encode(double)) == 0 || 
-           strcmp([self objCType], @encode(CGFloat)) == 0;
-}
-
-- (BOOL)sc_isBOOLType
-{
-    return strcmp([self objCType], @encode(BOOL)) == 0;
-}
-
-@end
+#import "NSNumber+RTDo.h"
 
 @implementation OSCValue (OSCValue_Additions)
 
@@ -37,17 +15,17 @@
 {
     if ([object isKindOfClass:[NSNumber class]]) 
     {
-        if ([object sc_isIntegerType])
+        if ([object rt_isIntegerType])
         {
             //NSLog(@"returning int osc type for number: %@", object);
             return [OSCValue createWithInt:[object intValue]];
         }
-        else if ([object sc_isFloatType])
+        else if ([object rt_isFloatType])
         {
             //NSLog(@"returning float osc type for number: %@", object);
             return [OSCValue createWithFloat:[object floatValue]];       
         }
-        else if ([object sc_isBOOLType])
+        else if ([object rt_isBOOLType])
         {
             //NSLog(@"returning bool osc type for number: %@", object);
             return [OSCValue createWithBool:[object boolValue]];
@@ -57,7 +35,7 @@
     {
         return [OSCValue createWithString:object];
     }
-    NSAssert1(NO, @"Couldn't convert object %@ into OSCValue", object);
+    //NSAssert1(NO, @"Couldn't convert object %@ into OSCValue", object);
     return nil;
 }
 

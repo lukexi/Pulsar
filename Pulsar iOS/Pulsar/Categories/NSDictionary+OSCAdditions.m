@@ -18,10 +18,50 @@
     {
         OSCValue *OSCKey = [OSCValue sc_valueWithObject:key];
         OSCValue *OSCVal = [OSCValue sc_valueWithObject:obj];
-        [argsArray addObject:OSCKey];
-        [argsArray addObject:OSCVal];
+        if (OSCVal)
+        {
+            [argsArray addObject:OSCKey];
+            [argsArray addObject:OSCVal];
+        }
+        else if ([obj isKindOfClass:[NSArray class]])
+        {
+            [self sc_addObjectsToArgsArray:argsArray
+               asOSCArrayfromValuesInArray:obj
+                                    forKey:OSCKey];
+        }
     }];
     return argsArray;
+}
+
+- (void)sc_addObjectsToArgsArray:(NSMutableArray *)argsArray
+     asOSCArrayfromValuesInArray:(NSArray *)originalArray
+                          forKey:(OSCValue *)OSCKey
+{
+    BOOL allConverted = YES;
+    NSMutableArray *arrayOSCValues = [NSMutableArray array];
+    for (id arrayElement in originalArray)
+    {
+        OSCValue *value = [OSCValue sc_valueWithObject:arrayElement];
+        if (value)
+        {
+            [arrayOSCValues addObject:value];
+        }
+        else
+        {
+            allConverted = NO;
+        }
+    }
+    if (allConverted)
+    {
+        [argsArray addObject:OSCKey];
+        [argsArray addObject:[OSCValue createWithArrayOpen]];
+        [argsArray addObjectsFromArray:arrayOSCValues];
+        [argsArray addObject:[OSCValue createWithArrayClose]];
+    }
+    else
+    {
+        NSLog(@"Couldn't convert array to OSC: %@", originalArray);
+    }
 }
 
 @end

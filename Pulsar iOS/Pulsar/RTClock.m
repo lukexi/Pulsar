@@ -1,21 +1,21 @@
 //
-//  PSClock.m
+//  RTClock.m
 //  PSPattern
 //
 //  Created by Luke Iannini on 3/25/12.
 //  Copyright (c) 2012 Eeoo. All rights reserved.
 //
 
-#import "PSClock.h"
+#import "RTClock.h"
 
-@implementation PSClock
+@implementation RTClock
 {
     NSDate *startDate;
 }
 
-+ (PSClock *)defaultClock
++ (RTClock *)defaultClock
 {
-    PSClock *defaultClock = nil;
+    RTClock *defaultClock = nil;
     if (!defaultClock)
     {
         defaultClock = [[self alloc] init];
@@ -28,11 +28,21 @@
     self = [super init];
     if (self)
     {
-        _tempo = 120;
+        _tempoBPS = 2;
         _beatsPerBar = 4;
         startDate = [NSDate date];
     }
     return self;
+}
+
+- (void)setTempoBPM:(CGFloat)tempoBPM
+{
+    self.tempoBPS = 60.0 / tempoBPM;
+}
+
+- (CGFloat)tempoBPM
+{
+    return self.tempoBPS * 60.0;
 }
 
 - (NSUInteger)beats
@@ -47,7 +57,7 @@
 
 - (NSTimeInterval)secondsPerBeat
 {
-    return 60.0f / self.tempo;
+    return 1.0 / self.tempoBPS;
 }
 
 - (NSTimeInterval)nextTimeOnGrid
@@ -60,7 +70,12 @@
     return [self nextTimeOnGrid] - [self secondsSinceStart];
 }
 
-- (void)scheduleEventAtNextBeat:(PSClockEvent)event
+- (void)inBars:(CGFloat)numBars schedule:(RTClockEvent)event
+{
+    
+}
+
+- (void)scheduleEventAtNextBeat:(RTClockEvent)event
 {
     double delayInSeconds = [self timeToNextBeat];
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);

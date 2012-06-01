@@ -8,13 +8,7 @@
 
 #import "VVOSC.h"
 
-@interface NSValue (TypeAdditions)
 
-- (BOOL)sc_isIntegerType;
-- (BOOL)sc_isFloatType;
-- (BOOL)sc_isBOOLType;
-
-@end
 
 @interface OSCValue (OSCValue_Additions)
 

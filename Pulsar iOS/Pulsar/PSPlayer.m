@@ -9,7 +9,7 @@
 #import "PSPlayer.h"
 #import "PSPattern.h"
 #import "PSStream.h"
-#import "PSClock.h"
+#import "RTClock.h"
 #import "PSBlock.h"
 #import "PSSubscripts.h"
 
@@ -71,7 +71,7 @@ typedef NSArray *(^PSCollectPairsBlock)(id left, id right);
     NSMutableArray *streamsByKey;
     BOOL isPlaying;
     NSMutableArray *blocks;
-    PSClock *clock;
+    RTClock *clock;
 }
 
 + (PSPlayer *)playerWithPatterns:(NSArray *)patternsByKey block:(PSEventBlock)block
@@ -88,7 +88,7 @@ typedef NSArray *(^PSCollectPairsBlock)(id left, id right);
 {
     self = [super init];
     if (self) {
-        clock = [PSClock defaultClock];
+        clock = [RTClock defaultClock];
         blocks = [theBlocks mutableCopy];
         streamsByKey = [NSMutableArray array];
         [self addPatterns:thePatternsByKey];

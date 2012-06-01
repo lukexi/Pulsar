@@ -9,7 +9,6 @@
 #import "SCSynth.h"
 #import "SCBus.h"
 
-
 @interface SCSynth ()
 
 - (OSCMessage *)mapMessageForControlName:(NSString *)controlName bus:(SCBus *)bus;
@@ -18,7 +17,6 @@
 
 @implementation SCSynth
 @synthesize name, arguments;
-
 
 // TODO: figure out an SCKit convention for sending now vs sending later...
 // maybe a blocks-and-class-variable based approach where synth messages can be collected, unsent?
@@ -138,6 +136,7 @@
     [message addArguments:arguments];
     return message;
 }
+
 
 
 @end
