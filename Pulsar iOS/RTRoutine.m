@@ -32,6 +32,11 @@
     return [[self alloc] initWithBlock:block];
 }
 
+- (void)dealloc
+{
+    dispatch_release(routineQueue);
+}
+
 - (id)initWithBlock:(RTRoutineBlock)block
 {
     self = [super init];
