@@ -47,6 +47,8 @@
 		C2339B0914C3EDE7002E4251 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2339B0414C3EDE7002E4251 /* SCWaveformView.m */; };
 		C2339B0E14C3EED6002E4251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
 		C2339B0F14C3EEE2002E4251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
+		C23675F71579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */ = {isa = PBXBuildFile; fileRef = C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */; };
+		C23675F81579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */ = {isa = PBXBuildFile; fileRef = C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */; };
 		C2372C4E152C3F570097575E /* PSScales.json in Resources */ = {isa = PBXBuildFile; fileRef = C2372C4D152C3F570097575E /* PSScales.json */; };
 		C2372C4F152C3F570097575E /* PSScales.json in Resources */ = {isa = PBXBuildFile; fileRef = C2372C4D152C3F570097575E /* PSScales.json */; };
 		C2372C56152C44060097575E /* PSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C2372C54152C44060097575E /* PSEvent.h */; };
@@ -583,6 +585,7 @@
 		C2339B0314C3EDE7002E4251 /* SCWaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWaveformView.h; sourceTree = "<group>"; };
 		C2339B0414C3EDE7002E4251 /* SCWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWaveformView.m; sourceTree = "<group>"; };
 		C2339B0D14C3EED6002E4251 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFMountainLionGCDARCWorkaround.h; path = ../../../MagicFile/MFMountainLionGCDARCWorkaround.h; sourceTree = "<group>"; };
 		C2372C4D152C3F570097575E /* PSScales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PSScales.json; path = Pulsar/PSScales.json; sourceTree = "<group>"; };
 		C2372C54152C44060097575E /* PSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSEvent.h; sourceTree = "<group>"; };
 		C2372C55152C44060097575E /* PSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSEvent.m; sourceTree = "<group>"; };
@@ -893,6 +896,7 @@
 		C24EE6D5148C3ED600E72DAF = {
 			isa = PBXGroup;
 			children = (
+				C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */,
 				C2D402A41578B40A00950C0F /* Routines Streams and Patterns */,
 				C2D62F2E1498BA4E000F534B /* README.txt */,
 				C2D62EFA1498B8EE000F534B /* Pulsar Bundle */,
@@ -1277,6 +1281,7 @@
 				C2D402FC1578B42500950C0F /* NSArray+RTAdditions.h in Headers */,
 				C2D403041578CBB800950C0F /* SCSynth+RTEventStreamPlayer.h in Headers */,
 				C2D4030C1578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.h in Headers */,
+				C23675F81579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1312,6 +1317,7 @@
 				C2D402FB1578B42500950C0F /* NSArray+RTAdditions.h in Headers */,
 				C2D403031578CBB800950C0F /* SCSynth+RTEventStreamPlayer.h in Headers */,
 				C2D4030B1578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.h in Headers */,
+				C23675F71579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

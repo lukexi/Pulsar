@@ -7,6 +7,7 @@
 //
 
 #import "RTRoutine.h"
+#import "MFMountainLionGCDARCWorkaround.h"
 
 @interface RTRoutine ()
 
@@ -22,7 +23,6 @@
     RTRoutineBlock _block;
     dispatch_queue_t routineQueue;
     BOOL done;
-    
 }
 #define HAS_YIELDED 0
 #define SHOULD_YIELD 1
@@ -34,6 +34,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"Deallocating routine!");
     dispatch_release(routineQueue);
 }
 
@@ -56,7 +57,9 @@
         dispatch_async(routineQueue, ^{
             [weakSelf.condition lockWhenCondition:SHOULD_YIELD];
             _block(weakSelf.yieldBlock, weakSelf.inValue);
-            weakSelf.yieldBlock(nil);
+            weakSelf.yieldedValue = nil;
+            [weakSelf.condition unlockWithCondition:HAS_YIELDED];
+            NSLog(@"Routine ended!");
         });
     }
     return self;

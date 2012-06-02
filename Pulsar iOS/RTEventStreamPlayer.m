@@ -67,8 +67,9 @@
     if (self)
     {
         self.stream = stream;
+        __weak RTStream *weakStream = stream;
         self.routine = [RTRoutine routineWithBlock:^(RTYieldBlock yield, id inValue) {
-            [stream embedInStream:yield inValue:inValue];
+            [weakStream embedInStream:yield inValue:inValue];
         }];
         self.prototypeEvent = @{@"dur":@1.0};
     }
