@@ -41,14 +41,14 @@
 		C22ACDC814983B8F003EE04B /* OSCZeroConfManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACDA014983B8E003EE04B /* OSCZeroConfManager.m */; };
 		C22ACDFB14983F7D003EE04B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACDFA14983F7C003EE04B /* AudioToolbox.framework */; };
 		C22ACE09149843A3003EE04B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACE08149843A2003EE04B /* Accelerate.framework */; };
+		C22DC7CD157B8CB1000004C3 /* libPattern copy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22DC7CC157B8CA3000004C3 /* libPattern copy.a */; };
+		C22DC7CE157B8CB9000004C3 /* libPattern.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22DC7A2157B8C14000004C3 /* libPattern.a */; };
 		C2339B0514C3EDE7002E4251 /* SCWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2339B0314C3EDE7002E4251 /* SCWaveformView.h */; };
 		C2339B0614C3EDE7002E4251 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2339B0414C3EDE7002E4251 /* SCWaveformView.m */; };
 		C2339B0814C3EDE7002E4251 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2339B0414C3EDE7002E4251 /* SCWaveformView.m */; };
 		C2339B0914C3EDE7002E4251 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2339B0414C3EDE7002E4251 /* SCWaveformView.m */; };
 		C2339B0E14C3EED6002E4251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
 		C2339B0F14C3EEE2002E4251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2339B0D14C3EED6002E4251 /* AVFoundation.framework */; };
-		C23675F71579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */ = {isa = PBXBuildFile; fileRef = C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */; };
-		C23675F81579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */ = {isa = PBXBuildFile; fileRef = C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */; };
 		C2372C4E152C3F570097575E /* PSScales.json in Resources */ = {isa = PBXBuildFile; fileRef = C2372C4D152C3F570097575E /* PSScales.json */; };
 		C2372C4F152C3F570097575E /* PSScales.json in Resources */ = {isa = PBXBuildFile; fileRef = C2372C4D152C3F570097575E /* PSScales.json */; };
 		C2372C56152C44060097575E /* PSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C2372C54152C44060097575E /* PSEvent.h */; };
@@ -144,12 +144,6 @@
 		C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
 		C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */ = {isa = PBXBuildFile; fileRef = C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */; };
-		C2A68C3D151F2A2C000A543E /* RTClock.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C31151F2A2C000A543E /* RTClock.h */; };
-		C2A68C3E151F2A2C000A543E /* RTClock.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C31151F2A2C000A543E /* RTClock.h */; };
-		C2A68C3F151F2A2C000A543E /* RTClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* RTClock.m */; };
-		C2A68C40151F2A2C000A543E /* RTClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* RTClock.m */; };
-		C2A68C41151F2A2C000A543E /* RTClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* RTClock.m */; };
-		C2A68C42151F2A2C000A543E /* RTClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C32151F2A2C000A543E /* RTClock.m */; };
 		C2A68C43151F2A2C000A543E /* PSPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C33151F2A2C000A543E /* PSPlayer.h */; };
 		C2A68C44151F2A2C000A543E /* PSPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A68C33151F2A2C000A543E /* PSPlayer.h */; };
 		C2A68C45151F2A2C000A543E /* PSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C34151F2A2C000A543E /* PSPlayer.m */; };
@@ -201,72 +195,6 @@
 		C2C513E514AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */; };
 		C2C513E714AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */; };
 		C2C513E814AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */; };
-		C2D402BF1578B42500950C0F /* RTStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402A91578B42500950C0F /* RTStream.h */; };
-		C2D402C01578B42500950C0F /* RTStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402A91578B42500950C0F /* RTStream.h */; };
-		C2D402C11578B42500950C0F /* RTStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AA1578B42500950C0F /* RTStream.m */; };
-		C2D402C21578B42500950C0F /* RTStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AA1578B42500950C0F /* RTStream.m */; };
-		C2D402C31578B42500950C0F /* RTStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AA1578B42500950C0F /* RTStream.m */; };
-		C2D402C41578B42500950C0F /* RTStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AA1578B42500950C0F /* RTStream.m */; };
-		C2D402C51578B42500950C0F /* RTFuncStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402AB1578B42500950C0F /* RTFuncStream.h */; };
-		C2D402C61578B42500950C0F /* RTFuncStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402AB1578B42500950C0F /* RTFuncStream.h */; };
-		C2D402C71578B42500950C0F /* RTFuncStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AC1578B42500950C0F /* RTFuncStream.m */; };
-		C2D402C81578B42500950C0F /* RTFuncStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AC1578B42500950C0F /* RTFuncStream.m */; };
-		C2D402C91578B42500950C0F /* RTFuncStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AC1578B42500950C0F /* RTFuncStream.m */; };
-		C2D402CA1578B42500950C0F /* RTFuncStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AC1578B42500950C0F /* RTFuncStream.m */; };
-		C2D402CB1578B42500950C0F /* RTEventStreamPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402AD1578B42500950C0F /* RTEventStreamPlayer.h */; };
-		C2D402CC1578B42500950C0F /* RTEventStreamPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402AD1578B42500950C0F /* RTEventStreamPlayer.h */; };
-		C2D402CD1578B42500950C0F /* RTEventStreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AE1578B42500950C0F /* RTEventStreamPlayer.m */; };
-		C2D402CE1578B42500950C0F /* RTEventStreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AE1578B42500950C0F /* RTEventStreamPlayer.m */; };
-		C2D402CF1578B42500950C0F /* RTEventStreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AE1578B42500950C0F /* RTEventStreamPlayer.m */; };
-		C2D402D01578B42500950C0F /* RTEventStreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402AE1578B42500950C0F /* RTEventStreamPlayer.m */; };
-		C2D402D11578B42500950C0F /* RTRoutine.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402AF1578B42500950C0F /* RTRoutine.h */; };
-		C2D402D21578B42500950C0F /* RTRoutine.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402AF1578B42500950C0F /* RTRoutine.h */; };
-		C2D402D31578B42500950C0F /* RTRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B01578B42500950C0F /* RTRoutine.m */; };
-		C2D402D41578B42500950C0F /* RTRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B01578B42500950C0F /* RTRoutine.m */; };
-		C2D402D51578B42500950C0F /* RTRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B01578B42500950C0F /* RTRoutine.m */; };
-		C2D402D61578B42500950C0F /* RTRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B01578B42500950C0F /* RTRoutine.m */; };
-		C2D402D71578B42500950C0F /* RTPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B11578B42500950C0F /* RTPattern.h */; };
-		C2D402D81578B42500950C0F /* RTPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B11578B42500950C0F /* RTPattern.h */; };
-		C2D402D91578B42500950C0F /* RTPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B21578B42500950C0F /* RTPattern.m */; };
-		C2D402DA1578B42500950C0F /* RTPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B21578B42500950C0F /* RTPattern.m */; };
-		C2D402DB1578B42500950C0F /* RTPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B21578B42500950C0F /* RTPattern.m */; };
-		C2D402DC1578B42500950C0F /* RTPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B21578B42500950C0F /* RTPattern.m */; };
-		C2D402DD1578B42500950C0F /* RTPattern+More.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B31578B42500950C0F /* RTPattern+More.h */; };
-		C2D402DE1578B42500950C0F /* RTPattern+More.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B31578B42500950C0F /* RTPattern+More.h */; };
-		C2D402DF1578B42500950C0F /* RTPattern+More.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B41578B42500950C0F /* RTPattern+More.m */; };
-		C2D402E01578B42500950C0F /* RTPattern+More.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B41578B42500950C0F /* RTPattern+More.m */; };
-		C2D402E11578B42500950C0F /* RTPattern+More.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B41578B42500950C0F /* RTPattern+More.m */; };
-		C2D402E21578B42500950C0F /* RTPattern+More.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B41578B42500950C0F /* RTPattern+More.m */; };
-		C2D402E31578B42500950C0F /* RTFilterPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B51578B42500950C0F /* RTFilterPattern.h */; };
-		C2D402E41578B42500950C0F /* RTFilterPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B51578B42500950C0F /* RTFilterPattern.h */; };
-		C2D402E51578B42500950C0F /* RTFilterPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B61578B42500950C0F /* RTFilterPattern.m */; };
-		C2D402E61578B42500950C0F /* RTFilterPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B61578B42500950C0F /* RTFilterPattern.m */; };
-		C2D402E71578B42500950C0F /* RTFilterPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B61578B42500950C0F /* RTFilterPattern.m */; };
-		C2D402E81578B42500950C0F /* RTFilterPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B61578B42500950C0F /* RTFilterPattern.m */; };
-		C2D402E91578B42500950C0F /* RTListPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B71578B42500950C0F /* RTListPattern.h */; };
-		C2D402EA1578B42500950C0F /* RTListPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B71578B42500950C0F /* RTListPattern.h */; };
-		C2D402EB1578B42500950C0F /* RTListPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B81578B42500950C0F /* RTListPattern.m */; };
-		C2D402EC1578B42500950C0F /* RTListPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B81578B42500950C0F /* RTListPattern.m */; };
-		C2D402ED1578B42500950C0F /* RTListPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B81578B42500950C0F /* RTListPattern.m */; };
-		C2D402EE1578B42500950C0F /* RTListPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402B81578B42500950C0F /* RTListPattern.m */; };
-		C2D402EF1578B42500950C0F /* NSObject+RTEmbedInStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B91578B42500950C0F /* NSObject+RTEmbedInStream.h */; };
-		C2D402F01578B42500950C0F /* NSObject+RTEmbedInStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402B91578B42500950C0F /* NSObject+RTEmbedInStream.h */; };
-		C2D402F11578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BA1578B42500950C0F /* NSObject+RTEmbedInStream.m */; };
-		C2D402F21578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BA1578B42500950C0F /* NSObject+RTEmbedInStream.m */; };
-		C2D402F31578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BA1578B42500950C0F /* NSObject+RTEmbedInStream.m */; };
-		C2D402F41578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BA1578B42500950C0F /* NSObject+RTEmbedInStream.m */; };
-		C2D402F51578B42500950C0F /* NSNumber+RTDo.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402BB1578B42500950C0F /* NSNumber+RTDo.h */; };
-		C2D402F61578B42500950C0F /* NSNumber+RTDo.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402BB1578B42500950C0F /* NSNumber+RTDo.h */; };
-		C2D402F71578B42500950C0F /* NSNumber+RTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BC1578B42500950C0F /* NSNumber+RTDo.m */; };
-		C2D402F81578B42500950C0F /* NSNumber+RTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BC1578B42500950C0F /* NSNumber+RTDo.m */; };
-		C2D402F91578B42500950C0F /* NSNumber+RTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BC1578B42500950C0F /* NSNumber+RTDo.m */; };
-		C2D402FA1578B42500950C0F /* NSNumber+RTDo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BC1578B42500950C0F /* NSNumber+RTDo.m */; };
-		C2D402FB1578B42500950C0F /* NSArray+RTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402BD1578B42500950C0F /* NSArray+RTAdditions.h */; };
-		C2D402FC1578B42500950C0F /* NSArray+RTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D402BD1578B42500950C0F /* NSArray+RTAdditions.h */; };
-		C2D402FD1578B42500950C0F /* NSArray+RTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BE1578B42500950C0F /* NSArray+RTAdditions.m */; };
-		C2D402FE1578B42500950C0F /* NSArray+RTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BE1578B42500950C0F /* NSArray+RTAdditions.m */; };
-		C2D402FF1578B42500950C0F /* NSArray+RTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BE1578B42500950C0F /* NSArray+RTAdditions.m */; };
-		C2D403001578B42500950C0F /* NSArray+RTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D402BE1578B42500950C0F /* NSArray+RTAdditions.m */; };
 		C2D403031578CBB800950C0F /* SCSynth+RTEventStreamPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D403011578CBB700950C0F /* SCSynth+RTEventStreamPlayer.h */; };
 		C2D403041578CBB800950C0F /* SCSynth+RTEventStreamPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D403011578CBB700950C0F /* SCSynth+RTEventStreamPlayer.h */; };
 		C2D403051578CBB800950C0F /* SCSynth+RTEventStreamPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D403021578CBB700950C0F /* SCSynth+RTEventStreamPlayer.m */; };
@@ -459,6 +387,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C22DC7A1157B8C14000004C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C22DC799157B8C14000004C3 /* Pattern.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C22DC6B0157B3073000004C3;
+			remoteInfo = Pattern;
+		};
+		C22DC7A3157B8C14000004C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C22DC799157B8C14000004C3 /* Pattern.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C22DC6C0157B3073000004C3;
+			remoteInfo = PatternTests;
+		};
+		C22DC7C8157B8CA2000004C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C22DC799157B8C14000004C3 /* Pattern.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C22DC7A5157B8C56000004C3;
+			remoteInfo = "Pattern OS X";
+		};
+		C22DC7CB157B8CA3000004C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C22DC799157B8C14000004C3 /* Pattern.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C22DC7C6157B8C56000004C3;
+			remoteInfo = "Pattern OS X";
+		};
+		C22DC7CF157B8CC1000004C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C22DC799157B8C14000004C3 /* Pattern.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C22DC6AF157B3073000004C3;
+			remoteInfo = "Pattern iOS";
+		};
 		C2A68C2D151F29F7000A543E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
@@ -582,10 +545,10 @@
 		C22ACDA114983B8E003EE04B /* VVOSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVOSC.h; sourceTree = "<group>"; };
 		C22ACDFA14983F7C003EE04B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C22ACE08149843A2003EE04B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C22DC799157B8C14000004C3 /* Pattern.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pattern.xcodeproj; path = ../ThirdParty/Pattern/Pattern.xcodeproj; sourceTree = "<group>"; };
 		C2339B0314C3EDE7002E4251 /* SCWaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWaveformView.h; sourceTree = "<group>"; };
 		C2339B0414C3EDE7002E4251 /* SCWaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWaveformView.m; sourceTree = "<group>"; };
 		C2339B0D14C3EED6002E4251 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFMountainLionGCDARCWorkaround.h; path = ../../../MagicFile/MFMountainLionGCDARCWorkaround.h; sourceTree = "<group>"; };
 		C2372C4D152C3F570097575E /* PSScales.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PSScales.json; path = Pulsar/PSScales.json; sourceTree = "<group>"; };
 		C2372C54152C44060097575E /* PSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSEvent.h; sourceTree = "<group>"; };
 		C2372C55152C44060097575E /* PSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSEvent.m; sourceTree = "<group>"; };
@@ -609,8 +572,6 @@
 		C25A2685150D1F4B00DB2F19 /* libPulsar OS X.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPulsar OS X.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C269C9FC14B47EBB00A8A683 /* RSTestSketches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTestSketches.h; sourceTree = "<group>"; };
 		C269C9FD14B47EBB00A8A683 /* RSTestSketches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTestSketches.m; sourceTree = "<group>"; };
-		C2A68C31151F2A2C000A543E /* RTClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTClock.h; path = Pulsar/RTClock.h; sourceTree = "<group>"; };
-		C2A68C32151F2A2C000A543E /* RTClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTClock.m; path = Pulsar/RTClock.m; sourceTree = "<group>"; };
 		C2A68C33151F2A2C000A543E /* PSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPlayer.h; sourceTree = "<group>"; };
 		C2A68C34151F2A2C000A543E /* PSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPlayer.m; sourceTree = "<group>"; };
 		C2A68C35151F2A2C000A543E /* PSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStream.h; sourceTree = "<group>"; };
@@ -630,28 +591,6 @@
 		C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRenderer.m; sourceTree = "<group>"; };
 		C2C513E214AA550700F089C2 /* NSDictionary+OSCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+OSCAdditions.h"; sourceTree = "<group>"; };
 		C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+OSCAdditions.m"; sourceTree = "<group>"; };
-		C2D402A91578B42500950C0F /* RTStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStream.h; sourceTree = "<group>"; };
-		C2D402AA1578B42500950C0F /* RTStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStream.m; sourceTree = "<group>"; };
-		C2D402AB1578B42500950C0F /* RTFuncStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTFuncStream.h; sourceTree = "<group>"; };
-		C2D402AC1578B42500950C0F /* RTFuncStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTFuncStream.m; sourceTree = "<group>"; };
-		C2D402AD1578B42500950C0F /* RTEventStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTEventStreamPlayer.h; sourceTree = "<group>"; };
-		C2D402AE1578B42500950C0F /* RTEventStreamPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTEventStreamPlayer.m; sourceTree = "<group>"; };
-		C2D402AF1578B42500950C0F /* RTRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRoutine.h; sourceTree = "<group>"; };
-		C2D402B01578B42500950C0F /* RTRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRoutine.m; sourceTree = "<group>"; };
-		C2D402B11578B42500950C0F /* RTPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPattern.h; sourceTree = "<group>"; };
-		C2D402B21578B42500950C0F /* RTPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPattern.m; sourceTree = "<group>"; };
-		C2D402B31578B42500950C0F /* RTPattern+More.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTPattern+More.h"; sourceTree = "<group>"; };
-		C2D402B41578B42500950C0F /* RTPattern+More.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RTPattern+More.m"; sourceTree = "<group>"; };
-		C2D402B51578B42500950C0F /* RTFilterPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTFilterPattern.h; sourceTree = "<group>"; };
-		C2D402B61578B42500950C0F /* RTFilterPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTFilterPattern.m; sourceTree = "<group>"; };
-		C2D402B71578B42500950C0F /* RTListPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTListPattern.h; sourceTree = "<group>"; };
-		C2D402B81578B42500950C0F /* RTListPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTListPattern.m; sourceTree = "<group>"; };
-		C2D402B91578B42500950C0F /* NSObject+RTEmbedInStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RTEmbedInStream.h"; sourceTree = "<group>"; };
-		C2D402BA1578B42500950C0F /* NSObject+RTEmbedInStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RTEmbedInStream.m"; sourceTree = "<group>"; };
-		C2D402BB1578B42500950C0F /* NSNumber+RTDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RTDo.h"; sourceTree = "<group>"; };
-		C2D402BC1578B42500950C0F /* NSNumber+RTDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RTDo.m"; sourceTree = "<group>"; };
-		C2D402BD1578B42500950C0F /* NSArray+RTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RTAdditions.h"; sourceTree = "<group>"; };
-		C2D402BE1578B42500950C0F /* NSArray+RTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RTAdditions.m"; sourceTree = "<group>"; };
 		C2D403011578CBB700950C0F /* SCSynth+RTEventStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCSynth+RTEventStreamPlayer.h"; path = "Pulsar/SCKit/SCSynth+RTEventStreamPlayer.h"; sourceTree = "<group>"; };
 		C2D403021578CBB700950C0F /* SCSynth+RTEventStreamPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCSynth+RTEventStreamPlayer.m"; path = "Pulsar/SCKit/SCSynth+RTEventStreamPlayer.m"; sourceTree = "<group>"; };
 		C2D403091578F4E700950C0F /* RTMonoSynthEventStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMonoSynthEventStreamPlayer.h; sourceTree = "<group>"; };
@@ -776,6 +715,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22DC7CD157B8CB1000004C3 /* libPattern copy.a in Frameworks */,
 				C25A2674150D1F4B00DB2F19 /* AVFoundation.framework in Frameworks */,
 				C25A2675150D1F4B00DB2F19 /* Foundation.framework in Frameworks */,
 				C25A2677150D1F4B00DB2F19 /* QuartzCore.framework in Frameworks */,
@@ -790,6 +730,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22DC7CE157B8CB9000004C3 /* libPattern.a in Frameworks */,
 				C2A9F1A1150078D6000ECC90 /* libscsynth iOS.a in Frameworks */,
 				C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */,
 				C2339B0E14C3EED6002E4251 /* AVFoundation.framework in Frameworks */,
@@ -893,11 +834,20 @@
 			path = FrameworkSrc;
 			sourceTree = "<group>";
 		};
+		C22DC79A157B8C14000004C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C22DC7A2157B8C14000004C3 /* libPattern.a */,
+				C22DC7A4157B8C14000004C3 /* PatternTests.octest */,
+				C22DC7CC157B8CA3000004C3 /* libPattern copy.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C24EE6D5148C3ED600E72DAF = {
 			isa = PBXGroup;
 			children = (
-				C23675F61579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h */,
-				C2D402A41578B40A00950C0F /* Routines Streams and Patterns */,
+				C22DC799157B8C14000004C3 /* Pattern.xcodeproj */,
 				C2D62F2E1498BA4E000F534B /* README.txt */,
 				C2D62EFA1498B8EE000F534B /* Pulsar Bundle */,
 				C2CAFD9914FE04E700D1DF3B /* PulsarEditorApp */,
@@ -1031,37 +981,6 @@
 			);
 			name = PulsarEditorApp;
 			path = Pulsar;
-			sourceTree = "<group>";
-		};
-		C2D402A41578B40A00950C0F /* Routines Streams and Patterns */ = {
-			isa = PBXGroup;
-			children = (
-				C2D402A91578B42500950C0F /* RTStream.h */,
-				C2D402AA1578B42500950C0F /* RTStream.m */,
-				C2D402AB1578B42500950C0F /* RTFuncStream.h */,
-				C2D402AC1578B42500950C0F /* RTFuncStream.m */,
-				C2D402AD1578B42500950C0F /* RTEventStreamPlayer.h */,
-				C2D402AE1578B42500950C0F /* RTEventStreamPlayer.m */,
-				C2D402AF1578B42500950C0F /* RTRoutine.h */,
-				C2D402B01578B42500950C0F /* RTRoutine.m */,
-				C2D402B11578B42500950C0F /* RTPattern.h */,
-				C2D402B21578B42500950C0F /* RTPattern.m */,
-				C2D402B31578B42500950C0F /* RTPattern+More.h */,
-				C2D402B41578B42500950C0F /* RTPattern+More.m */,
-				C2D402B51578B42500950C0F /* RTFilterPattern.h */,
-				C2D402B61578B42500950C0F /* RTFilterPattern.m */,
-				C2D402B71578B42500950C0F /* RTListPattern.h */,
-				C2D402B81578B42500950C0F /* RTListPattern.m */,
-				C2D402B91578B42500950C0F /* NSObject+RTEmbedInStream.h */,
-				C2D402BA1578B42500950C0F /* NSObject+RTEmbedInStream.m */,
-				C2D402BB1578B42500950C0F /* NSNumber+RTDo.h */,
-				C2D402BC1578B42500950C0F /* NSNumber+RTDo.m */,
-				C2D402BD1578B42500950C0F /* NSArray+RTAdditions.h */,
-				C2D402BE1578B42500950C0F /* NSArray+RTAdditions.m */,
-				C2A68C31151F2A2C000A543E /* RTClock.h */,
-				C2A68C32151F2A2C000A543E /* RTClock.m */,
-			);
-			name = "Routines Streams and Patterns";
 			sourceTree = "<group>";
 		};
 		C2D62DE9149860FC000F534B /* Generated */ = {
@@ -1257,7 +1176,6 @@
 				C25A267E150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.h in Headers */,
 				C25A267F150D1F4B00DB2F19 /* RSTestSketches.h in Headers */,
 				C25A2680150D1F4B00DB2F19 /* SCWaveformView.h in Headers */,
-				C2A68C3E151F2A2C000A543E /* RTClock.h in Headers */,
 				C2A68C44151F2A2C000A543E /* PSPlayer.h in Headers */,
 				C2A68C4A151F2A2C000A543E /* PSStream.h in Headers */,
 				C2A68C50151F2A2C000A543E /* PSPattern.h in Headers */,
@@ -1268,20 +1186,8 @@
 				C2372C5F152D73440097575E /* NSObject+BlockRecognition.h in Headers */,
 				C2074760152FA542002C9DD2 /* PSBlock.h in Headers */,
 				C215D8441576DF6A009486F2 /* SCDemandBuffer.h in Headers */,
-				C2D402C01578B42500950C0F /* RTStream.h in Headers */,
-				C2D402C61578B42500950C0F /* RTFuncStream.h in Headers */,
-				C2D402CC1578B42500950C0F /* RTEventStreamPlayer.h in Headers */,
-				C2D402D21578B42500950C0F /* RTRoutine.h in Headers */,
-				C2D402D81578B42500950C0F /* RTPattern.h in Headers */,
-				C2D402DE1578B42500950C0F /* RTPattern+More.h in Headers */,
-				C2D402E41578B42500950C0F /* RTFilterPattern.h in Headers */,
-				C2D402EA1578B42500950C0F /* RTListPattern.h in Headers */,
-				C2D402F01578B42500950C0F /* NSObject+RTEmbedInStream.h in Headers */,
-				C2D402F61578B42500950C0F /* NSNumber+RTDo.h in Headers */,
-				C2D402FC1578B42500950C0F /* NSArray+RTAdditions.h in Headers */,
 				C2D403041578CBB800950C0F /* SCSynth+RTEventStreamPlayer.h in Headers */,
 				C2D4030C1578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.h in Headers */,
-				C23675F81579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1293,7 +1199,6 @@
 				C2C513E414AA550700F089C2 /* NSDictionary+OSCAdditions.h in Headers */,
 				C269C9FE14B47EBB00A8A683 /* RSTestSketches.h in Headers */,
 				C2339B0514C3EDE7002E4251 /* SCWaveformView.h in Headers */,
-				C2A68C3D151F2A2C000A543E /* RTClock.h in Headers */,
 				C2A68C43151F2A2C000A543E /* PSPlayer.h in Headers */,
 				C2A68C49151F2A2C000A543E /* PSStream.h in Headers */,
 				C2A68C4F151F2A2C000A543E /* PSPattern.h in Headers */,
@@ -1304,20 +1209,8 @@
 				C2372C5E152D73440097575E /* NSObject+BlockRecognition.h in Headers */,
 				C207475F152FA542002C9DD2 /* PSBlock.h in Headers */,
 				C215D8431576DF6A009486F2 /* SCDemandBuffer.h in Headers */,
-				C2D402BF1578B42500950C0F /* RTStream.h in Headers */,
-				C2D402C51578B42500950C0F /* RTFuncStream.h in Headers */,
-				C2D402CB1578B42500950C0F /* RTEventStreamPlayer.h in Headers */,
-				C2D402D11578B42500950C0F /* RTRoutine.h in Headers */,
-				C2D402D71578B42500950C0F /* RTPattern.h in Headers */,
-				C2D402DD1578B42500950C0F /* RTPattern+More.h in Headers */,
-				C2D402E31578B42500950C0F /* RTFilterPattern.h in Headers */,
-				C2D402E91578B42500950C0F /* RTListPattern.h in Headers */,
-				C2D402EF1578B42500950C0F /* NSObject+RTEmbedInStream.h in Headers */,
-				C2D402F51578B42500950C0F /* NSNumber+RTDo.h in Headers */,
-				C2D402FB1578B42500950C0F /* NSArray+RTAdditions.h in Headers */,
 				C2D403031578CBB800950C0F /* SCSynth+RTEventStreamPlayer.h in Headers */,
 				C2D4030B1578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.h in Headers */,
-				C23675F71579A7A100434E52 /* MFMountainLionGCDARCWorkaround.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1354,6 +1247,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C22DC7C9157B8CA2000004C3 /* PBXTargetDependency */,
 			);
 			name = "Pulsar OS X";
 			productName = Pulsar;
@@ -1371,6 +1265,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C22DC7D0157B8CC1000004C3 /* PBXTargetDependency */,
 				C2A9F19F150078C5000ECC90 /* PBXTargetDependency */,
 				C2A9F19D150078C2000ECC90 /* PBXTargetDependency */,
 			);
@@ -1426,6 +1321,10 @@
 					ProductGroup = C2A9F18815007893000ECC90 /* Products */;
 					ProjectRef = C2D62F9C1498C751000F534B /* NodeCanvasKit.xcodeproj */;
 				},
+				{
+					ProductGroup = C22DC79A157B8C14000004C3 /* Products */;
+					ProjectRef = C22DC799157B8C14000004C3 /* Pattern.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1438,6 +1337,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C22DC7A2157B8C14000004C3 /* libPattern.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPattern.a;
+			remoteRef = C22DC7A1157B8C14000004C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C22DC7A4157B8C14000004C3 /* PatternTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PatternTests.octest;
+			remoteRef = C22DC7A3157B8C14000004C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C22DC7CC157B8CA3000004C3 /* libPattern copy.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPattern copy.a";
+			remoteRef = C22DC7CB157B8CA3000004C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C2A68C2E151F29F7000A543E /* libscsynth OS X.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1595,7 +1515,6 @@
 				C2C513E514AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269C9FF14B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0614C3EDE7002E4251 /* SCWaveformView.m in Sources */,
-				C2A68C3F151F2A2C000A543E /* RTClock.m in Sources */,
 				C2A68C45151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4B151F2A2C000A543E /* PSStream.m in Sources */,
 				C2A68C51151F2A2C000A543E /* PSPattern.m in Sources */,
@@ -1606,17 +1525,6 @@
 				C2372C60152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 				C2074761152FA542002C9DD2 /* PSBlock.m in Sources */,
 				C215D8451576DF6A009486F2 /* SCDemandBuffer.m in Sources */,
-				C2D402C11578B42500950C0F /* RTStream.m in Sources */,
-				C2D402C71578B42500950C0F /* RTFuncStream.m in Sources */,
-				C2D402CD1578B42500950C0F /* RTEventStreamPlayer.m in Sources */,
-				C2D402D31578B42500950C0F /* RTRoutine.m in Sources */,
-				C2D402D91578B42500950C0F /* RTPattern.m in Sources */,
-				C2D402DF1578B42500950C0F /* RTPattern+More.m in Sources */,
-				C2D402E51578B42500950C0F /* RTFilterPattern.m in Sources */,
-				C2D402EB1578B42500950C0F /* RTListPattern.m in Sources */,
-				C2D402F11578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */,
-				C2D402F71578B42500950C0F /* NSNumber+RTDo.m in Sources */,
-				C2D402FD1578B42500950C0F /* NSArray+RTAdditions.m in Sources */,
 				C2D403051578CBB800950C0F /* SCSynth+RTEventStreamPlayer.m in Sources */,
 				C2D4030D1578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.m in Sources */,
 			);
@@ -1682,7 +1590,6 @@
 				C25A266C150D1F4B00DB2F19 /* SCRenderer.m in Sources */,
 				C25A266D150D1F4B00DB2F19 /* NSDictionary+OSCAdditions.m in Sources */,
 				C25A266E150D1F4B00DB2F19 /* RSTestSketches.m in Sources */,
-				C2A68C41151F2A2C000A543E /* RTClock.m in Sources */,
 				C2A68C47151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4D151F2A2C000A543E /* PSStream.m in Sources */,
 				C2A68C53151F2A2C000A543E /* PSPattern.m in Sources */,
@@ -1693,17 +1600,6 @@
 				C2372C62152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 				C2074763152FA542002C9DD2 /* PSBlock.m in Sources */,
 				C215D8471576DF6A009486F2 /* SCDemandBuffer.m in Sources */,
-				C2D402C31578B42500950C0F /* RTStream.m in Sources */,
-				C2D402C91578B42500950C0F /* RTFuncStream.m in Sources */,
-				C2D402CF1578B42500950C0F /* RTEventStreamPlayer.m in Sources */,
-				C2D402D51578B42500950C0F /* RTRoutine.m in Sources */,
-				C2D402DB1578B42500950C0F /* RTPattern.m in Sources */,
-				C2D402E11578B42500950C0F /* RTPattern+More.m in Sources */,
-				C2D402E71578B42500950C0F /* RTFilterPattern.m in Sources */,
-				C2D402ED1578B42500950C0F /* RTListPattern.m in Sources */,
-				C2D402F31578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */,
-				C2D402F91578B42500950C0F /* NSNumber+RTDo.m in Sources */,
-				C2D402FF1578B42500950C0F /* NSArray+RTAdditions.m in Sources */,
 				C2D403071578CBB800950C0F /* SCSynth+RTEventStreamPlayer.m in Sources */,
 				C2D4030F1578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.m in Sources */,
 			);
@@ -1776,7 +1672,6 @@
 				C2C513E714AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269CA0114B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0814C3EDE7002E4251 /* SCWaveformView.m in Sources */,
-				C2A68C40151F2A2C000A543E /* RTClock.m in Sources */,
 				C2A68C46151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4C151F2A2C000A543E /* PSStream.m in Sources */,
 				C2A68C52151F2A2C000A543E /* PSPattern.m in Sources */,
@@ -1787,17 +1682,6 @@
 				C2372C61152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 				C2074762152FA542002C9DD2 /* PSBlock.m in Sources */,
 				C215D8461576DF6A009486F2 /* SCDemandBuffer.m in Sources */,
-				C2D402C21578B42500950C0F /* RTStream.m in Sources */,
-				C2D402C81578B42500950C0F /* RTFuncStream.m in Sources */,
-				C2D402CE1578B42500950C0F /* RTEventStreamPlayer.m in Sources */,
-				C2D402D41578B42500950C0F /* RTRoutine.m in Sources */,
-				C2D402DA1578B42500950C0F /* RTPattern.m in Sources */,
-				C2D402E01578B42500950C0F /* RTPattern+More.m in Sources */,
-				C2D402E61578B42500950C0F /* RTFilterPattern.m in Sources */,
-				C2D402EC1578B42500950C0F /* RTListPattern.m in Sources */,
-				C2D402F21578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */,
-				C2D402F81578B42500950C0F /* NSNumber+RTDo.m in Sources */,
-				C2D402FE1578B42500950C0F /* NSArray+RTAdditions.m in Sources */,
 				C2D403061578CBB800950C0F /* SCSynth+RTEventStreamPlayer.m in Sources */,
 				C2D4030E1578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.m in Sources */,
 			);
@@ -1870,7 +1754,6 @@
 				C2C513E814AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */,
 				C269CA0214B47EBB00A8A683 /* RSTestSketches.m in Sources */,
 				C2339B0914C3EDE7002E4251 /* SCWaveformView.m in Sources */,
-				C2A68C42151F2A2C000A543E /* RTClock.m in Sources */,
 				C2A68C48151F2A2C000A543E /* PSPlayer.m in Sources */,
 				C2A68C4E151F2A2C000A543E /* PSStream.m in Sources */,
 				C2A68C54151F2A2C000A543E /* PSPattern.m in Sources */,
@@ -1881,17 +1764,6 @@
 				C2372C63152D73440097575E /* NSObject+BlockRecognition.m in Sources */,
 				C2074764152FA542002C9DD2 /* PSBlock.m in Sources */,
 				C215D8481576DF6A009486F2 /* SCDemandBuffer.m in Sources */,
-				C2D402C41578B42500950C0F /* RTStream.m in Sources */,
-				C2D402CA1578B42500950C0F /* RTFuncStream.m in Sources */,
-				C2D402D01578B42500950C0F /* RTEventStreamPlayer.m in Sources */,
-				C2D402D61578B42500950C0F /* RTRoutine.m in Sources */,
-				C2D402DC1578B42500950C0F /* RTPattern.m in Sources */,
-				C2D402E21578B42500950C0F /* RTPattern+More.m in Sources */,
-				C2D402E81578B42500950C0F /* RTFilterPattern.m in Sources */,
-				C2D402EE1578B42500950C0F /* RTListPattern.m in Sources */,
-				C2D402F41578B42500950C0F /* NSObject+RTEmbedInStream.m in Sources */,
-				C2D402FA1578B42500950C0F /* NSNumber+RTDo.m in Sources */,
-				C2D403001578B42500950C0F /* NSArray+RTAdditions.m in Sources */,
 				C2D403081578CBB800950C0F /* SCSynth+RTEventStreamPlayer.m in Sources */,
 				C2D403101578F4EC00950C0F /* RTMonoSynthEventStreamPlayer.m in Sources */,
 			);
@@ -1900,6 +1772,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C22DC7C9157B8CA2000004C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pattern OS X";
+			targetProxy = C22DC7C8157B8CA2000004C3 /* PBXContainerItemProxy */;
+		};
+		C22DC7D0157B8CC1000004C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pattern iOS";
+			targetProxy = C22DC7CF157B8CC1000004C3 /* PBXContainerItemProxy */;
+		};
 		C2A9F19D150078C2000ECC90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libscsynth;
@@ -1991,6 +1873,7 @@
 					../ThirdParty/SuperCollider/include/plugin_interface,
 					../ThirdParty/SuperCollider/include/server,
 					../ThirdParty/SuperCollider/external_libraries/libsndfile,
+					"../ThirdParty/Pattern/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
@@ -2023,6 +1906,7 @@
 					../ThirdParty/SuperCollider/include/plugin_interface,
 					../ThirdParty/SuperCollider/include/server,
 					../ThirdParty/SuperCollider/external_libraries/libsndfile,
+					"../ThirdParty/Pattern/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

@@ -4,3 +4,6 @@
 [submodule "ThirdParty/NodeCanvasKit"]
 	path = ThirdParty/NodeCanvasKit
 	url = git@github.com:lukexi/NodeCanvasKit.git
+[submodule "ThirdParty/Pattern"]
+	path = ThirdParty/Pattern
+	url = git@github.com:lukexi/Pattern.git
