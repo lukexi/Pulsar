@@ -37,11 +37,9 @@
     {
         eventBlock = ^(NSDictionary *event){
             
-            
-            
             NSMutableDictionary *synthEvent = [event mutableCopy];
             
-            // Quick hack for now! but we should support arrays in any key that doesn't correspond to an array control... which requires knowledge of the synthDefs.
+            // Quick hack for now! but we should support arrays in any key that doesn't correspond to an array control... which requires knowledge of the synthDefs (or wait, no, I think SC does it by making you do [[1,2,3,4]] for things you don't want multi-synth expanded, which doesn't require synthDef knowledge after all)
             NSArray *degrees = synthEvent[@"degrees"];
             if (degrees)
             {
@@ -50,14 +48,12 @@
                 {
                     NSMutableDictionary *synthDegreeEvent = [synthEvent mutableCopy];
                     synthDegreeEvent[@"degree"] = degree;
-                    [self populateFreqForEvent:synthDegreeEvent];
                     [self spawnSynthForEvent:synthDegreeEvent];
                 }
             }
             else
             {
                 // Regular single-synth spawn
-                [self populateFreqForEvent:synthEvent];
                 [self spawnSynthForEvent:synthEvent];
             }
         };
@@ -65,22 +61,10 @@
     return eventBlock;
 }
 
-+ (void)populateFreqForEvent:(NSMutableDictionary *)synthEvent
-{
-    PSScale *scale = synthEvent[@"scale"];
-    if (!synthEvent[@"freq"])
-    {
-        CGFloat degree = [synthEvent[@"degree"] floatValue];
-        CGFloat octave = [synthEvent[@"octave"] floatValue];
-        CGFloat root = [synthEvent[@"root"] floatValue];
-        CGFloat rootFreq = mtof(root);
-        CGFloat freq = [scale degreeToFreq:degree rootFreq:rootFreq octave:octave];
-        synthEvent[@"freq"] = [NSNumber numberWithFloat:freq];
-    }
-}
-
 + (void)spawnSynthForEvent:(NSMutableDictionary *)synthEvent
 {
+    [self calculateFreqForEvent:synthEvent];
+    
     NSString *instrument = synthEvent[@"instrument"];
     SCSynth *monoSynth = synthEvent[@"monoSynth"];
     SCGroup *group = synthEvent[@"group"];
@@ -114,9 +98,23 @@
             double delayInSeconds = endTime;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                [synth set:[@{@"gate":@0} sc_asOSCArgsArray]];
+                [synth set:[@{ @"gate": @0 } sc_asOSCArgsArray]];
             });
         }
+    }
+}
+
++ (void)calculateFreqForEvent:(NSMutableDictionary *)synthEvent
+{
+    PSScale *scale = synthEvent[@"scale"];
+    if (!synthEvent[@"freq"])
+    {
+        CGFloat degree = [synthEvent[@"degree"] floatValue];
+        CGFloat octave = [synthEvent[@"octave"] floatValue];
+        CGFloat root = [synthEvent[@"root"] floatValue];
+        CGFloat rootFreq = mtof(root);
+        CGFloat freq = [scale degreeToFreq:degree rootFreq:rootFreq octave:octave];
+        synthEvent[@"freq"] = [NSNumber numberWithFloat:freq];
     }
 }
 
