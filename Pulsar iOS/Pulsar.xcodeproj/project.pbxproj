@@ -41,8 +41,8 @@
 		C22ACDC814983B8F003EE04B /* OSCZeroConfManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACDA014983B8E003EE04B /* OSCZeroConfManager.m */; };
 		C22ACDFB14983F7D003EE04B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACDFA14983F7C003EE04B /* AudioToolbox.framework */; };
 		C22ACE09149843A3003EE04B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACE08149843A2003EE04B /* Accelerate.framework */; };
-		C22DC7CD157B8CB1000004C3 /* libPattern copy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22DC7CC157B8CA3000004C3 /* libPattern copy.a */; };
-		C22DC7CE157B8CB9000004C3 /* libPattern.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22DC7A2157B8C14000004C3 /* libPattern.a */; };
+		C22DC7CD157B8CB1000004C3 /* libPattern OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22DC7CC157B8CA3000004C3 /* libPattern OS X.a */; };
+		C22DC7CE157B8CB9000004C3 /* libPattern iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22DC7A2157B8C14000004C3 /* libPattern iOS.a */; };
 		C2339B0514C3EDE7002E4251 /* SCWaveformView.h in Headers */ = {isa = PBXBuildFile; fileRef = C2339B0314C3EDE7002E4251 /* SCWaveformView.h */; };
 		C2339B0614C3EDE7002E4251 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2339B0414C3EDE7002E4251 /* SCWaveformView.m */; };
 		C2339B0814C3EDE7002E4251 /* SCWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2339B0414C3EDE7002E4251 /* SCWaveformView.m */; };
@@ -715,7 +715,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C22DC7CD157B8CB1000004C3 /* libPattern copy.a in Frameworks */,
+				C22DC7CD157B8CB1000004C3 /* libPattern OS X.a in Frameworks */,
 				C25A2674150D1F4B00DB2F19 /* AVFoundation.framework in Frameworks */,
 				C25A2675150D1F4B00DB2F19 /* Foundation.framework in Frameworks */,
 				C25A2677150D1F4B00DB2F19 /* QuartzCore.framework in Frameworks */,
@@ -730,7 +730,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C22DC7CE157B8CB9000004C3 /* libPattern.a in Frameworks */,
+				C22DC7CE157B8CB9000004C3 /* libPattern iOS.a in Frameworks */,
 				C2A9F1A1150078D6000ECC90 /* libscsynth iOS.a in Frameworks */,
 				C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */,
 				C2339B0E14C3EED6002E4251 /* AVFoundation.framework in Frameworks */,
@@ -1340,7 +1340,7 @@
 		C22DC7A2157B8C14000004C3 /* libPattern.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libPattern.a;
+			path = "libPattern iOS.a";
 			remoteRef = C22DC7A1157B8C14000004C3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1354,7 +1354,7 @@
 		C22DC7CC157B8CA3000004C3 /* libPattern copy.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libPattern copy.a";
+			path = "libPattern OS X.a";
 			remoteRef = C22DC7CB157B8CA3000004C3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
