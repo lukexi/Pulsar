@@ -9,7 +9,6 @@
 #import "SCServer.h"
 #import <AudioToolbox/AudioToolbox.h>
 #include "SC_World.h"
-#include "SC_HiddenWorld.h"
 #include "SC_CoreAudio.h"
 #include "SC_WorldOptions.h"
 #include "SC_Graph.h"
@@ -207,16 +206,16 @@ int vpost(const char *fmt, va_list ap)
 	if (world) World_Cleanup(world);
 	world = nil;
 }
-
-- (double)averageCPU
-{
-    return world ? world->hw->mAudioDriver->GetAvgCPU() : nil;
-}
-
-- (double)peakCPU
-{
-    return world ? world->hw->mAudioDriver->GetPeakCPU() : nil;
-}
+//
+//- (double)averageCPU
+//{
+//    return world ? world->hw->mAudioDriver->GetAvgCPU() : nil;
+//}
+//
+//- (double)peakCPU
+//{
+//    return world ? world->hw->mAudioDriver->GetPeakCPU() : nil;
+//}
 
 - (void)sendMessageInBundle:(OSCMessage *)message
 {

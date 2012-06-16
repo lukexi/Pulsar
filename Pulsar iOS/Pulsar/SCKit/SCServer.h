@@ -24,11 +24,26 @@ typedef NSInteger SCNodeID;
 typedef NSInteger SCBusID;
 typedef NSInteger SCBufferNumber;
 
+// New typesafe Obj-C Enums
+//NS_ENUM(NSUInteger, SCSynthRate) {
+//    SCSynthControlRate,
+//    SCSynthAudioRate
+//};
+
 typedef enum 
 {
     SCSynthControlRate,
     SCSynthAudioRate
 } SCSynthRate;
+
+//NS_ENUM(NSUInteger, SCAddAction)
+//{
+//    SCAddToHeadAction = 0,
+//    SCAddToTailAction,
+//    SCAddBeforeAction,
+//    SCAddAfterAction,
+//    SCReplaceAction
+//};
 
 typedef enum 
 {
@@ -46,8 +61,6 @@ typedef enum
 
 + (id)sharedServer;
 
-- (double)averageCPU;
-- (double)peakCPU;
 - (void)dumpTree;
 - (void)postAllocatedNodeIDs;
 

@@ -11,7 +11,10 @@
 @class SCWarp;
 @interface SCControlSpec : NSObject
 
-+ (id)controlSpecWithMin:(CGFloat)min max:(CGFloat)max warpSpecifier:(NSString *)specifier units:(NSString *)units;
++ (id)controlSpecWithMin:(CGFloat)min
+                     max:(CGFloat)max
+           warpSpecifier:(NSString *)specifier
+                   units:(NSString *)units;
 
 @property (nonatomic) CGFloat minValue;
 @property (nonatomic) CGFloat maxValue;

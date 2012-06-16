@@ -63,7 +63,8 @@
 		C2372C61152D73440097575E /* NSObject+BlockRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */; };
 		C2372C62152D73440097575E /* NSObject+BlockRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */; };
 		C2372C63152D73440097575E /* NSObject+BlockRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */; };
-		C24EE6E5148C3ED600E72DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E4148C3ED600E72DAF /* UIKit.framework */; };
+		C2490A6C1589416B001B76EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2490A6B1589416B001B76EF /* UIKit.framework */; };
+		C2490A6D15894179001B76EF /* libPattern iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22DC7A2157B8C14000004C3 /* libPattern iOS.a */; };
 		C24EE6E7148C3ED600E72DAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
 		C24EE6E9148C3ED600E72DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E8148C3ED600E72DAF /* CoreGraphics.framework */; };
 		C24EE6EB148C3ED600E72DAF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6EA148C3ED600E72DAF /* CoreData.framework */; };
@@ -181,16 +182,17 @@
 		C2A68C67151F2A81000A543E /* PSScale.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C62151F2A81000A543E /* PSScale.m */; };
 		C2A68C68151F2A81000A543E /* PSScale.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A68C62151F2A81000A543E /* PSScale.m */; };
 		C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F18F15007893000ECC90 /* libNodeCanvasKit.a */; };
-		C2A9F1A1150078D6000ECC90 /* libscsynth iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */; };
+		C2A9F1A1150078D6000ECC90 /* libscsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth.a */; };
 		C2A9F1A615007909000ECC90 /* NKWireEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A315007909000ECC90 /* NKWireEditorViewController.xib */; };
 		C2A9F1A815007909000ECC90 /* NKNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A415007909000ECC90 /* NKNodeView.xib */; };
 		C2A9F1AA15007909000ECC90 /* NKOutNodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A9F1A515007909000ECC90 /* NKOutNodeView.xib */; };
-		C2A9F1B0150079E6000ECC90 /* libscsynth iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */; };
+		C2A9F1B0150079E6000ECC90 /* libscsynth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F19B150078A1000ECC90 /* libscsynth.a */; };
 		C2A9F1B1150079EF000ECC90 /* libNodeCanvasKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A9F18F15007893000ECC90 /* libNodeCanvasKit.a */; };
 		C2B3ACB11498D32A00ED3B2B /* SCRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B3ACAF1498D32A00ED3B2B /* SCRenderer.h */; };
 		C2B3ACB21498D32A00ED3B2B /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
 		C2B3ACB41498D32A00ED3B2B /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
 		C2B3ACB51498D32A00ED3B2B /* SCRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B3ACB01498D32A00ED3B2B /* SCRenderer.m */; };
+		C2B6398F1589665800475C76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2490A6B1589416B001B76EF /* UIKit.framework */; };
 		C2C513E414AA550700F089C2 /* NSDictionary+OSCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C513E214AA550700F089C2 /* NSDictionary+OSCAdditions.h */; };
 		C2C513E514AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */; };
 		C2C513E714AA550700F089C2 /* NSDictionary+OSCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C513E314AA550700F089C2 /* NSDictionary+OSCAdditions.m */; };
@@ -255,9 +257,8 @@
 		C2D62EC41498A84A000F534B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
 		C2D62ECA1498A84A000F534B /* Pulsar.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62EC91498A84A000F534B /* Pulsar.m */; };
 		C2D62ED11498A84A000F534B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE70D148C3ED700E72DAF /* SenTestingKit.framework */; };
-		C2D62ED21498A84A000F534B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E4148C3ED600E72DAF /* UIKit.framework */; };
 		C2D62ED31498A84A000F534B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E6148C3ED600E72DAF /* Foundation.framework */; };
-		C2D62ED61498A84A000F534B /* libPulsarKit iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EC31498A849000F534B /* libPulsarKit iOS.a */; };
+		C2D62ED61498A84A000F534B /* libPulsar iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EC31498A849000F534B /* libPulsar iOS.a */; };
 		C2D62EDC1498A84B000F534B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2D62EDA1498A84B000F534B /* InfoPlist.strings */; };
 		C2D62EDF1498A84B000F534B /* PulsarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62EDE1498A84B000F534B /* PulsarTests.m */; };
 		C2D62EFB1498B94E000F534B /* RSGraphEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D62E2B1498611B000F534B /* RSGraphEditorViewController.m */; };
@@ -306,7 +307,6 @@
 		C2D62F311498BA4F000F534B /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = C2D62F2E1498BA4E000F534B /* README.txt */; };
 		C2D62FB61498C786000F534B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACE08149843A2003EE04B /* Accelerate.framework */; };
 		C2D62FB71498C78B000F534B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E8148C3ED600E72DAF /* CoreGraphics.framework */; };
-		C2D62FB81498C795000F534B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6E4148C3ED600E72DAF /* UIKit.framework */; };
 		C2D62FB91498C79F000F534B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24EE6EA148C3ED600E72DAF /* CoreData.framework */; };
 		C2D62FBA1498C7A9000F534B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22ACDFA14983F7C003EE04B /* AudioToolbox.framework */; };
 		C2D62FBB1498C7B6000F534B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D62EBD14989D4C000F534B /* QuartzCore.framework */; };
@@ -422,12 +422,12 @@
 			remoteGlobalIDString = C22DC6AF157B3073000004C3;
 			remoteInfo = "Pattern iOS";
 		};
-		C2A68C2D151F29F7000A543E /* PBXContainerItemProxy */ = {
+		C2490A6E15894184001B76EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C25A26D1150D1FDC00DB2F19;
-			remoteInfo = "libscsynth OS X";
+			containerPortal = C22DC799157B8C14000004C3 /* Pattern.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C22DC6AF157B3073000004C3;
+			remoteInfo = "Pattern iOS";
 		};
 		C2A9F18C15007893000ECC90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -554,8 +554,8 @@
 		C2372C55152C44060097575E /* PSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSEvent.m; sourceTree = "<group>"; };
 		C2372C5C152D73440097575E /* NSObject+BlockRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockRecognition.h"; sourceTree = "<group>"; };
 		C2372C5D152D73440097575E /* NSObject+BlockRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlockRecognition.m"; sourceTree = "<group>"; };
+		C2490A6B1589416B001B76EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C24EE6E0148C3ED600E72DAF /* Pulsar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulsar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C24EE6E4148C3ED600E72DAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C24EE6E6148C3ED600E72DAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C24EE6E8148C3ED600E72DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C24EE6EA148C3ED600E72DAF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -679,7 +679,7 @@
 		C2D62E9C149862E5000F534B /* synthdefs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = synthdefs; path = Pulsar/synthdefs; sourceTree = "<group>"; };
 		C2D62E9F1498631E000F534B /* PulsarMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PulsarMetadata.json; path = Pulsar/PulsarMetadata.json; sourceTree = "<group>"; };
 		C2D62EBD14989D4C000F534B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C2D62EC31498A849000F534B /* libPulsarKit iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPulsarKit iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D62EC31498A849000F534B /* libPulsar iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPulsar iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D62EC71498A84A000F534B /* PulsarKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PulsarKit-Prefix.pch"; path = "../Pulsar/PulsarKit-Prefix.pch"; sourceTree = "<group>"; };
 		C2D62EC81498A84A000F534B /* Pulsar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Pulsar.h; path = ../Pulsar/Pulsar.h; sourceTree = "<group>"; };
 		C2D62EC91498A84A000F534B /* Pulsar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Pulsar.m; path = ../Pulsar/Pulsar.m; sourceTree = "<group>"; };
@@ -698,10 +698,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2490A6D15894179001B76EF /* libPattern iOS.a in Frameworks */,
+				C2490A6C1589416B001B76EF /* UIKit.framework in Frameworks */,
 				C2A9F1B1150079EF000ECC90 /* libNodeCanvasKit.a in Frameworks */,
-				C2A9F1B0150079E6000ECC90 /* libscsynth iOS.a in Frameworks */,
+				C2A9F1B0150079E6000ECC90 /* libscsynth.a in Frameworks */,
 				C2339B0F14C3EEE2002E4251 /* AVFoundation.framework in Frameworks */,
-				C24EE6E5148C3ED600E72DAF /* UIKit.framework in Frameworks */,
 				C24EE6E7148C3ED600E72DAF /* Foundation.framework in Frameworks */,
 				C24EE6E9148C3ED600E72DAF /* CoreGraphics.framework in Frameworks */,
 				C24EE6EB148C3ED600E72DAF /* CoreData.framework in Frameworks */,
@@ -731,11 +732,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C22DC7CE157B8CB9000004C3 /* libPattern iOS.a in Frameworks */,
-				C2A9F1A1150078D6000ECC90 /* libscsynth iOS.a in Frameworks */,
+				C2A9F1A1150078D6000ECC90 /* libscsynth.a in Frameworks */,
 				C2A9F1A0150078CD000ECC90 /* libNodeCanvasKit.a in Frameworks */,
+				C2B6398F1589665800475C76 /* UIKit.framework in Frameworks */,
 				C2339B0E14C3EED6002E4251 /* AVFoundation.framework in Frameworks */,
 				C2D62EC41498A84A000F534B /* Foundation.framework in Frameworks */,
-				C2D62FB81498C795000F534B /* UIKit.framework in Frameworks */,
 				C2D62FBB1498C7B6000F534B /* QuartzCore.framework in Frameworks */,
 				C2D62FBA1498C7A9000F534B /* AudioToolbox.framework in Frameworks */,
 				C2D62FB91498C79F000F534B /* CoreData.framework in Frameworks */,
@@ -749,9 +750,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D62ED11498A84A000F534B /* SenTestingKit.framework in Frameworks */,
-				C2D62ED21498A84A000F534B /* UIKit.framework in Frameworks */,
 				C2D62ED31498A84A000F534B /* Foundation.framework in Frameworks */,
-				C2D62ED61498A84A000F534B /* libPulsarKit iOS.a in Frameworks */,
+				C2D62ED61498A84A000F534B /* libPulsar iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,9 +837,9 @@
 		C22DC79A157B8C14000004C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C22DC7A2157B8C14000004C3 /* libPattern.a */,
+				C22DC7A2157B8C14000004C3 /* libPattern iOS.a */,
 				C22DC7A4157B8C14000004C3 /* PatternTests.octest */,
-				C22DC7CC157B8CA3000004C3 /* libPattern copy.a */,
+				C22DC7CC157B8CA3000004C3 /* libPattern OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -868,7 +868,7 @@
 			isa = PBXGroup;
 			children = (
 				C24EE6E0148C3ED600E72DAF /* Pulsar.app */,
-				C2D62EC31498A849000F534B /* libPulsarKit iOS.a */,
+				C2D62EC31498A849000F534B /* libPulsar iOS.a */,
 				C2D62ED01498A84A000F534B /* PulsarKitTests.octest */,
 				C25A2685150D1F4B00DB2F19 /* libPulsar OS X.a */,
 			);
@@ -880,11 +880,11 @@
 			children = (
 				C2D62F9C1498C751000F534B /* NodeCanvasKit.xcodeproj */,
 				C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */,
+				C2490A6B1589416B001B76EF /* UIKit.framework */,
 				C2339B0D14C3EED6002E4251 /* AVFoundation.framework */,
 				C2D62EBD14989D4C000F534B /* QuartzCore.framework */,
 				C22ACE08149843A2003EE04B /* Accelerate.framework */,
 				C22ACDFA14983F7C003EE04B /* AudioToolbox.framework */,
-				C24EE6E4148C3ED600E72DAF /* UIKit.framework */,
 				C24EE6E6148C3ED600E72DAF /* Foundation.framework */,
 				C24EE6E8148C3ED600E72DAF /* CoreGraphics.framework */,
 				C24EE6EA148C3ED600E72DAF /* CoreData.framework */,
@@ -953,8 +953,7 @@
 			isa = PBXGroup;
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
-				C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */,
-				C2A68C2E151F29F7000A543E /* libscsynth OS X.a */,
+				C2A9F19B150078A1000ECC90 /* libscsynth.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1228,6 +1227,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C2490A6F15894184001B76EF /* PBXTargetDependency */,
 				C2A9F1AF150079DF000ECC90 /* PBXTargetDependency */,
 				C2A9F1AD150079DC000ECC90 /* PBXTargetDependency */,
 			);
@@ -1271,7 +1271,7 @@
 			);
 			name = "Pulsar iOS";
 			productName = Pulsar;
-			productReference = C2D62EC31498A849000F534B /* libPulsarKit iOS.a */;
+			productReference = C2D62EC31498A849000F534B /* libPulsar iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		C2D62ECF1498A84A000F534B /* PulsarKitTests */ = {
@@ -1299,7 +1299,7 @@
 		C24EE6D7148C3ED600E72DAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Eeoo;
 			};
 			buildConfigurationList = C24EE6DA148C3ED600E72DAF /* Build configuration list for PBXProject "Pulsar" */;
@@ -1337,7 +1337,7 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C22DC7A2157B8C14000004C3 /* libPattern.a */ = {
+		C22DC7A2157B8C14000004C3 /* libPattern iOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPattern iOS.a";
@@ -1351,18 +1351,11 @@
 			remoteRef = C22DC7A3157B8C14000004C3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C22DC7CC157B8CA3000004C3 /* libPattern copy.a */ = {
+		C22DC7CC157B8CA3000004C3 /* libPattern OS X.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libPattern OS X.a";
 			remoteRef = C22DC7CB157B8CA3000004C3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C2A68C2E151F29F7000A543E /* libscsynth OS X.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libscsynth OS X.a";
-			remoteRef = C2A68C2D151F29F7000A543E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C2A9F18D15007893000ECC90 /* NodeCanvasKit.app */ = {
@@ -1386,10 +1379,10 @@
 			remoteRef = C2A9F198150078A1000ECC90 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C2A9F19B150078A1000ECC90 /* libscsynth iOS.a */ = {
+		C2A9F19B150078A1000ECC90 /* libscsynth.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libscsynth iOS.a";
+			path = libscsynth.a;
 			remoteRef = C2A9F19A150078A1000ECC90 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1782,6 +1775,11 @@
 			name = "Pattern iOS";
 			targetProxy = C22DC7CF157B8CC1000004C3 /* PBXContainerItemProxy */;
 		};
+		C2490A6F15894184001B76EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pattern iOS";
+			targetProxy = C2490A6E15894184001B76EF /* PBXContainerItemProxy */;
+		};
 		C2A9F19D150078C2000ECC90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libscsynth;
@@ -1852,8 +1850,8 @@
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1863,7 +1861,6 @@
 					NOVA_SIMD,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1875,8 +1872,11 @@
 					../ThirdParty/SuperCollider/external_libraries/libsndfile,
 					"../ThirdParty/Pattern/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"/Applications/Xcode45-DP1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
+				);
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1889,14 +1889,13 @@
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					SC_IPHONE,
 					STATIC_PLUGINS,
 					NOVA_SIMD,
 				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -1908,9 +1907,12 @@
 					../ThirdParty/SuperCollider/external_libraries/libsndfile,
 					"../ThirdParty/Pattern/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"/Applications/Xcode45-DP1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
+				);
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1920,6 +1922,7 @@
 		C24EE720148C3ED700E72DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pulsar/Pulsar-Prefix.pch";
 				INFOPLIST_FILE = "Pulsar/Pulsar-Info.plist";
@@ -1928,6 +1931,7 @@
 					"\"$(SRCROOT)/../ThirdParty/NodeCanvasKit/build/Release-iphoneos\"",
 				);
 				PRODUCT_NAME = Pulsar;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1935,6 +1939,7 @@
 		C24EE721148C3ED700E72DAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pulsar/Pulsar-Prefix.pch";
 				INFOPLIST_FILE = "Pulsar/Pulsar-Info.plist";
@@ -1943,6 +1948,7 @@
 					"\"$(SRCROOT)/../ThirdParty/NodeCanvasKit/build/Release-iphoneos\"",
 				);
 				PRODUCT_NAME = Pulsar;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1957,7 +1963,6 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "Pulsar OS X";
 				SKIP_INSTALL = YES;
 			};
@@ -1969,7 +1974,6 @@
 				DSTROOT = /tmp/Pulsar.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pulsar/PulsarKit-Prefix.pch";
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "Pulsar OS X";
 				SKIP_INSTALL = YES;
 			};
@@ -1986,8 +1990,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "PulsarKit iOS";
+				PRODUCT_NAME = "Pulsar iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -2000,8 +2003,7 @@
 				DSTROOT = /tmp/Pulsar.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pulsar/PulsarKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "PulsarKit iOS";
+				PRODUCT_NAME = "Pulsar iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
