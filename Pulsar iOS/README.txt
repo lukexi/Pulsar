@@ -3,6 +3,9 @@ Setup instructions:
 2. Add Pulsar in "Target Dependencies" in your Target's Build Phases tab
 3. Add libPulsarKit, AudioToolbox, Accelerate, QuartzCore and Core Data in "Link Binary With Libraries" in your Target's Build Phases tab
 4. Add Pulsar's relative path (e.g. "../ThirdParty/Pulsar") to your Project's "Header Search Paths" in the "Build Settings" tab
+../../ThirdParty/Pulsar/ThirdParty/Pattern
+../../ThirdParty/Pulsar/Pulsar\ iOS
+../../ThirdParty/Pulsar/ThirdParty/NodeCanvasKit
 5. Add "-ObjC" to your Project's "Other Linker Flags" in the "Build Settings" tab
 6. Drag the 'Pulsar Bundle' from the Pulsar project into your project
 7. Add [Pulsar sharedPulsar] to applicationDidFinishLaunching in your App Delegate to initialize Pulsar and boot the synthesis server
