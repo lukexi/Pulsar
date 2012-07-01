@@ -1875,7 +1875,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"/Applications/Xcode45-DP1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
+					"/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
 				);
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1911,7 +1911,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"/Applications/Xcode45-DP1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
+					"/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
 				);
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
