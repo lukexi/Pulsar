@@ -20,8 +20,10 @@
     if (!prototypeEvent)
     {
         prototypeEvent = @{
+            @"instrument":@"simpleSynth",
             @"dur":@1.0,
             @"root":@60.0,
+            @"amp":@0.1,
             @"degree":@0.0,
             @"octave":@5.0,
             @"scale":[PSScale scaleNamed:@"major"]
@@ -74,7 +76,7 @@
     }
     
     NSArray *OSCArguments = [synthEvent sc_asOSCArgsArray];
-    
+    //NSLog(@"Args: %@", OSCArguments);
     if (monoSynth)
     {
         //NSLog(@"Sending to monosynth: %@ %@", monoSynth, OSCArguments);
