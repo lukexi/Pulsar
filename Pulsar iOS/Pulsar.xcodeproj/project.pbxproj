@@ -492,6 +492,13 @@
 			remoteGlobalIDString = C2D62EC21498A849000F534B;
 			remoteInfo = Pulsar;
 		};
+		C2F7B6B215CFAB330086934E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2F7B68E15CFA7130086934E;
+			remoteInfo = "libscsynth OS X";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -954,6 +961,7 @@
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
 				C2A9F19B150078A1000ECC90 /* libscsynth.a */,
+				C2F7B6B315CFAB330086934E /* libscsynth OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1384,6 +1392,13 @@
 			fileType = archive.ar;
 			path = libscsynth.a;
 			remoteRef = C2A9F19A150078A1000ECC90 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C2F7B6B315CFAB330086934E /* libscsynth OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libscsynth OS X.a";
+			remoteRef = C2F7B6B215CFAB330086934E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
