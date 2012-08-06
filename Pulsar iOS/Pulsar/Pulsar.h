@@ -17,7 +17,6 @@
 #import "RSSynthDef.h"
 #import "RSSynthDefControl.h"
 #import "RSWire.h"
-#import "RTClock.h"
 #import "PSPlayer.h"
 #import "PSPattern.h"
 #import "PSStream.h"
