@@ -384,6 +384,7 @@
 		C2D6305D1498CD32000F534B /* ObjectHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD7F14983B8E003EE04B /* ObjectHolder.m */; };
 		C2D6305E1498CD32000F534B /* VVStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD8214983B8E003EE04B /* VVStopwatch.m */; };
 		C2D6305F1498CD32000F534B /* VVThreadLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = C22ACD8414983B8E003EE04B /* VVThreadLoop.m */; };
+		C2F7B69515CFA7430086934E /* libscsynth OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F7B69215CFA7390086934E /* libscsynth OS X.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -491,6 +492,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = C2D62EC21498A849000F534B;
 			remoteInfo = Pulsar;
+		};
+		C2F7B69115CFA7390086934E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2F7B68E15CFA7130086934E;
+			remoteInfo = "libscsynth OS X";
+		};
+		C2F7B69315CFA73D0086934E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2D62F901498C189000F534B /* iPhone_Synth.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C2F7B64815CFA7130086934E;
+			remoteInfo = "libscsynth OS X";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -716,6 +731,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F7B69515CFA7430086934E /* libscsynth OS X.a in Frameworks */,
 				C22DC7CD157B8CB1000004C3 /* libPattern OS X.a in Frameworks */,
 				C25A2674150D1F4B00DB2F19 /* AVFoundation.framework in Frameworks */,
 				C25A2675150D1F4B00DB2F19 /* Foundation.framework in Frameworks */,
@@ -954,6 +970,7 @@
 			children = (
 				C2A9F199150078A1000ECC90 /* iscsynth.app */,
 				C2A9F19B150078A1000ECC90 /* libscsynth.a */,
+				C2F7B69215CFA7390086934E /* libscsynth OS X.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1247,6 +1264,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C2F7B69415CFA73D0086934E /* PBXTargetDependency */,
 				C22DC7C9157B8CA2000004C3 /* PBXTargetDependency */,
 			);
 			name = "Pulsar OS X";
@@ -1384,6 +1402,13 @@
 			fileType = archive.ar;
 			path = libscsynth.a;
 			remoteRef = C2A9F19A150078A1000ECC90 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C2F7B69215CFA7390086934E /* libscsynth OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libscsynth OS X.a";
+			remoteRef = C2F7B69115CFA7390086934E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1805,6 +1830,11 @@
 			target = C2D62EC21498A849000F534B /* Pulsar iOS */;
 			targetProxy = C2D62ED41498A84A000F534B /* PBXContainerItemProxy */;
 		};
+		C2F7B69415CFA73D0086934E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libscsynth OS X";
+			targetProxy = C2F7B69315CFA73D0086934E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1873,10 +1903,6 @@
 					"../ThirdParty/Pattern/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
-				);
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1909,10 +1935,6 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.0/lib/darwin/libclang_rt.eprintf.a",
-				);
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
